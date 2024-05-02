@@ -18,19 +18,18 @@
         for (int j=0;j<(n-c);j++){
             printf(" ");
         }
-    //loop 2 to print the # of the pyramids
+    //printando os # da primeira piramide
         for (int i=0;i<c;i++){
             printf("#");
         }
-    //doing the space between the pyramids
+    //espaço entre as piramides
         printf("  ");
-    //loop 3 to do print the # of the second pyramide
+    //loop para printar os # da segunda piramide
         for (int k=0;k<c;k++){
             printf("#");
         }
-     // counter used to limit the amount of # in each line of the pyramide
+     // somando um no contador
         c++;
-     // skipping line
         printf("\n");
     }
  }
