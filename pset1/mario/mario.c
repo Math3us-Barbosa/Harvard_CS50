@@ -25,7 +25,7 @@
     //espaço entre as piramides
         printf("  ");
     //loop para printar os # da segunda piramide
-        for (int k=0;k<c;k++){
+        for (int k = 0;k < c;k++){
             printf("#");
         }
      // somando um no contador
