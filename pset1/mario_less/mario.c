@@ -1,4 +1,4 @@
-int main(void){
+nt main(void){
     //declaraçao de variaveis
     int n, c = 1;
     int x = 0;
@@ -10,6 +10,7 @@ int main(void){
             x=1;
         }
         while(x! = 1);
+    while(c <= n){
         //printando o espaço entre o começo da linha e os # da respectiva linha
         for (int j = 0; j < (n - c); j++){
             printf(" ");
@@ -18,4 +19,6 @@ int main(void){
         for (int i = 0; i < c; i++){
             printf("#");
         }
+        c++;
     }
+}
