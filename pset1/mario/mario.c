@@ -13,8 +13,8 @@
             x=1;
         }
         while(x!=1);
-    //loop 1 to reverse the piramide
     while(c<=n){
+        //printando o espaço entre o começo da linha e os # da respectiva linha
         for (int j=0;j<(n-c);j++){
             printf(" ");
         }
