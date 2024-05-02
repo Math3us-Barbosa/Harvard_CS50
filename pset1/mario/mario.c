@@ -19,7 +19,7 @@
             printf(" ");
         }
     //printando os # da primeira piramide
-        for (int i=0;i<c;i++){
+        for (int i=q0;i<c;i++){
             printf("#");
         }
     //espaço entre as piramides
