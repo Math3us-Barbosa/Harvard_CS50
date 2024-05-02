@@ -1,4 +1,4 @@
-nt main(void){
+int main(void){
     //declaraçao de variaveis
     int n, c = 1;
     int x = 0;
