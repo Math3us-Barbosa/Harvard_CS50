@@ -2,12 +2,10 @@
 
 
  int main(void){
-    //declaring variables
-
-
+    //declaraçao de variaveis
     int n,c=1;
     int x=0;
-    //loop to make sure we get a height beetwen 1 and 8
+    //perguntando ao usuario o tamanho da piramide e garantindo que
     do{
         printf("type the pyramid height between 1 and 8\n");
         scanf("%i",&n);
