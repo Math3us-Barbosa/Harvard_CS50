@@ -5,7 +5,7 @@
     //declaraçao de variaveis
     int n,c=1;
     int x=0;
-    //perguntando ao usuario o tamanho da piramide e garantindo que
+    //perguntando ao usuario o tamanho da piramide e garantindo que esse seja entre 1 e 8
     do{
         printf("type the pyramid height between 1 and 8\n");
         scanf("%i",&n);
