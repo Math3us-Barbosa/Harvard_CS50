@@ -9,7 +9,7 @@
     int x=0;
     //loop to make sure we get a height beetwen 1 and 8
     do{
-        printf("type the pyramid height between 1 and 8");
+        printf("type the pyramid height between 1 and 8\n");
         scanf("%i",&n);
         if(n>=1 && n<=8)
             x=1;
