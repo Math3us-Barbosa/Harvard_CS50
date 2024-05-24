@@ -17,16 +17,18 @@ int main(void)
     // Score both words
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
-    int max1 = strlen(score1);
-    int max2 = strlen(score2);
-    for(int i = 0; i < max1; i++)
-    {
-        
-    }
     // TODO: Print the winner
 }
 
 int compute_score(string word)
 {
-    // TODO: Compute and return score for string
+    int max = strlen(word);
+    for (int i = 0; i < max; i++)
+    {
+        if(isalpha(word[i]))
+        {
+            
+        }
+
+    }
 }
