@@ -25,10 +25,7 @@ int compute_score(string word)
     int max = strlen(word);
     for (int i = 0; i < max; i++)
     {
-        if(isalpha(word[i]))
-        {
-            
-        }
+        
 
     }
 }
