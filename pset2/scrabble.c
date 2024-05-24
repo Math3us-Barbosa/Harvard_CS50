@@ -23,9 +23,10 @@ int main(void)
 int compute_score(string word)
 {
     int max = strlen(word);
+    int soma;
     for (int i = 0; i < max; i++)
     {
-        
+        isupp
 
     }
 }
