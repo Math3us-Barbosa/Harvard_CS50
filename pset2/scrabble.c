@@ -38,13 +38,14 @@ int compute_score(string word)
     int soma = 0;
     for (int i = 0; i < max; i++)
     {
-        if(islower!=)
+        if(islower(word[i]))
         {
             soma += POINTS[word[i]-97];
         }
-        else if(isupper)
+        else if(isupper(word[i]))
         {
             soma += POINTS[word[i]-65];
         }
     }
+    return soma;
 }
