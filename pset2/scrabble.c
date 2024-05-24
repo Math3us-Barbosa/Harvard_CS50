@@ -27,6 +27,7 @@ int compute_score(string word)
     int soma = 0;
     for (int i = 0; i < max; i++)
     {
+        int x = word[i];
         soma += POINTS[]
 
     }
