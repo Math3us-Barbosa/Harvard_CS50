@@ -41,7 +41,6 @@ int compute_score(string word)
         if(islower(word[i]))
         {
             soma += POINTS[word[i]-97];
-            printf("%i",POINTS[word[i]-97]);
         }
         else if(isupper(word[i]))
         {
