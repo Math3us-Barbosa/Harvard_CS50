@@ -20,6 +20,7 @@ int main(void)
     // TODO: Print the winner
 }
 
+
 int compute_score(string word)
 {
     int max = strlen(word);
