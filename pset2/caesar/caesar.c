@@ -41,11 +41,11 @@ int main(int argc, string argv[])
     {
         if (islower(p[i]))
         {
-            printf("%c", (p[i] - 97 + key) % 26 + 97);
+            printf("%c", (p[i] + key) % 26 + 97);
         }
         else if (isupper(p[i]))
         {
-            printf("%c", (p[i] - 65 + key) % 26 + 65);
+            printf("%c", (p[i]  + key) % 26 + 65);
         }
         else
         {
