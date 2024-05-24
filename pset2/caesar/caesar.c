@@ -1,83 +1,58 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 #include <cs50.h>
 
+
+
 int main(int argc, string argv[])
 {
-    //verificando quantidade de argumentos
+    int key;
+    //if the user deos not type 2 arguments the program will stop and show the following message:"Usage: ./caesar key\n"
     if (argc != 2)
     {
-        printf("Uso: ./chave de substituição");
+        printf("Usage: ./caesar key\n");
         return 1;
     }
-    //verificando tamanho da chave
-    if (strlen(argv[1]) != 26)
+    //turning the key from an charecter to an int value
+    key = atoi(argv[1]);
+    //if the user types a negative vallue the program will stop and show the following message:"Usage: ./caesar key\n"
+    if (key < 0)
     {
-        printf("A chave deve conter 26 caracteres");
+        printf("Usage: ./caesar key\n");
         return 1;
     }
-    // verificando caracteres da chave
-    for (int i=0,n=strlen(argv[1]); i<n; i++)
+    //if the user doesnt type digits as the key the program will stop and show the following message:"Usage: ./caesar key\n"
+    for (int i = 0, x = strlen(argv[1]); i < x; i++)
     {
-        if (!isalpha(argv[1][i]))
+        if (!isdigit(argv[1][i]))
         {
-        printf("Uso: ./chave de substituição");
-        return 1;
+            printf("Usage: ./caeser key\n");
+            return 1;
         }
     }
-    int x;
-    int a=0;
-    int n=strlen(argv[1]);
-    //verificando se ha letras repitidas na string usando 2 loops
-    for (x=0; x<n; x++)
-    {
-        a=argv[1][x];
-        for (int j = n; j>x;j--)
-        {
-            if(argv[1][j] == a)
-            {
-                printf("a chave não pode conter letras repitidas");
-                return 1;
-            }
-        }
-    }
+    //getting plaintext
     string p = get_string("plaintext: ");
-    int k = strlen(p);
-    int p2[k];
+    int n = strlen(p);
     printf("ciphertext: ");
-
-    for (int c = 0; c < k; c++)
+    //loop to calculate the cyphertext charecter by charecter
+    for (int i = 0; i < n; i++)
     {
-        if(isupper(p[c]))
+        if (islower(p[i]))
         {
-            p2[c] = p[c] - 65;
+            printf("%c", (p[i] - 97 + key) % 26 + 97);
+        }
+        else if (isupper(p[i]))
+        {
+            printf("%c", (p[i] - 65 + key) % 26 + 65);
         }
         else
         {
-            p2[c] = p[c] - 97;
+            printf("%c", p[i]);
         }
     }
 
 
-    for (int i = 0; i < k; i++)
-    {
-        if (isupper(p[i]))
-        {
-            printf("%c",toupper(argv[1][p2[i]]));
-        }
-        else if (islower(p[i]))
-        {
-            printf("%c",tolower(argv[1][p2[i]]));
-        }
-        else
-        {
-            printf("%c",p[i]);
-        }
-    }
     printf("\n");
 }
-
-
-
