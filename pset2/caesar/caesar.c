@@ -1,4 +1,10 @@
-nt main(int argc, string argv[])
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <cs50.h>
+
+int main(int argc, string argv[])
 {
     //verificando quantidade de argumentos
     if (argc != 2)
