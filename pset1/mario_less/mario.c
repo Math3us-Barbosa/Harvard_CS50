@@ -8,11 +8,11 @@ int main(void){
         scanf("%i",&n);
     } while(n < 1 || n > 8);
     while(c <= n){
-        //printando o espaço entre o começo da linha e os # da respectiva linha
+        //printing the space between the start of the line and the # of that line
         for (int j = 0; j < (n - c); j++){
             printf(" ");
         }
-    //printando os # da primeira piramide
+    //printing the # of the pyramides
         for (int i = 0; i < c; i++){
             printf("#");
         }
