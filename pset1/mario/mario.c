@@ -2,10 +2,10 @@
 #include<cs50.h>
 
  int main(void){
-    //declaraçao de variaveis
+    //declaring variables
     int n, c = 1;
     int x = 0;
-    //perguntando ao usuario o tamanho da piramide e garantindo que esse seja entre 1 e 8
+    //getting a height between 1 and 8 from the user
     do{
         printf("type the pyramid height between 1 and 8\n");
         scanf("%i",&n);
@@ -14,21 +14,20 @@
         }
         while(x! = 1);
     while(c <= n){
-        //printando o espaço entre o começo da linha e os # da respectiva linha
+        //printing the space between the start of the line and the # of that line
         for (int j = 0; j < (n - c); j++){
             printf(" ");
         }
-    //printando os # da primeira piramide
+    //printing the # of the first pyramides
         for (int i = 0; i < c; i++){
             printf("#");
         }
-    //espaço entre as piramides
+    //space between the pyramides
         printf("  ");
-    //loop para printar os # da segunda piramide
+    //printing the # of the second pyramide
         for (int k = 0; k < c; k++){
             printf("#");
         }
-     // somando um no contador
         c++;
         printf("\n");
     }
