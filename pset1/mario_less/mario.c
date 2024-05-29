@@ -19,4 +19,5 @@ int main(void){
         }
         c++;
     }
+        for (int i = 0;
 }
