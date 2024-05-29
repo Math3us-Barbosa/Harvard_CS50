@@ -6,8 +6,7 @@ int main(void){
     do{
         printf("type the pyramid height between 1 and 8\n");
         scanf("%i",&n);
-
-        while(n < 1 || n > 8);
+    } while(n < 1 || n > 8);
     while(c <= n){
         //printando o espaço entre o começo da linha e os # da respectiva linha
         for (int j = 0; j < (n - c); j++){
