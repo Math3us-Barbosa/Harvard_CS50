@@ -4,6 +4,7 @@
 
 typedef uint8_t BYTE;
 void jpg(FILE *f);
+bool startjpeg(BYTE *buffer);
 int main(int argc, char *argv[])
 {
     int cont = 0;
@@ -20,12 +21,14 @@ int main(int argc, char *argv[])
     char *d filename = malloc(4);
     do{
         fread(buffer,sizeof(BYTE),512,f);
-        } while(buffer[0] != 0Xff || buffer[1] != 0xd8 || buffer[2] != 0xff || (buffer[3] & 0xf0) != 0xe0);
-    while(!f.eof)
-    {
-        printf
-    }
+
+    }while();
     fclose(f);
     fclose(d);
     free(d);
+}
+
+bool startjpeg(Byte *buffer)
+{
+    for in
 }
