@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     char *d filename = malloc(4);
     while(fread(buffer,size(BYTE),512,f) == 512)
     {
-
+        
     }
     fclose(f);
     fclose(d);
