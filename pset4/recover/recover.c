@@ -25,7 +25,11 @@ int main(int argc, char *argv[])
     }while(!startjpeg(buffer));
     while(!f.eof)
     {
-        
+        do
+        {
+            fwrite(buffer,sizeof(BYTE),512,f);
+            fread(buffer,sizeof(BYTE),512,f);
+        }while(!startjpeg(buffer))
     }
     fclose(f);
     fclose(d);
