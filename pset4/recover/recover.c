@@ -20,7 +20,13 @@ int main(int argc, char *argv[])
     char *d filename = malloc(4);
     while(fread(&buffer,size(BYTE),512,f) == 512)
     {
-        if(buffer[0] == 0xff && bytes[1] == 0xd8 && bytes[2] && (bytes[3] & 0xf0) == 0xe0 && cont == 0);
+
+    }
+    fclose(f);
+    fclose(d);
+    free(d);
+}
+/*   if(buffer[0] == 0xff && bytes[1] == 0xd8 && bytes[2] && (bytes[3] & 0xf0) == 0xe0 && cont == 0);
         {
             cont ++;
             FILE *d = fopen(destination,"w");
@@ -37,9 +43,4 @@ int main(int argc, char *argv[])
             FILE *d= fopen(destination,"w");
             sprintf(d,"03i.jpeg",cont);
             fwrite(&buffer, size(BYTE), 512, d)
-        }
-    }
-    fclose(f);
-    fclose(d);
-    free(d);
-}
+        }*/
