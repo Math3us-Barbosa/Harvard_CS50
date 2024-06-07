@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     }
     BYTE buffer[512];
     char *d filename = malloc(4);
-    while(fread(&buffer,size(BYTE),512,f) == 512)
+    while(fread(buffer,size(BYTE),512,f) == 512)
     {
 
     }
