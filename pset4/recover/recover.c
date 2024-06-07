@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
             sprint(d,"03i.jpeg",cont);
             fwrite(&buffer, size(BYTE), 512, d);
         }
-        else if(buffer[0] != 0xff && bytes[1] != 0xd8 && bytes[2] && (bytes[3] & 0xf0) != 0xe0)
+        else if(buffer[0] != 0xff && bytes[1] != 0xd8 && bytes[2] && (bytes[512] & 0xf0) != 0xe0)
         {
             fwrite(&buffer, size(BYTE), 512, d);
         }
