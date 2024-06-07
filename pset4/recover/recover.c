@@ -17,9 +17,9 @@ int main(int argc, char *argv[])
         return 1;
     }
     BYTE buffer[512];
-    Byte
+    BYTE buffer2[512]
     char *d filename = malloc(4);
-    while(f)
+    while(fread())
     fread(buffer,size(BYTE),512,f);
         if(buffer)
     fclose(f);
