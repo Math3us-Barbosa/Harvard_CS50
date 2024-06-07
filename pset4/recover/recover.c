@@ -7,7 +7,7 @@ void jpg(FILE *f);
 bool startjpeg(BYTE *buffer);
 int main(int argc, char *argv[])
 {
-    int cont = 0;
+    int endf = 1;
     if(argc != 2)
     {
         return 1;
