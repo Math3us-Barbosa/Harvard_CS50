@@ -30,5 +30,5 @@ int main(int argc, char *argv[])
 
 bool startjpeg(Byte *buffer)
 {
-    for in
+    if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == oxff && (buffer[3] & 0xf0)
 }
