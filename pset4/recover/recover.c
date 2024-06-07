@@ -20,7 +20,10 @@ int main(int argc, char *argv[])
     char *d filename = malloc(4);
     do{
         fread(buffer,sizeof(BYTE),512,f);
-        if(buffer[0] == 0XFF && buffer[1] == 0xd8 && buffer[2] == 0xff && buffer 512[]
+        if(buffer[0] == 0Xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[512] & 0xf0) == 0xe0)
+        {
+            
+        }
     }while(!f.eof);
     fclose(f);
     fclose(d);
