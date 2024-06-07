@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     fclose(d);
     free(d);
 }
-/*   if(buffer[0] == 0xff && bytes[1] == 0xd8 && bytes[2] && (bytes[3] & 0xf0) == 0xe0 && cont == 0);
+/*   if(buffer[0] == 0xff && bytes[1] == 0xd8 && bytes[2] && (bytes[512] & 0xf0) == 0xe0 && cont == 0);
         {
             cont ++;
             FILE *d = fopen(destination,"w");
