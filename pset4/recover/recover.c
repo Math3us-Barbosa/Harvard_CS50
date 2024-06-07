@@ -41,4 +41,5 @@ int main(int argc, char *argv[])
     }
     fclose(f);
     fclose(d);
+    free(d);
 }
