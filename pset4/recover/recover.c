@@ -22,7 +22,11 @@ int main(int argc, char *argv[])
     do{
         fread(buffer,sizeof(BYTE),512,f);
 
-    }while();
+    }while(!startjpeg(buffer));
+    while(!f.eof)
+    {
+        
+    }
     fclose(f);
     fclose(d);
     free(d);
@@ -30,5 +34,7 @@ int main(int argc, char *argv[])
 
 bool startjpeg(Byte *buffer)
 {
-    if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == oxff && (buffer[3] & 0xf0)
+    if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        return true;
+    return false;
 }
