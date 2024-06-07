@@ -17,30 +17,12 @@ int main(int argc, char *argv[])
         return 1;
     }
     BYTE buffer[512];
-    BYTE buffer2[512]
     char *d filename = malloc(4);
-    while(fread(buffer2,sizeof(BYTE),))
-    fread(buffer,sizeof(BYTE),512,f);
-        if(buffer)
+    do{
+        fread(buffer,sizeof(BYTE),512,f);
+        if(buffer[0] == 0XFF && buffer[1] == 0xd8 && buffer[2] == 0xff && buffer 512[]
+    }while(!f.eof);
     fclose(f);
     fclose(d);
     free(d);
 }
-/*   if(buffer[0] == 0xff && bytes[1] == 0xd8 && bytes[2] && (bytes[512] & 0xf0) == 0xe0 && cont == 0);
-        {
-            cont ++;
-            FILE *d = fopen(destination,"w");
-            sprint(d,"03i.jpeg",cont);
-            fwrite(&buffer, size(BYTE), 512, d);
-        }
-        else if(buffer[0] != 0xff && bytes[1] != 0xd8 && bytes[2] && (bytes[512] & 0xf0) != 0xe0)
-        {
-            fwrite(&buffer, size(BYTE), 512, d);
-        }
-        else if(buffer[0] == 0xff && bytes[1] == 0xd8 && bytes[2] && (bytes[3] & 0xf0) == 0xe0 && cont != 0)
-        {
-            fclose(d);
-            FILE *d= fopen(destination,"w");
-            sprintf(d,"03i.jpeg",cont);
-            fwrite(&buffer, size(BYTE), 512, d)
-        }*/
