@@ -19,20 +19,28 @@ int main(int argc, char *argv[])
     }
     BYTE buffer[512];
     char *d filename = malloc(4);
-    do{
-        fread(buffer,sizeof(BYTE),512,f);
-
-    }while(!startjpeg(buffer));
-    while(!f.eof)
+      while(fread(&buffer,size(BYTE),512,f) == 512)
     {
-        
-        do
+        if(starjpeg(buffer) && cont == 0);
         {
-            fwrite(buffer,sizeof(BYTE),512,d);
-            fread(buffer,sizeof(BYTE),512,f);
-        }while(!startjpeg(buffer))
-        cont++;
+            cont ++;
+            FILE *d = fopen(destination,"w");
+            sprint(d,"03i.jpeg",cont);
+            fwrite(&buffer, size(BYTE), 512, d);
+        }
+        else if(!startjpeg(buffer))
+        {
+            fwrite(&buffer, size(BYTE), 512, d);
+        }
+        else if(startjpeg(buffer) && cont != 0)
+        {
+            fclose(d);
+            FILE *d= fopen(destination,"w");
+            sprintf(d,"03i.jpeg",cont);
+            fwrite(&buffer, size(BYTE), 512, d)
+        }
     }
+
     fclose(f);
     fclose(d);
     free(d);
@@ -44,3 +52,18 @@ bool startjpeg(Byte *buffer)
         return true;
     return false;
 }
+/*   do{
+        fread(buffer,sizeof(BYTE),512,f);
+
+    }while(!startjpeg(buffer));
+    while(!f.eof)
+    {
+
+        do
+        {
+            fwrite(buffer,sizeof(BYTE),512,d);
+            fread(buffer,sizeof(BYTE),512,f);
+        }while(!startjpeg(buffer))
+        cont++;
+    }
+*/
