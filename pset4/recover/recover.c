@@ -25,10 +25,10 @@ int main(int argc, char *argv[])
     }while(!startjpeg(buffer));
     while(!f.eof)
     {
-        
+
         do
         {
-            fwrite(buffer,sizeof(BYTE),512,f);
+            fwrite(buffer,sizeof(BYTE),512,d);
             fread(buffer,sizeof(BYTE),512,f);
         }while(!startjpeg(buffer))
         cont++;
