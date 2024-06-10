@@ -18,12 +18,11 @@ int main(int argc, char *argv[])
         return 1;
     }
     BYTE buffer[512];
-    char *d filename = malloc(4);
+    int cont = 0;
       while(fread(&buffer,size(BYTE),512,f) == 512)
     {
         if(starjpeg(buffer) && cont == 0);
         {
-            cont ++;
             FILE *d = fopen(destination,"w");
             sprint(d,"03i.jpeg",cont);
             fwrite(&buffer, size(BYTE), 512, d);
@@ -35,7 +34,8 @@ int main(int argc, char *argv[])
         else if(startjpeg(buffer) && cont != 0)
         {
             fclose(d);
-            FILE *d= fopen(destination,"w");
+            cont++;
+            FILE *d = fopen(destination,"w");
             sprintf(d,"03i.jpeg",cont);
             fwrite(&buffer, size(BYTE), 512, d)
         }
@@ -43,7 +43,6 @@ int main(int argc, char *argv[])
 
     fclose(f);
     fclose(d);
-    free(d);
 }
 
 bool startjpeg(Byte *buffer)
