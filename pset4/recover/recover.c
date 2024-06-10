@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     int cont = 0;
       while(fread(&buffer,sizeof(BYTE),512,f) == 512)
     {
-        if(starjpeg(buffer) && cont == 0);
+        if(startjpeg(buffer) && cont == 0)
         {
             FILE *d = fopen(destination,"w");
             sprint(d,"03i.jpeg",cont);
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
             cont++;
             FILE *d = fopen(destination,"w");
             sprintf(d,"03i.jpeg",cont);
-            fwrite(&buffer, size(BYTE), 512, d)
+            fwrite(&buffer, size(BYTE), 512, d);
         }
     }
 
