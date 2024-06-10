@@ -18,13 +18,13 @@ int main(int argc, char *argv[])
         return 1;
     }
     BYTE buffer[512];
+    char
     int cont = 0;
       while(fread(&buffer,sizeof(BYTE),512,f) == 512)
     {
         if(startjpeg(buffer) && cont == 0)
         {
-            FILE *d = fopen("destination.jpeg","w");
-            sprintf(d,"03i.jpeg",cont);
+            FILE *d = fopen("000.jpeg","w");
             fwrite(&buffer, sizeof(BYTE), 512, d);
         }
         else if(!startjpeg(buffer))
