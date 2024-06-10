@@ -37,8 +37,7 @@ int main(int argc, char *argv[])
             fclose(d);
             cont++;
             sprintf(s,"03i.jpeg",cont);
-            FILE *d = fopen(destination,"w");
-            sprintf(s,"03i.jpeg",cont);
+            FILE *d = fopen(s,"w");
             fwrite(buffer, size(BYTE), 512, d);
         }
     }
