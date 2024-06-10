@@ -20,23 +20,23 @@ int main(int argc, char *argv[])
     BYTE buffer[512];
     char *s = malloc(11);
     int cont = 0;
-    FILE *d = fopen("000.jpeg","w");
+    FILE *destination = fopen("000.jpeg","w");
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
     {
         if(startjpeg(buffer) && cont == 0 )
         {
-            fwrite(buffer, sizeof(BYTE), 512, d);
+            fwrite(buffer, sizeof(BYTE), 512, destination);
         }
         else if(!startjpeg(buffer) && cont != 0)
         {
-            fwrite(buffer, sizeof(BYTE), 512, d);
+            fwrite(buffer, sizeof(BYTE), 512, destination);
         }
         else if(startjpeg(buffer) && cont != 0)
         {
-            fclose(d);
+            fclose(destination);
             cont++;
             sprintf(s,"%03i.jpeg",cont);
-            FILE *d = fopen(s,"w");
+            FILE *destination = fopen(s,"w");
             fwrite(buffer, size(BYTE), 512, d);
         }
     }
