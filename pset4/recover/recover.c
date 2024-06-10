@@ -23,14 +23,11 @@ int main(int argc, char *argv[])
     FILE *d = fopen("000.jpeg","w");
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
     {
-        if(startjpeg(buffer) && cont == 0)
+        if((startjpeg(buffer) && cont == 0)|| !startjpeg(buffer))
         {
             fwrite(buffer, sizeof(BYTE), 512, d);
         }
-        else if(!startjpeg(buffer))
-        {
-            fwrite(buffer, sizeof(BYTE), 512, d);
-        }
+
         else if(startjpeg(buffer) && cont != 0)
         {
             fclose(d);
