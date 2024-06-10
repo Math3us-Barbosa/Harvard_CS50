@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     BYTE buffer[512];
-    char *s = malloc(9);
+    char *s = malloc(11);
     malloc
     int cont = 0;
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
             cont++;
             sprintf(s,"03i.jpeg",cont);
             FILE *d = fopen(destination,"w");
-            sprintf(d,"03i.jpeg",cont);
+            sprintf(s,"03i.jpeg",cont);
             fwrite(buffer, size(BYTE), 512, d);
         }
     }
