@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
         {
             fwrite(buffer, sizeof(BYTE), 512, d);
         }
-        else if(!startjpeg(buffer) && cont =! 0)
+        else if(!startjpeg(buffer) && cont != 0)
         {
             fwrite(buffer, sizeof(BYTE), 512, d);
         }
