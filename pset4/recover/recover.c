@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     BYTE buffer[512];
-    char
+    char s[4];
     int cont = 0;
       while(fread(&buffer,sizeof(BYTE),512,f) == 512)
     {
