@@ -19,17 +19,17 @@ int main(int argc, char *argv[])
     }
     BYTE buffer[512];
     int cont = 0;
-      while(fread(&buffer,size(BYTE),512,f) == 512)
+      while(fread(&buffer,sizeof(BYTE),512,f) == 512)
     {
         if(starjpeg(buffer) && cont == 0);
         {
             FILE *d = fopen(destination,"w");
             sprint(d,"03i.jpeg",cont);
-            fwrite(&buffer, size(BYTE), 512, d);
+            fwrite(&buffer, sizeof(BYTE), 512, d);
         }
         else if(!startjpeg(buffer))
         {
-            fwrite(&buffer, size(BYTE), 512, d);
+            fwrite(&buffer, sizeof(BYTE), 512, d);
         }
         else if(startjpeg(buffer) && cont != 0)
         {
