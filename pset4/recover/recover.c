@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     {
         if(startjpeg(buffer) && cont == 0)
         {
-            FILE *d = fopen(destination.jpeg,"w");
+            FILE *d = fopen("destination.jpeg","w");
             sprint(d,"03i.jpeg",cont);
             fwrite(&buffer, sizeof(BYTE), 512, d);
         }
