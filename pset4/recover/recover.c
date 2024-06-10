@@ -19,7 +19,6 @@ int main(int argc, char *argv[])
     }
     BYTE buffer[512];
     char *s = malloc(11);
-    malloc
     int cont = 0;
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
     {
