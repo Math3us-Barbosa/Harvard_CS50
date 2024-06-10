@@ -20,11 +20,11 @@ int main(int argc, char *argv[])
     BYTE buffer[512];
     char *s = malloc(11);
     int cont = 0;
+    FILE *d = fopen("000.jpeg","w");
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
     {
         if(startjpeg(buffer) && cont == 0)
         {
-            FILE *d = fopen("000.jpeg","w");
             fwrite(buffer, sizeof(BYTE), 512, d);
         }
         else if(!startjpeg(buffer))
