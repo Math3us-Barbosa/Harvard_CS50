@@ -27,6 +27,9 @@ int main(int argc, char *argv[])
              FILE *destination = fopen("000.jpeg","w");
             fwrite(buffer, sizeof(BYTE), 512, destination);
             cont++;
+        }
+        else if(startjpeg(buffer) && cont != 0)
+        {
             fclose(destination);
             sprintf(s,"%03i.jpg",cont);
             FILE *destination = fopen(s,"w");
