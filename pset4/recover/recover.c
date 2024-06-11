@@ -20,6 +20,8 @@ int main(int argc, char *argv[])
     BYTE buffer[512];
     char *s = malloc(11);
     int cont = 0;
+    sprintf(s,"%03i.jpeg", cont);
+    FILE *destination = fopen(s,"w");
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
     {
         if(startjpeg(buffer) && cont == 0 )
