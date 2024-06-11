@@ -25,7 +25,6 @@ int main(int argc, char *argv[])
     {
         if(startjpeg(buffer) && cont == 0 )
         {
-             FILE *destination = fopen("000.jpeg","w");
             fwrite(buffer, sizeof(BYTE), 512, destination);
         }
         else if(startjpeg(buffer) && cont != 0)
