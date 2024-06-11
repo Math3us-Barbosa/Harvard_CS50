@@ -27,17 +27,13 @@ int main(int argc, char *argv[])
         {
         if(startjpeg(buffer))
         {
-            break;
             fwrite(buffer, sizeof(BYTE), 512, destination);
         }
         }
         else if(startjpeg(buffer) && cont != 0)
         {
             fclose(destination);
-            if(cont != 1)
-            {
             cont++;
-            }
             sprintf(s,"%03i.jpeg",cont);
             FILE *destination = fopen(s,"w");
             fwrite(buffer, size(BYTE), 512, d);
