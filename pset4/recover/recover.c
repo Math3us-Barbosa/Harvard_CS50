@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
     {
         if(startjpeg(buffer) && cont == 0 )
-        {'1
+        {
             fwrite(buffer, sizeof(BYTE), 512, destination);
         }
         else if(startjpeg(buffer) && cont != 0)
