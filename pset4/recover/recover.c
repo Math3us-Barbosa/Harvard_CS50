@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
         }
         else if(!startjpeg(buffer) && cont != 0)
         {
-            fwrite(buffer, sizeof(BYTE), 512, s);
+            fwrite(buffer, sizeof(BYTE), 512, destination);
         }
     }
     free(s);
