@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
     BYTE buffer[512];
     char *s = malloc(11);
     int cont = 0;
-    sprintf(s,"%03i.jpeg", cont);
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
     {
         if(startjpeg(buffer) && cont == 0 )
@@ -30,12 +29,9 @@ int main(int argc, char *argv[])
             FILE *d1 = fopen(s,"w");
             fwrite(buffer, sizeof(BYTE), 512, destination);
             cont++;
-        }
-        else if(startjpeg(buffer) && cont != 0)
-        {
             fclose(destination);
             sprintf(s,"%03i.jpeg",cont);
-            FILE *destination = fopen(s,"w");
+            FILE *d = fopen(s,"w");
             fwrite(buffer, size(BYTE), 512, d);
             cont++;
         }
