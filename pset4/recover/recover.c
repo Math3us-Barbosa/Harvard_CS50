@@ -40,7 +40,6 @@ int main(int argc, char *argv[])
     }
     free(s);
     fclose(f);
-    fclose(d);
 }
 
 bool startjpeg(Byte *buffer)
