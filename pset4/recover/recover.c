@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
         }
         else if(!startjpeg(buffer) && cont != 0)
         {
-            FILE *d3 = fopen(s,"a");
+            FILE *d2 = fopen(s,"a");
             fwrite(buffer, sizeof(BYTE), 512, destination);
             fclose(d2);
         }
