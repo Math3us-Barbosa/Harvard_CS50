@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     {
         if(startjpeg(buffer))
         {
-            sprintf(s,"%03i.jpeg", cont);
+            sprintf(s,"%03i.jpg", cont);
             FILE *d1 = fopen(s,"w");
             fwrite(buffer, sizeof(BYTE), 512, d1);
             cont++;
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
         else if(!startjpeg(buffer) && cont != 0)
         {
             FILE *d2 = fopen(s,"a");
-            fwrite(buffer, sizeof(BYTE), 512, destination);
+            fwrite(buffer, sizeof(BYTE), 512, d2);
             fclose(d2);
         }
     }
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
     fclose(f);
 }
 
-bool startjpeg(Byte *buffer)
+bool startjpeg(BYTE *buffer)
 {
     if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         return true;
