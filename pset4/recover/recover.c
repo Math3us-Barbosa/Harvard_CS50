@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
         {
         if(startjpeg(buffer))
         {
+            break;
             fwrite(buffer, sizeof(BYTE), 512, destination);
         }
         }
