@@ -22,13 +22,9 @@ int main(int argc, char *argv[])
     int cont = 0;
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
     {
-        if(startjpeg(buffer))
+        if(startjpeg(buffer) && cont == 0 )
         {
-            
-            if(cont > 0)
-            {
-                fclose
-            }
+
         }
          else if(!startjpeg(buffer) && cont != 0)
         {
