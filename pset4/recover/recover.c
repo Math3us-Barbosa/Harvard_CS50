@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
             FILE *d1 = fopen(s,"w");
             fwrite(buffer, sizeof(BYTE), 512, d1);
             cont++;
-            fclose()
+            fclose(d1);
         }
         else if(!startjpeg(buffer) && cont != 0)
         {
