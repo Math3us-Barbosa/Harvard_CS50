@@ -23,20 +23,13 @@ int main(int argc, char *argv[])
     int cont = 0;
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
     {
-        if(startjpeg(buffer) && cont == 0 )
+        if(startjpeg(buffer))
         {
             sprintf(s,"%03i.jpeg", cont);
             FILE *d1 = fopen(s,"w");
-            fwrite(buffer, sizeof(BYTE), 512, destination);
+            fwrite(buffer, sizeof(BYTE), 512, d1);
             cont++;
-        }
-        else if(startjpeg(buffer) && cont != 0)
-        {
-            fclose(destination);
-            sprintf(s,"%03i.jpeg",cont);
-            FILE *d = fopen(s,"w");
-            fwrite(buffer, size(BYTE), 512, d);
-            cont++;
+            fclose()
         }
         else if(!startjpeg(buffer) && cont != 0)
         {
