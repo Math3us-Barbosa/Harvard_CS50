@@ -22,13 +22,12 @@ int main(int argc, char *argv[])
     char *s = malloc(11);
     int cont = 0;
     sprintf(s,"%03i.jpeg", cont);
-    FILE *destination = fopen(s,"w");
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
     {
         if(startjpeg(buffer) && cont == 0 )
         {
             sprintf(s,"%03i.jpeg", cont);
-            FILE *destination = fopen(s,"w");
+            FILE *d1 = fopen(s,"w");
             fwrite(buffer, sizeof(BYTE), 512, destination);
             cont++;
         }
@@ -42,7 +41,7 @@ int main(int argc, char *argv[])
         }
         else if(!startjpeg(buffer) && cont != 0)
         {
-            FILE *d2 = fopen(s,"a");
+            FILE *d3 = fopen(s,"a");
             fwrite(buffer, sizeof(BYTE), 512, destination);
             fclose(d2);
         }
