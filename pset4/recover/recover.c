@@ -44,6 +44,7 @@ int main(int argc, char *argv[])
         {
             FILE *d2 = fopen(s,"a");
             fwrite(buffer, sizeof(BYTE), 512, destination);
+            fclose(d2);
         }
     }
     free(s);
