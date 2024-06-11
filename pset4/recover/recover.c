@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
-    
+
     BYTE buffer[512];
     char *s = malloc(11);
     int cont = 0;
@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
         }
         else if(!startjpeg(buffer) && cont != 0)
         {
+            FILE *d2 = fopen(s,"a");
             fwrite(buffer, sizeof(BYTE), 512, destination);
         }
     }
