@@ -22,19 +22,13 @@ int main(int argc, char *argv[])
     int cont = 0;
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
     {
-        if(startjpeg(buffer) && cont == 0 )
+        if(startjpeg(buffer))
         {
-             FILE *destination = fopen("000.jpeg","w");
-            fwrite(buffer, sizeof(BYTE), 512, destination);
-            cont++;
-        }
-        else if(startjpeg(buffer) && cont != 0)
-        {
-            fclose(destination);
-            sprintf(s,"%03i.jpeg",cont);
-            FILE *destination = fopen(s,"w");
-            fwrite(buffer, size(BYTE), 512, d);
-            cont++;
+            
+            if(cont > 0)
+            {
+                fclose
+            }
         }
          else if(!startjpeg(buffer) && cont != 0)
         {
@@ -52,18 +46,4 @@ bool startjpeg(Byte *buffer)
         return true;
     return false;
 }
-/*   do{
-        fread(buffer,sizeof(BYTE),512,f);
 
-    }while(!startjpeg(buffer));
-    while(!f.eof)
-    {
-
-        do
-        {
-            fwrite(buffer,sizeof(BYTE),512,d);
-            fread(buffer,sizeof(BYTE),512,f);
-        }while(!startjpeg(buffer))
-        cont++;
-    }
-*/
