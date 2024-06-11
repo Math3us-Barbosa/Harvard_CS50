@@ -20,15 +20,12 @@ int main(int argc, char *argv[])
     BYTE buffer[512];
     char *s = malloc(11);
     int cont = 0;
-    FILE *destination = fopen("000  .jpeg","w");
       while(fread(buffer,sizeof(BYTE),512,f) == 512)
     {
-        while(cont = 0)
+        if(startjpeg(buffer) && cont == 0 )
         {
-        if(startjpeg(buffer))
-        {
+             FILE *destination = fopen("000.jpeg","w");
             fwrite(buffer, sizeof(BYTE), 512, destination);
-        }
         }
         else if(startjpeg(buffer) && cont != 0)
         {
