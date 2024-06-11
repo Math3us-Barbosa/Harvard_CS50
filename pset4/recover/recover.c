@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
+    
     BYTE buffer[512];
     char *s = malloc(11);
     int cont = 0;
