@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     }
     float factor = atof(argv[3]);
     uint8_t header[HEADER_SIZE];
-    int16_t buffer2[1];
+    int16_t * buffer2 = malloc(sizeof(BYTES2));
     int16_t result = 0;
     fread(header, sizeof(BYTE), HEADER_SIZE, input);
     fwrite(header, sizeof(BYTE), HEADER_SIZE, output);
