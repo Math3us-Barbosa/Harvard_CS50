@@ -34,9 +34,13 @@ int main(int argc, char *argv[])
 
     float factor = atof(argv[3]);
     BYTE buffer1[44];
-    fread(buffer1,)
-
-    // TODO: Read samples from input file and write updated data to output file
+    BYTES2 buffer2;
+    fread(buffer1,sizeof[BYTE],44,input);
+    fwrite(buffer1,sizeof[BYTE],44,output);
+    while(fread(buffer2,sizeof[BYTES2],1,input))
+    {
+        fwrite(buffer2 * factor,sizeof[BYTES2],1,output);
+    }
 
     // Close files
     fclose(input);
