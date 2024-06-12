@@ -35,13 +35,14 @@ int main(int argc, char *argv[])
     uint8_t header[HEADER_SIZE];
     int16_t buffer2;
     int16_t result = 0;
-    float temp;
+    int temp;
+    int i = round(2.6 * 2);
+    printf("%i",i);
     fread(header, sizeof(BYTE), HEADER_SIZE, input);
     fwrite(header, sizeof(BYTE), HEADER_SIZE, output);
     while(fread(&buffer2,sizeof(BYTES2),1,input) == 1)
     {
-        temp = buffer2 * factor;
-        temp = (round)temp;
+        temp = round (buffer2 * factor);
         buffer2 = (int8_t) temp;
         fwrite(&buffer2, sizeof(BYTES2), 1, output);
     }
