@@ -1,5 +1,5 @@
 // Modifies the volume of an audio file
-
+#include <math.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
