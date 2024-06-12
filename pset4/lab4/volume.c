@@ -31,7 +31,6 @@ int main(int argc, char *argv[])
         printf("Could not open file.\n");
         return 1;
     }
-
     float factor = atof(argv[3]);
     BYTE buffer1[44];
     BYTES2 buffer2;
