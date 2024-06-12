@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
     uint8_t header[HEADER_SIZE];
     int16_t buffer2;
-    int16_t result;
+    int16_t result == NULL;
     fread(header, sizeof(BYTE), HEADER_SIZE, input);
     fwrite(header, sizeof(BYTE), HEADER_SIZE, output);
     while(fread(&buffer2,sizeof(BYTES2),1,input) == 1)
