@@ -32,10 +32,10 @@ int main(int argc, char *argv[])
         return 1;
     }
     float factor = atof(argv[3]);
-    BYTE buffer1[44];
+    BYTE buffer1[HEADER_SIZE];
     BYTES2 buffer2;
-    fread(buffer1,sizeof[BYTE],44,input);
-    fwrite(buffer1,sizeof[BYTE],44,output);
+    fread(buffer1,sizeof[BYTE],HEADER_SIZE,input);
+    fwrite(buffer1,sizeof[BYTE],HEADER_SIZE,output);
     while(fread(buffer2,sizeof[BYTES2],1,input))
     {
         fwrite(buffer2 * factor,sizeof[BYTES2],1,output);
