@@ -40,6 +40,14 @@ int main(int argc, char *argv[])
     while(fread(&buffer,sizeof(BYTES2),1,input) == 1)
     {
         buffer = (BYTES2)round(buffer * factor);
+        if (buffer > 32767)
+        {
+            buffer = 32767;
+        }
+        else if (buffer < -32768)
+        {
+            buffer = -32768;
+        }
         fwrite(&buffer, sizeof(BYTES2), 1, output);
     }
 
