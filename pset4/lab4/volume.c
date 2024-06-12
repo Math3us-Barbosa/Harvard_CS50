@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
     while(fread(&buffer2,sizeof(BYTES2),1,input) == 1)
     {
         result = buffer2 * factor;
+        &buffer2 = &result
         fwrite(&buffer2 * factor,sizeof(BYTES2),1,output);
     }
 
