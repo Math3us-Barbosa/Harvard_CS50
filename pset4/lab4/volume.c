@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     fwrite(header,sizeof(BYTE),HEADER_SIZE,output);
     while(fread(&buffer2,sizeof(BYTES2),1,input) == 1)
     {
-        fwrite(&buffer2 * factor,sizeof(BYTES2),1,output);
+        fwrite(buffer2 * factor,sizeof(BYTES2),1,output);
     }
 
     // Close files
