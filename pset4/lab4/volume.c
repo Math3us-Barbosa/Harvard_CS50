@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
     fwrite(header, sizeof(BYTE), HEADER_SIZE, output);
     while(fread(&buffer,sizeof(BYTES2),1,input) == 1)
     {
-        buffer = round(buffer2 * factor);
+        buffer = (BYTES2)round(buffer * factor);
         fwrite(&buffer, sizeof(BYTES2), 1, output);
     }
 
