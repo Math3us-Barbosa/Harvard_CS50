@@ -32,13 +32,13 @@ int main(int argc, char *argv[])
         return 1;
     }
     float factor = atof(argv[3]);
-    BYTE header[HEADER_SIZE];
-    BYTES2 buffer2;
+    uint8_t header[HEADER_SIZE];
+    int16_t buffer2 = 0 ;
     fread(header,sizeof(BYTE),HEADER_SIZE,input);
     fwrite(header,sizeof(BYTE),HEADER_SIZE,output);
     while(fread(&buffer2,sizeof(BYTES2),1,input) == 1)
     {
-        fwrite(buffer2 * factor,sizeof(BYTES2),1,output);
+        fwrite(&buffer2 * factor,sizeof(BYTES2),1,output);
     }
 
     // Close files
