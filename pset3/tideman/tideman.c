@@ -38,7 +38,7 @@ void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
-bool iscircle(int x);
+bool iscircle(void);
 void print_winner(void);
 
 
@@ -242,7 +242,7 @@ void print_winner(void)
     printf("%s",candidates[winner]);
     return;
 }
-bool iscircle(int x)
+bool iscircle(void)
 {
     int cont = 0;
     for(int j = 0; j < candidate_count ; j++)
@@ -252,9 +252,10 @@ bool iscircle(int x)
             if (locked[i][j])
                 cont++
         }
+        if (cont == 0)
+            return false
     }
-    if(cont = 0 && )
-    return ;
+    return true;
 }
 
 
