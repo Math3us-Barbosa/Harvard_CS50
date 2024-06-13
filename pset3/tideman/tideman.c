@@ -254,14 +254,14 @@ void print_winner(void)
 }
 bool iscircle(int end,int start)
 {
-    if(end == start)
+/*    if(end == start)
     {
         return true;
     }
     for(int i = 0; i < pair_count)
     {
-        
-    }
+
+    }*/
 }
 
 
