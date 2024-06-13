@@ -215,8 +215,6 @@ int find_min(void)
             if(candidates[i].votes > max)
             {
                 max = candidates[i].votes;
-
-
             }
 
 
