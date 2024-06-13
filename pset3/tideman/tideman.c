@@ -249,10 +249,9 @@ bool iscircle(int x)
     {
         for(i = 0; i < candidate_count; i++)
         {
-            if locked
+            if (locked[i][j])
+                cont++
         }
-
-
     }
     if(cont = 0 && )
     return ;
