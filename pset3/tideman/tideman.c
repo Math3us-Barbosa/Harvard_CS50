@@ -238,7 +238,7 @@ void print_winner(void)
                 c2++;
             }
         }
-        if(c2 == 2)
+        if(c2 == 0)
         {
             winner = j;
         }
