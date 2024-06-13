@@ -214,6 +214,7 @@ int find_min(void)
             }
         }
     }
+    printf("%i",min);
     return min;
 }
 
