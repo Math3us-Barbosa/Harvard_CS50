@@ -244,7 +244,7 @@ void print_winner(void)
                 c2++;
             }
         }
-        if(c2 == 0)
+        if(c2 == 2)
         {
             winner = i;
         }
