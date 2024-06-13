@@ -190,7 +190,7 @@ void sort_pairs(void)
     {
         for(int j = 0 ; j < pair_count - i - 1 ; j++)
         {
-            if((preferences[pairs[j].winner][pairs[j].loser] / preferences[pairs[j].loser][pairs[j].winner]) < (preferences[pairs[j+1].winner][pairs[j+1].loser] - preferences[pairs[j+1].loser][pairs[j+1].winner]))
+            if((preferences[pairs[j].winner][pairs[j].loser] / preferences[pairs[j].loser][pairs[j].winner]) < (preferences[pairs[j+1].winner][pairs[j+1].loser] / preferences[pairs[j+1].loser][pairs[j+1].winner]))
             {
                 aux1 = pairs[j+1].winner;
                 aux2 = pairs[j+1].loser;
