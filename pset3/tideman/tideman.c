@@ -245,9 +245,12 @@ void print_winner(void)
 bool iscircle(int x)
 {
     int cont = 0;
-    for(int i = 0; i < candidate_count ; i++)
+    for(int j = 0; j < candidate_count ; j++)
     {
-        for
+        for(i = 0; i < candidate_count; i++)
+        {
+            if locked
+        }
 
 
     }
