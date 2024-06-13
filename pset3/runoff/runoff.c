@@ -220,10 +220,6 @@ int find_min(void)
 
         }
     }
-    if(max == min)
-    {
-    min--;
-    }
     return min;
 }
 
@@ -242,13 +238,11 @@ bool is_tie(int min)
     }
     for(int i = 0; i < (candidate_count-1); i++)
     {
-        for(int j = i+1; j <candidate_count;j++)
+        for(int j = i+1; j < candidate_count; j++)
         {
             if(!candidates[j].eliminated && candidates[j].votes < max)
             {
                 return false;
-
-
             }
             else if(!candidates[j-1].eliminated && candidates[j-1].votes < max)
             {
