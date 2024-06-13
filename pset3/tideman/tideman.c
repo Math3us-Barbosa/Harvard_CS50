@@ -168,14 +168,14 @@ void record_preferences(int ranks[])
             pair_count++;
             pairs[cont].winner = i;
             pairs[cont].loser = j;
-            cont++;
+            cont++
             }
             else if(preferences[j][i] > preferences[i][j])
             {
             pair_count++;
             pairs[cont].winner = j;
             pairs[cont].loser = i;
-            cont++;
+            cont++
             }
         }
     }
