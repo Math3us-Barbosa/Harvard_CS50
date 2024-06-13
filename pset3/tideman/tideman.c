@@ -214,11 +214,9 @@ void lock_pairs(void)
     int c2 = 0;
     for(int i = 0; i < pair_count; i++)
     {
-        if(!iscircle(i))
-        {
         locked[pairs[i].winner][pairs[i].loser] = true;
         locked[pairs[i].loser][pairs[i].winner] = false;
-        }
+        if
     }
     return;
 }
