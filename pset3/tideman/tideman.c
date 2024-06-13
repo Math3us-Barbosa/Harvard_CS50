@@ -251,6 +251,7 @@ bool iscircle(int x)
         {
             cont++
         }
+        if
     }
     if(cont = 0 && )
     return ;
