@@ -229,11 +229,11 @@ bool is_tie(int min)
 {
     int cont = 0;
     int max = 0;
-    for(int k = 0; k < candidate_count;k++)
+    for(int i = 0; i < candidate_count; i++)
     {
-        if(candidates[k].votes > max)
+        if(candidates[i].votes > max)
         {
-            max = candidates[k].votes;
+            max = candidates[i].votes;
         }
     }
     for(int i = 0; i < (candidate_count-1); i++)
