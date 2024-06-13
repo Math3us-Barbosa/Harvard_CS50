@@ -248,9 +248,12 @@ bool iscircle(int x)
     for(int i = 0; i < 3 ; i++)
     {
         if(locked[x][i])
-
+        {
+            cont++
+        }
     }
-    return 0;
+    if(cont = 0 && )
+    return ;
 }
 
 
