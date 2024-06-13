@@ -250,7 +250,7 @@ bool iscircle(int x)
 {
     for(int i = 0; i < 3 ; i++)
     {
-        locked
+        locked[x][i]
     }
 
     return 0;
