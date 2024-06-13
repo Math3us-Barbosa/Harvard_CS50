@@ -43,11 +43,11 @@ int main(int argc, char *argv[])
         if (result > 32767.0) {
         buffer = 32767; // Clip to maximum value
         }
-        else if (scaledSample < -32768.0) {
+        else if (result < -32768.0) {
         buffer = -32768; // Clip to minimum value
         }
         else {
-        buffer = (BYTES2)scaledSample; // Convert back to 16-bit and assign
+        buffer = (BYTES2)result; // Convert back to 16-bit and assign
         }
         fwrite(&buffer, sizeof(BYTES2), 1, output);
     }
