@@ -214,10 +214,10 @@ void lock_pairs(void)
    int c2 = 0;
    for(int i = 0; i < pair_count; i++)
    {
-       locked[pairs[pair_count - 1 - i].winner][pairs[pair_count-1-i].loser] = true;
+       locked[pairs[i].winner][pairs[i].loser] = true;
        if( (i >= pair_count/2) && iscircle())
        {
-           locked[pairs[pair_count -i].winner][pairs[pair_count-1-i].loser] = false;
+           locked[pairs[i].winner][pairs[i].loser] = false;
        }
 
 
