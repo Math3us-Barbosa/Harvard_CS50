@@ -158,7 +158,7 @@ void record_preferences(int ranks[])
 // Record pairs of candidates where one is preferred over the other
     void add_pairs(void)
 {
-    int cont = 0;
+    int cont=0;
     for(int i = 0; i < (candidate_count-1); i++)
     {
         for(int j = i+1; j < candidate_count;j++)
@@ -168,14 +168,14 @@ void record_preferences(int ranks[])
             pair_count++;
             pairs[cont].winner = i;
             pairs[cont].loser = j;
-            cont++
+            cont++;
             }
             else if(preferences[j][i] > preferences[i][j])
             {
             pair_count++;
             pairs[cont].winner = j;
             pairs[cont].loser = i;
-            cont++
+            cont++;
             }
         }
     }
@@ -210,19 +210,21 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    int c = 0, winner = candidate_count;
-    int c2 = 0;
-    for(int i = 0; i < pair_count; i++)
-    {
-        locked[pairs[pair_count -i].winner][pairs[i].loser] = true;
-        if( (i >= pair_count/2) && iscircle())
-        {
-            locked[pairs[pair_count -i].winner][pairs[i].loser] = false;
-        }
+   int c = 0, winner = candidate_count;
+   int c2 = 0;
+   for(int i = 0; i < pair_count; i++)
+   {
+       locked[pairs[pair_count -i].winner][pairs[i].loser] = true;
+       if( (i >= pair_count/2) && iscircle())
+       {
+           locked[pairs[pair_count -i].winner][pairs[i].loser] = false;
+       }
 
-    }
-    return;
+
+   }
+   return;
 }
+
 
 
 // Print the winner of the election
@@ -241,29 +243,29 @@ void print_winner(void)
                 c2++;
             }
         }
-        if(c2 == 0)
+        if(c2 == 2)
         {
-            winner = j;
+            winner = i;
         }
     }
     printf("%s",candidates[winner]);
     return;
 }
+
 bool iscircle(void)
 {
-    int cont = 0;
-    for(int j = 0; j < candidate_count ; j++)
-    {
-        for(i = 0; i < candidate_count; i++)
-        {
-            if (locked[i][j])
-                cont++
-        }
-        if (cont == 0)
-            return false
-    }
-    return true;
+   int cont = 0;
+   for(int j = 0; j < candidate_count ; j++)
+   {
+       for(int i = 0; i < candidate_count; i++)
+       {
+           if (locked[i][j])
+               cont++;
+       }
+       if (cont == 0)
+           return false;
+   }
+   return true;
 }
-
 
 
