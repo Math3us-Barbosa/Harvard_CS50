@@ -250,7 +250,6 @@ bool iscircle(int x)
         if(locked[x][i])
 
     }
-
     return 0;
 }
 
