@@ -234,33 +234,6 @@ bool is_tie(int min)
     if(max == min)
         return true;
     return false;
-
-    /*for(int i = 0; i < (candidate_count-1); i++)
-    {
-        for(int j = i+1; j < candidate_count; j++)
-        {
-            if(!candidates[j].eliminated && candidates[j].votes < max)
-            {
-                return false;
-            }
-            else if(!candidates[j-1].eliminated && candidates[j-1].votes < max)
-            {
-                return false;
-            }
-            else if(!candidates[i].eliminated && candidates[i].votes == candidates[j].votes && candidates[i].votes == max)
-            {
-                return true;
-            }
-
-        }
-    }
-
-
-
-
-    return false;*/
-
-
 }
 
 
