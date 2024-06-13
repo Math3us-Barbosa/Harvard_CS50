@@ -250,14 +250,14 @@ bool is_tie(int min)
             {
                 return true;
             }
-            */
+
         }
     }
 
 
 
 
-    return false;
+    return false;*/
 
 
 }
