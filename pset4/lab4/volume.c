@@ -39,7 +39,16 @@ int main(int argc, char *argv[])
     fwrite(header, sizeof(BYTE), HEADER_SIZE, output);
     while(fread(&buffer,sizeof(BYTES2),1,input) == 1)
     {
-        buffer = (BYTES2)round(buffer * factor);
+        float result = (float)buffer * factor;
+        if (result > 32767.0) {
+        buffer = 32767; // Clip to maximum value
+        }
+        else if (scaledSample < -32768.0) {
+        buffer = -32768; // Clip to minimum value
+        }
+        else {
+        buffer = (BYTES2)scaledSample; // Convert back to 16-bit and assign
+        }
         fwrite(&buffer, sizeof(BYTES2), 1, output);
     }
 
