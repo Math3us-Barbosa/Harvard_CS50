@@ -35,10 +35,12 @@ int main(int argc, char *argv[])
     uint8_t header[HEADER_SIZE];
     int16_t buffer;
     int temp;
+    //copy the header from the innput to the output file
     fread(header, sizeof(BYTE), HEADER_SIZE, input);
     fwrite(header, sizeof(BYTE), HEADER_SIZE, output);
     while(fread(&buffer,sizeof(BYTES2),1,input) == 1)
     {
+        //result from the multiplication of the 2bytes segment of the audio with the float value
         float result = (float)buffer * factor;
         if (result > 32767.0) {
         buffer = 32767; // Clip to maximum value
