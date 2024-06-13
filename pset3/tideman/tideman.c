@@ -252,7 +252,7 @@ void print_winner(void)
     printf("%s",candidates[winner]);
     return;
 }
-bool iscircle(int end,int start)
+bool iscircle(int x)
 {
 /*    if(end == start)
     {
@@ -262,6 +262,7 @@ bool iscircle(int end,int start)
     {
 
     }*/
+    return 0;
 }
 
 
