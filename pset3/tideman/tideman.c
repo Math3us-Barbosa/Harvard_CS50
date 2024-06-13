@@ -242,7 +242,7 @@ void print_winner(void)
         }
         if(c2 == 2)
         {
-            winner = i;
+            winner = j;
         }
     }
     printf("%s",candidates[winner]);
