@@ -262,7 +262,10 @@ bool iscycle(int winner, int loser)
     {
         if(locked[loser][i])
         {
-            iscycle(winner,i);
+            if(iscycle(winner,i))
+                {
+                    return true;
+                }
         }
     }
     return false;
