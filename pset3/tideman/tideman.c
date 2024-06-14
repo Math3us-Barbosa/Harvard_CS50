@@ -243,17 +243,24 @@ void print_winner(void)
         }
         if(c == 0)
         {
-            winner = j;
+            printf("%s",candidates[j]);
+            return;
         }
     }
-    printf("%s",candidates[winner]);
     return;
 }
 
 bool iscycle(int winner, int loser)
 {
-   int cont = 0
-   return true;
+    if(winner == loser)
+    {
+        return true;
+    }
+    for(int i = 0; i < candidate_count;i++)
+    {
+        if(iscycle(loser))
+    }
+    return false;
 }
 
 
