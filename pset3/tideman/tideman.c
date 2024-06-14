@@ -38,7 +38,7 @@ void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
-bool iscircle(void);
+bool iscycle(int winner, int loser);
 void print_winner(void);
 
 
@@ -216,8 +216,10 @@ void lock_pairs(void)
     {
         winner = pairs[i].winner;
         loser = pairs[i].loser;
-        locked[pairs[i].winner][pairs[i].loser] = true;
-
+        if(!iscycle(winner,loser))
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+        }
 
     }
     return;
