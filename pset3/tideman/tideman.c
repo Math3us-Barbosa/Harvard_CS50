@@ -233,7 +233,7 @@ void print_winner(void)
 {
 
 
-    int c = 0, winner;
+    int c, winner;
     for(int j = 0; j < candidate_count;j++)
     {
         c = 0;
