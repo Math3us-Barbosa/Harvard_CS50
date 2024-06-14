@@ -241,6 +241,7 @@ void print_winner(void)
             if(locked[i][j])
             {
                 c++;
+                break;
             }
         }
         if(c == 0)
