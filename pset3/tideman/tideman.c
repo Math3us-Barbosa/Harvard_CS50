@@ -250,19 +250,9 @@ void print_winner(void)
     return;
 }
 
-bool iscycle(void)
+bool iscycle(int winner, int loser)
 {
-   int cont = 0;
-   for(int j = 0; j < candidate_count ; j++)
-   {
-       for(int i = 0; i < candidate_count; i++)
-       {
-           if (locked[i][j])
-               cont++;
-       }
-       if (cont == 0)
-           return false;
-   }
+   int cont = 0
    return true;
 }
 
