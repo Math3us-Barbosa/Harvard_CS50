@@ -233,18 +233,18 @@ void print_winner(void)
 {
 
 
-    int c = 0, c2 = 0, winner;
+    int c = 0, winner;
     for(int j = 0; j < candidate_count;j++)
     {
-        c2 = 0;
+        c = 0;
         for(int i = 0; i < candidate_count; i++)
         {
             if(locked[i][j])
             {
-                c2++;
+                c++;
             }
         }
-        if(c2 == 0)
+        if(c == 0)
         {
             winner = j;
         }
