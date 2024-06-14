@@ -216,7 +216,7 @@ void lock_pairs(void)
    {
        locked[pairs[i].winner][pairs[i].loser] = true;
        locked[pairs[i].loser][pairs[i].winner] = false;
-       /*if( (i >= pair_count/2) && iscircle())
+       /*if( (i >= pair_count/2) && iscycle())
        {
            locked[pairs[i].winner][pairs[i].loser] = false;
        }
@@ -253,7 +253,7 @@ void print_winner(void)
     return;
 }
 
-bool iscicle(void)
+bool iscycle(void)
 {
    int cont = 0;
    for(int j = 0; j < candidate_count ; j++)
