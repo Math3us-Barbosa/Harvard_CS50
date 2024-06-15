@@ -23,7 +23,7 @@ int main(void)
     mergesort(v,max);
 }
 
-void mergesort(int*v)
+/*void mergesort(int*v)
 {
     if(max == 1)
     {
@@ -45,3 +45,4 @@ void mergesort(int*v)
 
 
 }
+*/
