@@ -33,7 +33,11 @@ void mergesort(int*v)
     int v2;
     for int(int i = 0; i < max; i++)
     {
-        
+        if(i < max/2)
+        {
+            v1[i] = v[i]
+            v
+        }
     }
 
 
