@@ -185,13 +185,15 @@ void record_preferences(int ranks[])
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    int aux1, aux2;
+    int aux1, aux2, cont;
     for(int i = 0; i < pair_count; i++)
     {
+        cont = 0;
         for(int j = 0 ; j < pair_count - i - 1 ; j++)
         {
             if((preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner]) < (preferences[pairs[j+1].winner][pairs[j+1].loser] - preferences[pairs[j+1].loser][pairs[j+1].winner]))
             {
+                cont++;
                 aux1 = pairs[j+1].winner;
                 aux2 = pairs[j+1].loser;
                 pairs[j+1].winner = pairs[j].winner;
@@ -199,6 +201,10 @@ void sort_pairs(void)
                 pairs[j].winner = aux1;
                 pairs[j].loser = aux2;
             }
+        }
+        if(cont = 0)
+        {
+            return;
         }
     }
 
