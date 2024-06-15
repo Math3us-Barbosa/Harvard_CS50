@@ -36,7 +36,10 @@ void mergesort(int*v)
         if(i < max/2)
         {
             v1[i] = v[i]
-            v
+        }
+        else
+        {
+            v2[i] = v[i]
         }
     }
 
