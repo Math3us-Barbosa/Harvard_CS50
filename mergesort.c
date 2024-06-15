@@ -3,17 +3,17 @@
 #include <stdlib.h>
 
 
-void mergesort(int*v);
-
+void mergesort(int*v,int max);
+void number(int x);
 int main(void)
 {
     int max;
     srand(time(NULL));
     printf("type de size of the array\n");
-    scanf("%i"&max);
+    scanf("%i",&max);
     printf("unsorted array:  ");
     int *v = malloc(20*sizeof(int));
-    for(int i = 0; int i < max; i++)
+    for(int i = 0; i < max; i++)
     {
         v[i] = rand()%100;
         printf("%i",v[i]);
@@ -21,7 +21,18 @@ int main(void)
     printf("\n");
     printf("array ordenado: ");
     mergesort(v,max);
+    int x = 2;
+    number(x);
+    printf("%i",x);
 }
+
+void number(int x)
+{
+    x = 4;
+}
+
+
+
 
 /*void mergesort(int*v)
 {
