@@ -20,17 +20,21 @@ int main(void)
     }
     printf("\n");
     printf("array ordenado: ");
-    mergesort(v);
+    mergesort(v,max);
 }
 
 void mergesort(int*v)
 {
-    if(sizeof(v) == 1)
+    if(max == 1)
     {
         return
     }
     int v1;
     int v2;
+    for int(int i = 0; i < max; i++)
+    {
+        
+    }
 
 
 }
