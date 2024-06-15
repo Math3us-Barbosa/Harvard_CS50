@@ -29,7 +29,7 @@ void mergesort(int*v)
     {
         return
     }
-    int v1 = malloc
+    int v1[sizeof(v)/2]
 
 
 }
