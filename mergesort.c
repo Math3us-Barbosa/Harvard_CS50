@@ -29,7 +29,8 @@ void mergesort(int*v)
     {
         return
     }
-    int v1[sizeof(v)/2]
+    int v1;
+    int v2;
 
 
 }
