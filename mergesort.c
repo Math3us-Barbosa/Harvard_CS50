@@ -16,7 +16,7 @@ int main(void)
     for(int i = 0; int i < max; i++)
     {
         v[i] = rand()%100;
-        printf("%i",v[i]);
+        printf("%i",v[i00]);
     }
     printf("\n");
     printf("array ordenado: ");
@@ -42,6 +42,6 @@ void mergesort(int*v)
             v2[i] = v[i]
         }
     }
-
+        
 
 }
