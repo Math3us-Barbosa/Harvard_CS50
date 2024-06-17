@@ -63,4 +63,19 @@ void mergesort(int*v, left,right)
 
 }
 
-void()
+void bubblesort(int *v, int max)
+{
+    int aux;
+    for(int i = 0; i < max;i++)
+    {
+        for(int j = 0; j < max -i; j++)
+        {
+            if(v[j] > v[j+1])
+            {
+                aux = v[j];
+                v[j] = v[j+1];
+                v[j+1] = aux;
+            }
+        }
+    }
+}
