@@ -23,7 +23,11 @@ int main(void)
     mergesort(v,max);
 
 }
-
+void merge(int *v,int left,int right)
+{
+    int max = right;
+    int *temp;
+}
 
 
 void mergesort(int*v, left,right)
