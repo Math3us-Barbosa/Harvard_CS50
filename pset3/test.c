@@ -20,10 +20,7 @@ int main(void)
     }
     printf("\n");
     printf("array ordenado: ");
-//    mergesort(v,max);
-    int x = 2;
-    int y = number(x);
-    printf("%i,%i",x,y);
+
 }
 
 int number(int x)
