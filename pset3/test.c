@@ -29,46 +29,31 @@ int main(void)
 void merge(int *v, int left, int mid, int right)
 {
 
-    int max = right - left +1 , p1 = left, p2 = mid + 1;
+    int max = right - left +1 , p1 = left, p2 = mid + 1, i = 0;
     bool end1 = false, end2 = false;
     int* temp = malloc(max*sizeof(int));
-    for(int i =0; i < max; i++)
+    while(p1 <= mid && p2 <= right)
     {
-        if(!end1 && !end2)
+        if(v[p1] < v[p2])
         {
-            if(v[p1] < v[p2])
-            {
-                temp[i] = v[p1];
-                p1++;
-            }
-            else
-            {
-                temp[i] = v[p2];
-                p2++;
-            }
-            if(p1>mid)
-                end1 = true;
-            if(p2 > right)
-                end2 = true;
+            temp[i++] = v[p1++];
         }
-        else{
-            if(end1)
-            {
-                temp[i] = v[p2];
-                p2++;
-            }
-            else if(end2)
-            {
-                temp[i] = v[p1];
-                p1++;
-            }
+        else
+        {
+            temp[i++] = v[p2++];
         }
-
     }
-
-    for(int i = 0, k = left; i < max; i++,k++)
+    while(p1 <= mid)
     {
-        v[k] = temp[i];
+        temp[i++] = v[p1++];
+    }
+    while(p2 <= right)
+    {
+        temp[i++] = v[p2++];
+    }
+    for(int j = 0; j < max ; j++)
+    {
+        v[left+j] = temp[j];
     }
     free (temp);
 }
@@ -100,7 +85,7 @@ void mergesort(int*v, int left, int right)
 
 }
 
-void bubblesort(int *v, int max)
+/*void bubblesort(int *v, int max)
 {
     int aux, cont = 0;
     for(int i = 0; i < max;i++)
