@@ -57,7 +57,7 @@ void merge(int *v, int left, int mid, int right)
                 temp[i] = v[p2];
                 p2++;
             }
-            if(end2)
+            else if(end2)
             {
                 temp[i] = v[p1];
                 p1++;
