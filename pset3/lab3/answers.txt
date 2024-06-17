@@ -1,6 +1,6 @@
-sort1 uses: TODO
-5.357 reversed 50000
-How do you know?: TODO
+sort1 uses: bubble sort
+5.357 reversed 50000 sorted
+How do you know?: for the 3 sorting algorythms I tested reversed50000 wich is the worts case and sorted50000 wich is the best case. In the reversed50000 program the sort 1 algorythm took 5.357 seconds beeing the slowest algorythm for that program,
 
 sort2 uses: TODO
 0.931 reversed 50000
