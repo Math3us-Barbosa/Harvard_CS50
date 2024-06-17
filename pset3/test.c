@@ -25,9 +25,9 @@ int main(void)
 }
 void merge(int *v, int left, int mid, int right)
 {
-    int max = right;
-    int *temp;
-    i
+    int max = right - left +1 , p1 = left, p2 = mid + 1;
+    int *temp = malloc(max*sizeof(int));
+    
 }
 
 
