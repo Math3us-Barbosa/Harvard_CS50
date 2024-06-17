@@ -49,7 +49,15 @@ void merge(int *v, int left, int mid, int right)
     }
     while (p1 <= mid)
     {
-
+        temp[i] = v[p1]
+        i++;
+        p1++;
+    }
+    while (p2<=right)
+    {
+        temp[i] = v[p1];
+        i++;
+        p1++
     }
     for(int i =0; i < max; i++)
     {
@@ -85,9 +93,9 @@ void merge(int *v, int left, int mid, int right)
 
     }
     */
-    for(int i = 0, k = left; i < max; i++,k++)
+    for(int i = 0, i < max; i++)
     {
-        v[k] = temp[i];
+        v[left+i] = temp[i];
     }
     free (temp);
 }
