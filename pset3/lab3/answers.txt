@@ -1,6 +1,6 @@
 sort1 uses: bubble sort
-5.357 reversed 50000 sorted
-How do you know?: for the 3 sorting algorythms I tested reversed50000 wich is the worts case and sorted50000 wich is the best case. In the reversed50000 program the sort 1 algorythm took in avarage 5.3 seconds beeing the slowest algorythm for that program,and for the sorted 50000 it took in avarage
+
+How do you know?: for the 3 sorting algorythms I tested reversed50000 wich is the worts case and sorted50000 wich is the best case. In the reversed50000 program the sort 1 algorythm took in avarage 5.3 seconds beeing the slowest algorythm for that file,and for the sorted 50000 it took in avarage 1 segond beeing the fastest for that file.
 
 sort2 uses: TODO
 0.931 reversed 50000
