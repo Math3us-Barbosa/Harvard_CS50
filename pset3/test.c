@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <boolean.h>
+#include <stdbool.h>
 
 //void bubblesort(int *v, int max);
 void printarray(int *v, int max);
@@ -54,7 +54,7 @@ void merge(int *v, int left, int mid, int right)
             if(end1)
             {
                 temp[i] = v[p2];
-                p2++
+                p2++;
             }
             if(end2)
             {
