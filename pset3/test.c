@@ -13,7 +13,7 @@ int main(void)
 {
     int max;
     srand(time(NULL));
-    printf("type de size of the array\n");
+    printf("type de size of the array: ");
     scanf("%i",&max);
     printf("unsorted array:  ");
     int *v = malloc(max*sizeof(int));
@@ -23,7 +23,7 @@ int main(void)
     mergesort(v,0,max-1);
     printarray(v,max);
     free(v);
-    printf("type the size of the second array");
+    printf("type the size of the second array: ");
     scanf("%i",&max);
     int *v2 = malloc(max*sizeof(int));
     randomarray(v2,max);
@@ -32,6 +32,9 @@ int main(void)
     printf("array sorted with bubblesort");
     printarray(v2,max);
 }
+
+
+
 void merge(int *v, int left, int mid, int right)
 {
     int max = right - left +1 , p1 = left, p2 = mid + 1, i = 0;
