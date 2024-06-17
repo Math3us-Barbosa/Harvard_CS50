@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-void mergesort(int*v,int max);
+//void mergesort(int*v,int max);
 int number(int x);
 int main(void)
 {
@@ -20,7 +20,7 @@ int main(void)
     }
     printf("\n");
     printf("array ordenado: ");
-    mergesort(v,max);
+//    mergesort(v,max);
     int x = 2;
     int y = number(x);
     printf("%i,%i",x,y);
