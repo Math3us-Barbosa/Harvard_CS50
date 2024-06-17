@@ -4,7 +4,7 @@
 
 
 //void mergesort(int*v,int max);
-int number(int x);
+void number(int *x);
 int main(void)
 {
     int max;
@@ -20,13 +20,15 @@ int main(void)
     }
     printf("\n");
     printf("array ordenado: ");
-
+//    mergesort(v,max);
+    int x = 2;
+    number(&x);
+    printf("%i",x);
 }
 
-int number(int x)
+void number(int *x)
 {
-    x = 4;
-    return x;
+    *x = 4;
 }
 
 
