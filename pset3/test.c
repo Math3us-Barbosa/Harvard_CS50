@@ -1,9 +1,10 @@
 #include <time.h>
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 void randomarray(int *v, int max);
-void mergesort(int*v,int max);
+void mergesort(int*v, int left, int right);
 void merge(int *v, int left, int mid, int right);
 int main(void)
 {
@@ -41,7 +42,7 @@ void merge(int *v, int left, int mid, int right)
 
 }
 
-void randomarray(int *v,max)
+void randomarray(int *v,int max)
 {
     for(int i = 0; i < max; i++)
     {
@@ -50,9 +51,9 @@ void randomarray(int *v,max)
     }
 }
 
-void mergesort(int*v, left,right)
+void mergesort(int*v, int left, int right)
 {
-    if(lef<right)
+    if(left<right)
     {
         int medium = flooor(right-left/2)
         mergesort(v, left, medium);
