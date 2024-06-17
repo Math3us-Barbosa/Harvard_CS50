@@ -32,7 +32,7 @@ void merge(int *v, int left, int mid, int right)
     int max = right - left +1 , p1 = left, p2 = mid + 1;
     bool end1 = false, end2 = false;
     int* temp = malloc(max*sizeof(int));
-    int c = 0;
+    int i = 0;
     while(p1<= mid && p2 <= right)
     {
           if(v[p1] < v[p2])
@@ -45,6 +45,11 @@ void merge(int *v, int left, int mid, int right)
                 temp[i] = v[p2];
                 p2++;
             }
+            c++
+    }
+    while (p1 <= mid)
+    {
+
     }
     for(int i =0; i < max; i++)
     {
