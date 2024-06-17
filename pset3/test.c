@@ -15,6 +15,7 @@ int main(void)
     printf("unsorted array:  ");
     int *v = malloc(max*sizeof(int));
     randomarray(v,max);
+    printfarray(v,max);
     printf("\n");
     printf("array ordenado: ");
 
