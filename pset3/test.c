@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+void printarray(int *v, int max);
 void randomarray(int *v, int max);
 void mergesort(int*v, int left, int right);
 void merge(int *v, int left, int mid, int right);
@@ -41,13 +41,19 @@ void merge(int *v, int left, int mid, int right)
     }
 
 }
-
+void printarray(int *v, int max)
+{
+    for(int i = 0; i < max; i++)
+    {
+        printf("%i",v[i]);
+    }
+    printf("\n");
+}
 void randomarray(int *v,int max)
 {
     for(int i = 0; i < max; i++)
     {
         v[i] = rand()%100;
-        printf("%i ",v[i]);
     }
 }
 
@@ -55,8 +61,8 @@ void mergesort(int*v, int left, int right)
 {
     if(left<right)
     {
-        int medium = flooor(right-left/2)
-        mergesort(v, left, medium);
+        int mid = floor(right-left/2);
+        mergesort(v, left, mid);
         mergesort(v, mid+1, right);
         merge(v, left, mid, right);
     }
@@ -80,3 +86,4 @@ void mergesort(int*v, int left, int right)
         }
     }
 }
+*/
