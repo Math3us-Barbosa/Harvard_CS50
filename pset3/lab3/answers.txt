@@ -1,11 +1,11 @@
 sort1 uses: Bubble Sort
 
-How do you know?: for the 3 sorting algorythms I tested reversed50000 wich is the worts case and sorted50000 wich is the best case. In the reversed50000 program the sort 1 algorythm took in avarage 5.3 seconds beeing the slowest algorythm for that file,and for the sorted 50000 it took in avarage 0.63 seconds beeing the fastest for that file.As the bubble sort has the execution time of 0(n²) and Ω(n) sort1 uses bubblesort
+How do you know?: for the 3 sorting algorythms I tested reversed50000 wich is the worts case and sorted50000 wich is the best case(I also ran each one multiple times to get an avarage). In the reversed50000 program the sort 1 algorythm took in average 5.3 seconds beeing the slowest algorythm for that file,and for the sorted 50000 it took in average 0.63 seconds beeing the fastest for that file.As the bubble sort has the execution time of O(n²) and Ω(n) sort1 uses bubblesort
 
 sort2 uses: Merge Sort
 
-How do you know?: TODO
+How do you know?: sort2 was by far the fastest for reversed50000.txt with an average of 0.9 seconds and it had the same average for sorted50000.txt. that means sort2 uses merge sort as it has a running time of O(nlog n) and Ω(n log n)
 
-sort3 uses: TODO
+sort3 uses: sort3
 
-How do you know?: TODO
+How do you know?: TODO 
