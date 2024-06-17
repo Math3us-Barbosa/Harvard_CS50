@@ -28,7 +28,6 @@ int main(void)
 }
 void merge(int *v, int left, int mid, int right)
 {
-
     int max = right - left +1 , p1 = left, p2 = mid + 1, i = 0;
     bool end1 = false, end2 = false;
     int* temp = malloc(max*sizeof(int));
@@ -57,6 +56,9 @@ void merge(int *v, int left, int mid, int right)
     }
     free (temp);
 }
+
+
+
 void printarray(int *v, int max)
 {
     for(int i = 0; i < max; i++)
@@ -65,6 +67,9 @@ void printarray(int *v, int max)
     }
     printf("\n");
 }
+
+
+
 void randomarray(int *v,int max)
 {
     for(int i = 0; i < max; i++)
@@ -72,6 +77,7 @@ void randomarray(int *v,int max)
         v[i] = rand()%100;
     }
 }
+
 
 void mergesort(int*v, int left, int right)
 {
@@ -82,10 +88,11 @@ void mergesort(int*v, int left, int right)
         mergesort(v, mid+1, right);
         merge(v, left, mid, right);
     }
-
 }
 
-/*void bubblesort(int *v, int max)
+
+
+void bubblesort(int *v, int max)
 {
     int aux, cont = 0;
     for(int i = 0; i < max;i++)
