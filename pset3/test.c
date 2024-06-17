@@ -29,7 +29,7 @@ int main(void)
 void merge(int *v, int left, int mid, int right)
 {
     int max = right - left +1 , p1 = left, p2 = mid + 1;
-    int *temp = malloc(max*sizeof(int));
+    int* temp = malloc(max*sizeof(int));
     for(int i =0; i <max; i++)
     {
         if(v[p1] < v[p2])
