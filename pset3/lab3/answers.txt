@@ -1,9 +1,9 @@
 sort1 uses: TODO
-
+5.357 reversed 50000
 How do you know?: TODO
 
 sort2 uses: TODO
-
+0.931 reversed 50000
 How do you know?: TODO
 
 sort3 uses: TODO
