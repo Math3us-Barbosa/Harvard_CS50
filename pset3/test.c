@@ -53,9 +53,14 @@ void merge(int *v, int left, int mid, int right)
         else{
             if(end1)
             {
-                temp = p1
+                temp[i] = v[p2];
+                p2++
             }
-
+            if(end2)
+            {
+                temp[i] = v[p1++]
+            }
+        }
 
     }
     for(int i = 0, k = left; i < max; i++)
