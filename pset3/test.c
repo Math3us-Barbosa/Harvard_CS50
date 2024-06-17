@@ -53,7 +53,7 @@ void merge(int *v, int left, int mid, int right)
         else{
             if(end1)
             {
-                v[i]
+                temp = p1
             }
 
 
