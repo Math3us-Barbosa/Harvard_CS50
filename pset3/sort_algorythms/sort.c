@@ -9,8 +9,8 @@ void printarray(int *v, int max);
 void randomarray(int *v, int max);
 void mergesort(int*v, int left, int right);
 void merge(int *v, int left, int mid, int right);
-int main(void)
 {
+    int main(void)
     int max;
     srand(time(NULL));
     printf("type de size of the array: ");
