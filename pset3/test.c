@@ -35,10 +35,12 @@ void merge(int *v, int left, int mid, int right)
         if(v[p1] < v[p2])
         {
             temp[i] = v[p1];
+            p1++;
         }
         else
         {
             temp[i] = v[p2];
+            p2++;
         }
     }
     for(int i = 0; i < max; i++)
