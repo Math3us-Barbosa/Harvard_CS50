@@ -90,7 +90,7 @@ void mergesort(int*v, int left, int right)
 {
     if(left<right)
     {
-        int mid = floor((left+(right-left))/2);
+        int mid = floor((left+right)/2);
         mergesort(v, left, mid);
         mergesort(v, mid+1, right);
         merge(v, left, mid, right);
