@@ -37,29 +37,29 @@ void merge(int *v, int left, int mid, int right)
         {
             if(v[p1] < v[p2])
             {
-                temp[i] = v[p1++];
+                temp[i] = v[p1];
                 p1++;
             }
             else
-
             {
-                temp[i] = v[p2++];
-
+                temp[i] = v[p2];
+                p2++;
             }
             if(p1>mid)
                 end1 = true;
-            if(p2 > mid)
+            if(p2 > right)
                 end2 = true;
         }
         else{
             if(end1)
             {
-                temp[i] = v[p2++];
+                temp[i] = v[p2];
+                p2++;
             }
             if(end2)
             {
-                temp[i] = v[p1++];
-
+                temp[i] = v[p1];
+                p1++;
             }
         }
 
@@ -95,6 +95,7 @@ void mergesort(int*v, int left, int right)
         mergesort(v, mid+1, right);
         merge(v, left, mid, right);
     }
+
 }
 
 /*void bubblesort(int *v, int max)
