@@ -67,6 +67,7 @@ void merge(int *v, int left, int mid, int right)
     for(int i = 0, k = left; i < max; i++)
     {
         v[k] = temp[i];
+        k++;
     }
     free (temp);
 }
