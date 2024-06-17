@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 
-void bubblesort(int *v, int max);
+//void bubblesort(int *v, int max);
 void printarray(int *v, int max);
 void randomarray(int *v, int max);
 void mergesort(int*v, int left, int right);
@@ -22,6 +22,7 @@ int main(void)
     printf("array ordenado com mergesort: ");
     mergesort(v,0,max-1);
     printarray(v,max);
+    free(v);
 
 
 }
@@ -44,7 +45,7 @@ void merge(int *v, int left, int mid, int right)
     {
         v[i] = temp[i];
     }
-
+    free (temp);
 }
 void printarray(int *v, int max)
 {
