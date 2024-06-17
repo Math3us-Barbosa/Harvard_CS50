@@ -62,7 +62,7 @@ void merge(int *v, int left, int mid, int right)
                 p1++;
             }
         }
-
+        v[i] = 
     }
     for(int i = 0, k = left; i < max; i++,k++)
     {
