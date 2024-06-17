@@ -27,6 +27,7 @@ void merge(int *v,int left,int right)
 {
     int max = right;
     int *temp;
+    int *temp2;
 }
 
 
