@@ -43,9 +43,9 @@ void merge(int *v, int left, int mid, int right)
             p2++;
         }
     }
-    for(int i = 0; i < max; i++)
+    for(int i = 0, k = left; i < max; i++)
     {
-        v[i] = temp[i];
+        v[k] = temp[i];
     }
     free (temp);
 }
@@ -53,7 +53,7 @@ void printarray(int *v, int max)
 {
     for(int i = 0; i < max; i++)
     {
-        printf("%i",v[i]);
+        printf("%i ",v[i]);
     }
     printf("\n");
 }
