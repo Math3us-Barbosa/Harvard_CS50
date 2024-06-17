@@ -34,7 +34,7 @@ void merge(int *v, int left, int mid, int right)
             temp[i] = v[p2];
         }
     }
-    for(int i = 0; i < tamanho; i++)
+    for(int i = 0; i < max; i++)
     {
         v[i] = temp[i];
     }
@@ -63,9 +63,9 @@ void mergesort(int*v, left,right)
 
 }
 
-void bubblesort(int *v, int max)
+/*void bubblesort(int *v, int max)
 {
-    int aux;
+    int aux, cont = 0;
     for(int i = 0; i < max;i++)
     {
         for(int j = 0; j < max -i; j++)
