@@ -100,7 +100,7 @@ void mergesort(int*v, int left, int right)
 
 }
 
-/*void bubblesort(int *v, int max)
+void bubblesort(int *v, int max)
 {
     int aux, cont = 0;
     for(int i = 0; i < max;i++)
