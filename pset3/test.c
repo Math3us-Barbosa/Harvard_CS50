@@ -2,6 +2,9 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+
+
+void bubblesort(int *v, int max);
 void printarray(int *v, int max);
 void randomarray(int *v, int max);
 void mergesort(int*v, int left, int right);
@@ -15,9 +18,10 @@ int main(void)
     printf("unsorted array:  ");
     int *v = malloc(max*sizeof(int));
     randomarray(v,max);
-    printfarray(v,max);
-    printf("\n");
-    printf("array ordenado: ");
+    printarray(v,max);
+    printf("array ordenado com mergesort: ");
+    mergesort(v,0,max-1);
+    printarray(v,max);
 
 
 }
