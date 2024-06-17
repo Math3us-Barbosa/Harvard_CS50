@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 
-//void mergesort(int*v,int max);
-void number(int *x);
+void mergesort(int*v,int max);
+void merge(int *v, int left, int right);
 int main(void)
 {
     int max;
@@ -16,44 +16,26 @@ int main(void)
     for(int i = 0; i < max; i++)
     {
         v[i] = rand()%100;
-        printf("%i",v[i]);
+        printf("%i ",v[i]);
     }
     printf("\n");
     printf("array ordenado: ");
-//    mergesort(v,max);
-    int x = 2;
-    number(&x);
-    printf("%i",x);
-}
+    mergesort(v,max);
 
-void number(int *x)
-{
-    *x = 4;
 }
 
 
 
-
-/*void mergesort(int*v)
+void mergesort(int*v, left,right)
 {
-    if(max == 1)
+    if(lef<right)
     {
-        return
-    }
-    int v1;
-    int v2;
-    for int(int i = 0; i < max; i++)
-    {
-        if(i < max/2)
-        {
-            v1[i] = v[i]
-        }
-        else
-        {
-            v2[i] = v[i]
-        }
+        int medium = flooor(right-left/2)
+        mergesort(v, left, medium);
+        mergesort(v, medium+1, right);
+        merge(v,left,right);
     }
 
 
 }
-*/
+
