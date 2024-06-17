@@ -29,6 +29,7 @@ int main(void)
     randomarray(v2,max);
     printarray(v2,max);
     bubblesort(v2,max);
+    printf("array sorted with bubblesort");
     printarray(v2,max);
 }
 void merge(int *v, int left, int mid, int right)
