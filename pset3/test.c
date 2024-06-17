@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-//void bubblesort(int *v, int max);
+void bubblesort(int *v, int max);
 void printarray(int *v, int max);
 void randomarray(int *v, int max);
 void mergesort(int*v, int left, int right);
@@ -19,12 +19,17 @@ int main(void)
     int *v = malloc(max*sizeof(int));
     randomarray(v,max);
     printarray(v,max);
-    printf("array ordenado com mergesort: ");
+    printf("array sorted with mergesort: ");
     mergesort(v,0,max-1);
     printarray(v,max);
     free(v);
-
-
+    printf("type the size of the second array");
+    scanf("%i",&max);
+    int *v2 = malloc(max*sizeof(int));
+    randomarray(v2,max);
+    printarray(v2,max);
+    bubblesort(v2,max);
+    printarray(v2,max);
 }
 void merge(int *v, int left, int mid, int right)
 {
@@ -108,4 +113,4 @@ void bubblesort(int *v, int max)
         }
     }
 }
-*/
+
