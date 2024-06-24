@@ -21,7 +21,7 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    FILE *f = fopen()
     return false;
 }
 
