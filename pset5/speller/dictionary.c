@@ -55,7 +55,7 @@ bool load(const char *dictionary)
     table[i]-> word = temp;
     while(fgets(s,20,f) != NULL)
     {
-        if(strcpy)
+        if(strcpy((n-> word),s))
 
 
 
