@@ -45,17 +45,10 @@ bool load(const char *dictionary)
         printf("file %s not found",dictionary);
         return false;
     }
+    fgets(temp,3,f);
     while(fgets(s,20,f) != NULL)
     {
-        if(i == 0)
-        {
-            s[0] = temp[0];
-            s[1] = temp[1];
-        }
-        else
-        {
-            temp
-        }
+        fgets();
     }
 
 
