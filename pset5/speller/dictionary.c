@@ -59,7 +59,9 @@ bool load(const char *dictionary)
         {
             if(tmp == NULL)
             {
-                
+                tmp->word = s;
+                tmp->next = NULL;
+                i++;
             }
         }
 
