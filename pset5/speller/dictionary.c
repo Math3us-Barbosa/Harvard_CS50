@@ -36,13 +36,19 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     node n = NULL;
-    char * s = malloc(20);
+    int i = 0;
+    char* s = malloc(20);
+    char* temp =malloc(2);
     FILE *f = fopen(dictionary,"r");
-    do{
-        fgets(s,20,f);
+    if(f == NULL)
+    {
+        printf("file %s not found",dictionary);
+    }
+
+    for(int i = 0; i < N; i++)
+    {
         
     }
-    for(int i = 0; i < )
     return false;
 }
 
