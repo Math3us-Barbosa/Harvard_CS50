@@ -49,6 +49,7 @@ bool load(const char *dictionary)
     {
         fgets(s,20,f);
         
+
     }
     return false;
 }
