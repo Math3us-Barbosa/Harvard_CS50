@@ -35,7 +35,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    node n = NULL;
+    node *n = malloc(sizeof(node));
     int i = 0;
     char* s = malloc(20);
     char* temp =malloc(4);
