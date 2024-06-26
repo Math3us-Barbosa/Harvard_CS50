@@ -46,12 +46,13 @@ bool load(const char *dictionary)
         return false;
     }
 
-    for(int i = 0; i < N; i++)
+    while(fgets(s,20,f) != NULL)
     {
-        fgets(s,20,f);
-
-
+        s = 
     }
+
+
+
     return false;
 }
 
