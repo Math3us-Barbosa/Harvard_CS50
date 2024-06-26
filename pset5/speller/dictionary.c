@@ -50,7 +50,8 @@ bool load(const char *dictionary)
         return false;
     }
     fgets(temp,4,f);
-    node *
+    n-> word = temp;
+    n-> next = NULL;
     table[i]-> word = temp;
     while(fgets(s,20,f) != NULL)
     {
