@@ -46,9 +46,14 @@ bool load(const char *dictionary)
         return false;
     }
     fgets(temp,4,f);
+    table[i] = 
     while(fgets(s,20,f) != NULL)
     {
-        if(s[0] == temp[0] && s[1] == temp[1]);
+        if(s[0] == temp[0] && s[1] == temp[1])
+        {
+
+        }
+
     }
 
 
