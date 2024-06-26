@@ -57,7 +57,10 @@ bool load(const char *dictionary)
         index = ((s[0]-96) * (s[1]-96)) - 1;
         for(node *tmp = table[index], int i = 0;i < 1;tmp = tmp->next)
         {
-            
+            if(tmp == NULL)
+            {
+                
+            }
         }
 
     }
