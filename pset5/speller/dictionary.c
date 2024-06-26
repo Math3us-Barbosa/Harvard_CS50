@@ -50,10 +50,10 @@ bool load(const char *dictionary)
         return false;
     }
     fgets(temp,4,f);
-    
+
     while(fgets(s,20,f) != NULL)
     {
-
+        for(node *tmp;)
 
     }
 
