@@ -108,7 +108,12 @@ bool unload(void)
     node *tmp;
     for(int = 0; i < N;i++)
     {
+        while(table[i] != NULL)
+        {
+            
 
+
+        }
     }
     return false;
 }
