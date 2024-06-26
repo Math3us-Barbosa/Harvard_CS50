@@ -36,7 +36,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     node n = NULL;
-    //FILE *f = fopen(dictionary,"r");
+    FILE *f = fopen(dictionary,"r");
 
     return false;
 }
