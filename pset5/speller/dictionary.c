@@ -53,12 +53,11 @@ bool load(const char *dictionary)
     n-> word = temp;
     n-> next = NULL;
     table[0] = n;
-    table[i]-> word = temp;
     while(fgets(s,20,f) != NULL)
     {
-        if(s[0] == temp[0] && s[1] == temp[1])
+        if(s[0] == table[i]-> word[0] && s[1] == table[i] -> word[1])
         {
-
+            
         }
 
     }
