@@ -64,6 +64,7 @@ bool load(const char *dictionary)
 
     while(fgets(s,20,f) != NULL)
     {
+        bool word_loaded = false;
         node *n = malloc(sizeof(node));
         if(n == NULL)
         {
@@ -79,9 +80,13 @@ bool load(const char *dictionary)
                 tmp = n;
                 i++;
                 siz++;
+                word_loaded = true;
             }
         }
-
+        if(word_loaded == false)
+        {
+            return false
+        }
     }
 
 
