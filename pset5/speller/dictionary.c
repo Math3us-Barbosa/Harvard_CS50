@@ -36,8 +36,12 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     node n = NULL;
+    char * s = malloc(20);
     FILE *f = fopen(dictionary,"r");
-    while()
+    do{
+        fgets(s,20,f);
+        
+    }
     for(int i = 0; i < )
     return false;
 }
