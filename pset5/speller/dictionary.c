@@ -48,7 +48,7 @@ bool load(const char *dictionary)
     fgets(temp,4,f);
     while(fgets(s,20,f) != NULL)
     {
-        if(s[0] == temp[0] && s[1] == temp[1])
+        if(s[0] == temp[0] && s[1] == temp[1]);
     }
 
 
