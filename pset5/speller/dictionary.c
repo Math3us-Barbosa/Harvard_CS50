@@ -14,7 +14,8 @@ node;
 
 // Number of buckets in hash table
 const unsigned int N = 676;
-
+//global counter for how many words are in the hash table
+int size = 0;
 // Hash table
 node *table[N];
 
@@ -76,6 +77,7 @@ bool load(const char *dictionary)
             {
                 tmp = n;
                 i++;
+                siz++;
             }
         }
 
