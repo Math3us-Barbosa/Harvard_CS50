@@ -43,6 +43,7 @@ bool load(const char *dictionary)
     if(f == NULL)
     {
         printf("file %s not found",dictionary);
+        return false;
     }
 
     for(int i = 0; i < N; i++)
