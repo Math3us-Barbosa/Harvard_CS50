@@ -55,13 +55,6 @@ bool load(const char *dictionary)
     table[i]-> word = temp;
     while(fgets(s,20,f) != NULL)
     {
-        if(strcpy((n-> word),s))
-
-
-
-
-
-
         if(s[0] == temp[0] && s[1] == temp[1])
         {
 
