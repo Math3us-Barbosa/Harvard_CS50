@@ -48,7 +48,7 @@ bool load(const char *dictionary)
     for(int i = 0; i < N; i++)
     {
         fgets(s,20,f);
-        
+
 
     }
     return false;
