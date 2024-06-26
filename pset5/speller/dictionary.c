@@ -37,7 +37,7 @@ bool load(const char *dictionary)
 {
     node n = NULL;
     FILE *f = fopen(dictionary,"r");
-    while(!eof)
+    while()
     for(int i = 0; i < )
     return false;
 }
