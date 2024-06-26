@@ -29,7 +29,8 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO
-    return 0;
+    int number = ((word[0]-96) * (word[1]-96)) - 1;
+    return number;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -61,7 +62,7 @@ bool load(const char *dictionary)
         }
         n-> word = s;
         n-> next = NULL;
-        index = ((s[0]-96) * (s[1]-96)) - 1;
+        index = hash(s);
         for(node *tmp = table[index], int i = 0;i < 1;tmp = tmp->next)
         {
             if(tmp == NULL)
@@ -70,6 +71,7 @@ bool load(const char *dictionary)
                 i++;
             }
         }
+
     }
 
 
