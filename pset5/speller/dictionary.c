@@ -110,9 +110,9 @@ bool unload(void)
     {
         while(table[i] != NULL)
         {
-            node *tmp = 
-
-
+            node *tmp = table[i];
+            free(table[i]);
+            table[i]= tmp->next;
         }
     }
     return false;
