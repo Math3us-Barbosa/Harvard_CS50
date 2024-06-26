@@ -54,17 +54,22 @@ bool load(const char *dictionary)
 
     while(fgets(s,20,f) != NULL)
     {
+        node *n = malloc(sizeof(node));
+        if(n == NULL)
+        {
+            return false;
+        }
+        n-> word = s;
+        n-> next = NULL;
         index = ((s[0]-96) * (s[1]-96)) - 1;
         for(node *tmp = table[index], int i = 0;i < 1;tmp = tmp->next)
         {
             if(tmp == NULL)
             {
-                tmp->word = s;
-                tmp->next = NULL;
+                tmp = n;
                 i++;
             }
         }
-
     }
 
 
