@@ -36,6 +36,10 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     node *n = malloc(sizeof(node));
+    if(n == NULL)
+    {
+        return false;
+    }
     int i = 0;
     char* s = malloc(20);
     char* temp =malloc(4);
@@ -46,6 +50,7 @@ bool load(const char *dictionary)
         return false;
     }
     fgets(temp,4,f);
+    node *
     table[i]-> word = temp;
     while(fgets(s,20,f) != NULL)
     {
