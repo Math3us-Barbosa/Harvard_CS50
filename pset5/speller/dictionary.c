@@ -38,17 +38,17 @@ bool load(const char *dictionary)
     node n = NULL;
     int i = 0;
     char* s = malloc(20);
-    char* temp =malloc(3);
+    char* temp =malloc(4);
     FILE *f = fopen(dictionary,"r");
     if(f == NULL)
     {
         printf("file %s not found",dictionary);
         return false;
     }
-    fgets(temp,3,f);
+    fgets(temp,4,f);
     while(fgets(s,20,f) != NULL)
     {
-        if(s[1]=)
+        if(s[0] == temp[0] && s[1] == temp[1])
     }
 
 
