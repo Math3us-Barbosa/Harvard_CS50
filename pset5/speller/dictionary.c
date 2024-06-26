@@ -16,6 +16,7 @@ node;
 const unsigned int N = 676;
 //global counter for how many words are in the hash table
 int siz = 0;
+int loaded = 1;
 // Hash table
 node *table[N];
 
@@ -91,7 +92,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    
+
     return 0;
 }
 
