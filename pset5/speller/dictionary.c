@@ -52,6 +52,7 @@ bool load(const char *dictionary)
     fgets(temp,4,f);
     n-> word = temp;
     n-> next = NULL;
+    table[0] = n;
     table[i]-> word = temp;
     while(fgets(s,20,f) != NULL)
     {
