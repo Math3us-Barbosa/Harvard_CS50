@@ -35,6 +35,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    int index;
     node *n = malloc(sizeof(node));
     if(n == NULL)
     {
@@ -53,6 +54,7 @@ bool load(const char *dictionary)
 
     while(fgets(s,20,f) != NULL)
     {
+        
         for(node *tmp;)
 
     }
