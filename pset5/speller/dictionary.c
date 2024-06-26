@@ -54,8 +54,8 @@ bool load(const char *dictionary)
 
     while(fgets(s,20,f) != NULL)
     {
-        
-        for(node *tmp;)
+        index = ((s[0]-96) * (s[1]-96)) - 1;
+        for(node *tmp = ta;)
 
     }
 
