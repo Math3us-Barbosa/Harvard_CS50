@@ -32,6 +32,7 @@ bool check(const char *word)
     {
         s[i] = tolower(word[i]);
     }
+    free(word);
     int i = hash(s);
     for(node *tmp = table[i]; tmp != NULL; tmp = tmp->next)
     {
