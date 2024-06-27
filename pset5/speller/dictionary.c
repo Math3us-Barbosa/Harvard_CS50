@@ -20,7 +20,7 @@ const unsigned int N = 676;
 int siz = 0;
 int loaded = 1;
 // Hash table
-node *table[N];
+node *table[N] = NULL;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
