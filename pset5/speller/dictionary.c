@@ -54,7 +54,6 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     int index;
-    node *n = malloc(sizeof(node));
     if(n == NULL)
     {
         return false;
