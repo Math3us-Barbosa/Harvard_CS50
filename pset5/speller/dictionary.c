@@ -5,7 +5,7 @@
 #include <string.h>
 #include <ctype.h>
 #include "dictionary.h"
-
+#define N 676
 // Represents a node in a hash table
 typedef struct node
 {
@@ -15,7 +15,7 @@ typedef struct node
 node;
 
 // Number of buckets in hash table
-const unsigned int N = 676;
+
 //global counter for how many words are in the hash table
 int siz = 0;
 //global variable that defines if the dictionary is stored(0 for loaded 1 for unloaded)
@@ -55,7 +55,6 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     int index;
-    int i = 0;
     char* s = malloc(20);
     FILE *f = fopen(dictionary,"r");
     if(f == NULL)
