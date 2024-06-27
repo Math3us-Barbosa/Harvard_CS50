@@ -54,10 +54,6 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     int index;
-    if(n == NULL)
-    {
-        return false;
-    }
     int i = 0;
     char* s = malloc(20);
     FILE *f = fopen(dictionary,"r");
