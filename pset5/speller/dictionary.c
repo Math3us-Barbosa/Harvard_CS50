@@ -66,6 +66,7 @@ bool load(const char *dictionary)
     while(fgets(s,20,f) != NULL)
     {
         bool word_loaded = false;
+        int i = 0;
         node *n = malloc(sizeof(node));
         if(n == NULL)
         {
@@ -74,7 +75,7 @@ bool load(const char *dictionary)
         n-> word = s;
         n-> next = NULL;
         index = hash(s);
-        for(node *tmp = table[index], int i = 0;i < 1;tmp = tmp->next)
+        for(node *tmp = table[index];i < 1;tmp = tmp->next)
         {
             if(tmp == NULL)
             {
