@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -101,7 +102,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    if(loaded = 0)
+    if(loaded == 0)
     {
         return siz;
     }
@@ -111,7 +112,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    for(int = 0; i < N;i++)
+    for(int i = 0; i < N;i++)
     {
         while(table[i] != NULL)
         {
