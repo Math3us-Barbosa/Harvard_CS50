@@ -23,7 +23,10 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    for(word;)
+    for(char *p = word; *p; p++)
+    {
+        *p = tolower(*p);
+    }
     int i = hash(word);
     for(node *tmp = table[i]; tmp != NULL; tmp = tmp->next)
     {
