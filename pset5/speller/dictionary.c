@@ -1,7 +1,8 @@
 // Implements a dictionary's functionality
-
+#include <stdio.h>
 #include <stdbool.h>
-
+#include <stdlib.h>
+#include <string.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -23,9 +24,10 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    for(char *p = word; *p; p++)
+    int  max = strlen(word);
+    for(int i = 0; i < max; i++)
     {
-        *p = tolower(*p);
+        word[i] = tolower(word[i]);
     }
     int i = hash(word);
     for(node *tmp = table[i]; tmp != NULL; tmp = tmp->next)
