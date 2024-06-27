@@ -26,11 +26,12 @@ node *table[N] = NULL;
 bool check(const char *word)
 {
     int  max = strlen(word);
+    char *s = malloc(max);
     for(int i = 0; i < max; i++)
     {
-        word[i] = tolower(word[i]);
+        s[i] = tolower(word[i]);
     }
-    int i = hash(word);
+    int i = hash(s);
     for(node *tmp = table[i]; tmp != NULL; tmp = tmp->next)
     {
         if(strcmp((tmp->word),s) == 0)
