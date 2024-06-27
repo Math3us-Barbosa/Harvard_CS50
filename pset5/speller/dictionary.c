@@ -18,9 +18,10 @@ node;
 const unsigned int N = 676;
 //global counter for how many words are in the hash table
 int siz = 0;
+//global variable that defines if the dictionary is stored(0 for loaded 1 for unloaded)
 int loaded = 1;
 // Hash table
-node *table[N] = NULL;
+node *table[N];
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
