@@ -72,7 +72,7 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        n-> word = s;
+        strcpy(n-> word,s);
         n-> next = NULL;
         index = hash(s);
         for(node *tmp = table[index];i < 1;tmp = tmp->next)
