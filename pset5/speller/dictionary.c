@@ -105,7 +105,6 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-
     for(int = 0; i < N;i++)
     {
         while(table[i] != NULL)
