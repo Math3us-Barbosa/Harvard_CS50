@@ -60,7 +60,6 @@ bool load(const char *dictionary)
     }
     int i = 0;
     char* s = malloc(20);
-    char* temp =malloc(4);
     FILE *f = fopen(dictionary,"r");
     if(f == NULL)
     {
