@@ -87,7 +87,7 @@ bool load(const char *dictionary)
         }
         if(word_loaded == false)
         {
-            return false
+            return false;
         }
     }
     loaded = 0;
