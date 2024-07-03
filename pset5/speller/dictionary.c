@@ -109,7 +109,7 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        break;
+
     }
     loaded = 0;
     return true;
