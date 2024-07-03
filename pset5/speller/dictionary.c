@@ -83,6 +83,7 @@ bool load(const char *dictionary)
         }
         printf("%c",n->word[i]);
         strcpy(n-> word,s);
+        printf("%s",n->word);
         n-> next = NULL;
         index = hash(s);
         for(node *tmp = table[index];i < 1;tmp = tmp->next)
