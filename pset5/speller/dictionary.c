@@ -54,17 +54,14 @@ unsigned int hash(const char *word)
 {
     // TODO
     int number;
-    printf("chegou aqui\n");
-    printf("%i",word[0]-96);
-
     if(isalpha(word[1]))
     {
         number = ((word[0]-96) * (word[1]-96)) - 1;
-        printf("errado");
+        printf("errado/n");
     }
     else{
         number = (word[0]-97);
-        printf("certo");
+        printf("certo/n");
     }
     printf("%i\n",number);
     return number;
