@@ -110,6 +110,7 @@ bool load(const char *dictionary)
 
     }
     loaded = 0;
+    free(s);
     return true;
 }
 
