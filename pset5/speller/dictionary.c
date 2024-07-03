@@ -27,7 +27,7 @@ node *table[N];
 bool check(const char *word)
 {
     int  max = strlen(word);
-    char *s = malloc(max);
+    char *s = malloc(max+1);
     if(s == NULL)
     {
         printf("out of memory\n");
@@ -57,11 +57,9 @@ unsigned int hash(const char *word)
     if(isalpha(word[1]))
     {
         number = ((word[0]-96) * (word[1]-96)) - 1;
-        printf("errado\n");
     }
     else{
         number = (word[0]-97);
-        printf("certo\n");
     }
     printf("%i\n",number);
     return number;
