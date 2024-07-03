@@ -53,6 +53,8 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO
+    printf("chegou aqui\n");
+
     int number = ((word[0]-96) * (word[1]-96)) - 1;
     printf("%i",number);
     return number;
