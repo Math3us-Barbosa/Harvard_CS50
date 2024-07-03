@@ -69,7 +69,6 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     int index;
-    char c;
     char* s = malloc(46);
     FILE *f = fopen(dictionary,"r");
     if(f == NULL)
@@ -78,7 +77,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-    while(fread(c,1,f) != NULL)
+    while(fgets(s,46,f) != NULL)
     {
         printf("%s\n",s);
         bool word_loaded = false;
