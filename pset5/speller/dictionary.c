@@ -85,7 +85,7 @@ bool load(const char *dictionary)
         node *n = malloc(sizeof(node));
         if(n == NULL)
         {
-            printf("n NULL\n");
+            printf("out of memory \n");
             return false;
         }
         printf("%c",n->word[i]);
