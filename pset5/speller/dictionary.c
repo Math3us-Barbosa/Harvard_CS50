@@ -28,16 +28,21 @@ bool check(const char *word)
 {
     int  max = strlen(word);
     char *s = malloc(max);
+    if(s == NULL)
+    {
+        printf("out of memory\n");
+        return false;
+    }
     for(int i = 0; i < max; i++)
     {
         s[i] = tolower(word[i]);
     }
-    free(word);
     int i = hash(s);
     for(node *tmp = table[i]; tmp != NULL; tmp = tmp->next)
     {
         if(strcmp((tmp->word),s) == 0)
         {
+            
             return true;
         }
     }
