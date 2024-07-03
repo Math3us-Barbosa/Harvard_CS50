@@ -42,7 +42,7 @@ bool check(const char *word)
     {
         if(strcmp((tmp->word),s) == 0)
         {
-            
+            free(s);
             return true;
         }
     }
