@@ -53,13 +53,18 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO
+    int number;
     printf("chegou aqui\n");
     if(strlen(word) > 1)
     {
-    int number = ((word[0]-96) * (word[1]-96)) - 1;
+        number = ((word[0]-96) * (word[1]-96)) - 1;
+        printf("errado");
     }
-    else()
-    printf("%i",number);
+    else{
+        number = (word[0]-97);
+        printf("certo");
+    }
+    printf("%i\n",number);
     return number;
 }
 
