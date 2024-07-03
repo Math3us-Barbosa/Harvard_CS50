@@ -54,8 +54,11 @@ unsigned int hash(const char *word)
 {
     // TODO
     printf("chegou aqui\n");
-
+    if(strlen(word) > 1)
+    {
     int number = ((word[0]-96) * (word[1]-96)) - 1;
+    }
+    else()
     printf("%i",number);
     return number;
 }
