@@ -49,6 +49,7 @@ unsigned int hash(const char *word)
 {
     // TODO
     int number = ((word[0]-96) * (word[1]-96)) - 1;
+    printf("%i",number);
     return number;
 }
 
