@@ -72,14 +72,16 @@ bool load(const char *dictionary)
 
     while(fgets(s,20,f) != NULL)
     {
-        printf("%s",s);
+        printf("%s\n",s);
         bool word_loaded = false;
         int i = 0;
         node *n = malloc(sizeof(node));
         if(n == NULL)
         {
+            printf("n NULL\n");
             return false;
         }
+        printf("%c",n->word[i]);
         strcpy(n-> word,s);
         n-> next = NULL;
         index = hash(s);
