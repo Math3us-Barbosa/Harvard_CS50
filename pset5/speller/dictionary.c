@@ -77,8 +77,9 @@ bool load(const char *dictionary)
         return false;
     }
 
-    while(fread(s,46,f) != NULL)
+    while(fread(s,1,f) != NULL)
     {
+        if()
         printf("%s\n",s);
         bool word_loaded = false;
         int i = 0;
