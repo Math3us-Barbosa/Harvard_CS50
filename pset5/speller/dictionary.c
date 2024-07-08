@@ -85,8 +85,9 @@ bool load(const char *dictionary)
             s[i] = ch;
         }
         bool word_loaded = false;
-        else if()
-        int i = 0;
+        else if(ch = '\n')
+        {
+            s[i] = '\0';
         node *n = malloc(sizeof(node));
         if(n == NULL)
         {
