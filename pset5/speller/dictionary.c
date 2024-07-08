@@ -77,8 +77,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-       for (i = 0; (i < (sizeof(buffer)-1) &&
-         ((ch = fgetc(stream)) != EOF) && (ch != '\n')); i++)
+       for (i = 0; (i < 45 && ((ch = fgetc(stream)) != EOF) && (ch != '\n')); i++)
     {
         if()
         printf("%s\n",s);
