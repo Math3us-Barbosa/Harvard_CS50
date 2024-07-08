@@ -77,7 +77,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-       for (i = 0; (i < 45 && ((ch = fgetc(stream)) != EOF) && (ch != '\n')); i++)
+    while(fread(s,1,1,f) != NULL)
     {
         if()
         printf("%s\n",s);
