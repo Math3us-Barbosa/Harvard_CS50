@@ -68,6 +68,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    char ch;
     int index;
     char* s = malloc(46);
     FILE *f = fopen(dictionary,"r");
@@ -77,10 +78,9 @@ bool load(const char *dictionary)
         return false;
     }
 
-       for (i = 0; (i < (sizeof(buffer)-1) &&
+       for (i = 0; (i < 45 &&
          ((ch = fgetc(stream)) != EOF) && (ch != '\n')); i++)
-    {
-        if()
+        {
         printf("%s\n",s);
         bool word_loaded = false;
         int i = 0;
