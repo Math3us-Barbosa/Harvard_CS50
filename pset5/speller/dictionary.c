@@ -77,10 +77,10 @@ bool load(const char *dictionary)
         printf("file %s not found",dictionary);
         return false;
     }
-
-       for (i = 0; (i < 45 &&
-         ((ch = fgetc(stream)) != EOF) && (ch != '\n')); i++)
-        {
+    while((ch = fgetc(f)) != EOF)
+    {
+    for (i = 0; (i < 45 && ((ch = fgetc(stream)) != EOF) && (ch != '\n')); i++)
+    {
         printf("%s\n",s);
         bool word_loaded = false;
         int i = 0;
@@ -110,6 +110,7 @@ bool load(const char *dictionary)
             return false;
         }
 
+    }
     }
     loaded = 0;
     free(s);
