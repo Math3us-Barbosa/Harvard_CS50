@@ -68,6 +68,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    int i;
     char ch;
     int index;
     char* s = malloc(46);
