@@ -22,7 +22,7 @@ int siz = 0;
 int loaded = 1;
 // Hash table
 node *table[N];
-
+void loadhelper(char* s);
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
