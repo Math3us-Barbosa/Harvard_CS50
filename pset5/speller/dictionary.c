@@ -88,25 +88,25 @@ bool load(const char *dictionary)
         else if(ch = '\n')
         {
             s[i] = '\0';
-        node *n = malloc(sizeof(node));
-        if(n == NULL)
-        {
-            printf("out of memory \n");
-            return false;
-        }
-        printf("%c",n->word[i]);
-        strcpy(n-> word,s);
-        printf("%s",n->word);
-        n-> next = NULL;
-        index = hash(s);
-        for(node *tmp = table[index];i < 1;tmp = tmp->next)
-        {
-            if(tmp == NULL)
+            node *n = malloc(sizeof(node));
+            if(n == NULL)
             {
-                tmp = n;
-                i++;
-                siz++;
-                word_loaded = true;
+                printf("out of memory \n");
+                return false;
+            }
+            printf("%c",n->word[i]);
+            strcpy(n-> word,s);
+            printf("%s",n->word);
+            n-> next = NULL;
+            index = hash(s);
+            for(node *tmp = table[index];i < 1;tmp = tmp->next)
+            {
+                if(tmp == NULL)
+                {
+                    tmp = n;
+                    siz++;
+                    word_loaded = true;
+                }
             }
         }
         if(word_loaded == false)
