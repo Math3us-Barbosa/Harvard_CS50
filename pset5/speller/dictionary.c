@@ -22,7 +22,6 @@ int siz = 0;
 int loaded = 1;
 // Hash table
 node *table[N];
-void loadhelper(char* s);
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -80,10 +79,12 @@ bool load(const char *dictionary)
     }
     while((ch = fgetc(f)) != EOF)
     {
+        int j = 0;
         int i = 0;
         if(isalpha(ch))
         {
             s[i] = ch;
+            i++;
         }
         bool word_loaded = false;
         else if(ch = '\n')
@@ -100,21 +101,21 @@ bool load(const char *dictionary)
             printf("%s",n->word);
             n-> next = NULL;
             index = hash(s);
-            for(node *tmp = table[index];i < 1;tmp = tmp->next)
+            for(node *tmp = table[index];j < 1;tmp = tmp->next)
             {
                 if(tmp == NULL)
                 {
                     tmp = n;
                     siz++;
+                    j++;
                     word_loaded = true;
                 }
             }
+            if(word_loaded == false)
+            {
+                return false;
+            }
         }
-        if(word_loaded == false)
-        {
-            return false;
-        }
-
 
     }
     loaded = 0;
