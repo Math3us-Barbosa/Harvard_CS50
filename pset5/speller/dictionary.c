@@ -79,6 +79,11 @@ bool load(const char *dictionary)
     }
     while((ch = fgetc(f)) != EOF)
     {
+        int i = 0;
+        if(isalpha(ch))
+        {
+            s[i] = ch;
+        }
         bool word_loaded = false;
         int i = 0;
         node *n = malloc(sizeof(node));
