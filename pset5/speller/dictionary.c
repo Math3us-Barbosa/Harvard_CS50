@@ -26,23 +26,6 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-
-    for(node *tmp = table[i]; tmp != NULL; tmp = tmp->next)
-    {
-        if(strcmp((tmp->word),s) == 0)
-        {
-            free(s);
-            return true;
-        }Z
-    }
-    return false;
-}
-
-
-// Hashes word to a number
-unsigned int hash(const char *word)
-{
-    // TODO
     char *s = malloc(LENGHT+1);
     if(s == NULL)
     {
@@ -56,13 +39,38 @@ unsigned int hash(const char *word)
     }
     int i = hash(s);
     int number;
+    for(node *tmp = table[i]; tmp != NULL; tmp = tmp->next)
+    {
+        if(strcmp((tmp->word),s) == 0)
+        {
+            free(s);
+            return true;
+        }
+    }
+    return false;
+}
 
-    if(islower(word[0])
+
+// Hashes word to a number
+unsigned int hash(const char *word)
+{
+    // TODO
+
+    if(isalpha(word[3]))
     {
         number = ((word[0] - 97) * 26 * 26 * 26) + ((word[1] - 97) *26 * 26) + ((word[2] - 97) *26)+ word[3] - 97;
     }
-    else if {
+    else if (isalpha(word[2]) && !isalpha(word[3]))
+    {
         number = (word[0] - 96) * (word[0] - 97);
+    }
+    else if(isalpha(word[1]) && !isalpha(word[2]) && !isalpha(word[3]))
+    {
+
+    }
+    else
+    {
+
     }
     printf("%i\n",number);
     return number;
