@@ -90,7 +90,6 @@ bool load(const char *dictionary)
             int j = 0;
             s[i] = '\0';
             i = 0;
-            printf("%s",s);
             node *n = malloc(sizeof(node));
             if(n == NULL)
             {
@@ -98,7 +97,6 @@ bool load(const char *dictionary)
                 return false;
             }
             strcpy(n-> word,s);
-            printf("%s",n->word);
             n-> next = NULL;
             index = hash(s);
             for(node *tmp = table[index];j < 1;tmp = tmp->next)
