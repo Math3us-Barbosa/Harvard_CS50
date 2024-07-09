@@ -18,7 +18,7 @@ node;
 
 //global counter for how many words are in the hash table
 int hash_helper_counter  = -1;
-const int power = 4;
+const int power = 4;//number of letter used to hash a number
 int siz = 0;
 //global variable that defines if the dictionary is stored(0 for loaded 1 for unloaded)
 int loaded = 1;
