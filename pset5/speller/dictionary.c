@@ -83,13 +83,13 @@ bool load(const char *dictionary)
         bool word_loaded = false;
         if(isalpha(ch))
         {
-            word[i] = ch;
+            n->word[i] = ch;
             i++;
         }
         else if(ch == '\n')
         {
             int j = 0;
-            s[i] = '\0';
+            n->word[i] = '\0';
             i = 0;
             if(n == NULL)
             {
