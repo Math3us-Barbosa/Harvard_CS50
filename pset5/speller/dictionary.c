@@ -26,14 +26,14 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    
+
     for(node *tmp = table[i]; tmp != NULL; tmp = tmp->next)
     {
         if(strcmp((tmp->word),s) == 0)
         {
             free(s);
             return true;
-        }
+        }Z
     }
     return false;
 }
@@ -56,7 +56,7 @@ unsigned int hash(const char *word)
     }
     int i = hash(s);
     int number;
-    
+
     if(islower(word[0])
     {
         number = ((word[0] - 97) * 26 * 26 * 26) + ((word[1] - 97) *26 * 26) + ((word[2] - 97) *26)+ word[3] - 97;
