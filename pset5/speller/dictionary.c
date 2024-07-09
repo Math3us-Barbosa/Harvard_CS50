@@ -82,7 +82,7 @@ bool load(const char *dictionary)
         bool word_loaded = false;
         if(isalpha(ch))
         {
-            s[i] = ch;
+            word[i] = ch;
             i++;
         }
         else if(ch == '\n')
