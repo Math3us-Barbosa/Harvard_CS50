@@ -49,6 +49,14 @@ bool check(const char *word)
     return false;
 }
 
+
+int hash_helper(char* word, int n)
+{
+    word[i]
+
+
+
+}
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
