@@ -97,7 +97,6 @@ bool load(const char *dictionary)
             {
                 if(tmp == NULL)
                 {
-
                     tmp = n;
                     siz++;
                     j++;
