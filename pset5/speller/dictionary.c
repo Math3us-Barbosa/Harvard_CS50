@@ -59,15 +59,15 @@ unsigned int hash(const char *word)
     int number;
     if (isalpha(word[2]))
     {
-        number = ((word[0] - 97) * 26 * 26 * 26) + ((word[1] - 97) *26 * 26) + ((word[2] - 97) *26);
+        number = ((word[0] - 97) * 26 * 26) + ((word[1] - 97) * 26) + (word[2] - 97);
     }
     else if(isalpha(word[1]) && !isalpha(word[2]))
     {
-        number = ((word[0] - 97) * 26 * 26 * 26) + ((word[1] - 97) *26 * 26);
+        number = ((word[0] - 97)  * 26 * 26) + ((word[1] - 97)  * 26);
     }
     else
     {
-        number = ((word[0] - 97) * 26 * 26 * 26);
+        number = ((word[0] - 97) * 26 * 26 );
     }
     printf("%i\n",number);
     return number;
