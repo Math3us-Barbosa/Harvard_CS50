@@ -52,14 +52,14 @@ bool check(const char *word)
 }
 
 
-int hash_helper(char word, int n)
+int hash_helper(char letter, int n)
 {
     if(n = power)
     {
         return (letter);
     }
     n++;
-    return 26 * hash_helper(word,n);
+    return 26 * hash_helper(letter,n);
 }
 // Hashes word to a number
 unsigned int hash(const char *word)
