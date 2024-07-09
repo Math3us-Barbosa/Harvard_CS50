@@ -17,6 +17,8 @@ node;
 // Number of buckets in hash table
 
 //global counter for how many words are in the hash table
+hahs_helper counter k =0;
+const int power = N/26;
 int siz = 0;
 //global variable that defines if the dictionary is stored(0 for loaded 1 for unloaded)
 int loaded = 1;
@@ -52,6 +54,10 @@ bool check(const char *word)
 
 int hash_helper(char* word, int n)
 {
+    if(n = power)
+    {
+        return word[power-1]
+    }
     word[i]
 
 
