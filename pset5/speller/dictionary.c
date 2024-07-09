@@ -59,7 +59,7 @@ int hash_helper(char word, int n)
         return (letter);
     }
     n++;
-    return(letter *(power-n)*26)
+    return 26 * hash_helper(word,n);
 }
 // Hashes word to a number
 unsigned int hash(const char *word)
