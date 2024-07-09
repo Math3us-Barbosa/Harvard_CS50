@@ -27,7 +27,7 @@ node *table[N];
 bool check(const char *word)
 {
 
-    char *s = malloc(l1);
+    char *s = malloc(LENGTH + 1);
     if(s == NULL)
     {
         printf("out of memory\n");
