@@ -23,7 +23,6 @@ int loaded = 1;
 // Hash table
 node *table[N];
 // Returns true if word is in dictionary, else false
-int hash helper(int letter,int )
 bool check(const char *word)
 {
     int  max = strlen(word);
