@@ -62,15 +62,15 @@ unsigned int hash(const char *word)
     }
     else if (isalpha(word[2]) && !isalpha(word[3]))
     {
-        number = (word[0] - 96) * (word[0] - 97);
+        ((word[0] - 97) * 26 * 26 * 26) + ((word[1] - 97) *26 * 26) + ((word[2] - 97) *26);
     }
     else if(isalpha(word[1]) && !isalpha(word[2]) && !isalpha(word[3]))
     {
-
+        ((word[0] - 97) * 26 * 26 * 26) + ((word[1] - 97) *26 * 26);
     }
     else
     {
-
+        ((word[0] - 97) * 26 * 26 * 26);
     }
     printf("%i\n",number);
     return number;
