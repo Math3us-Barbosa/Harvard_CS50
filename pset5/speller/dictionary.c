@@ -54,11 +54,11 @@ unsigned int hash(const char *word)
 {
     // TODO
     int number;
-    if(isalpha(word[1]))
+    if(islower(word[0]word[1]))
     {
-        number = ((word[0] - 96) * (word[0] - 97)) + (word[1] - 96) - 1;
+        number = (((word[0] - 97) * 26) * (word[1] - 97) * 26 ) + word[2] - 97;
     }
-    else{
+    else if ({
         number = (word[0] - 96) * (word[0] - 97);
     }
     printf("%i\n",number);
