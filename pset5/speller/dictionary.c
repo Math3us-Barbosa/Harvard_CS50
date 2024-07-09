@@ -118,6 +118,7 @@ bool load(const char *dictionary)
         }
 
     }
+    free(s);
     loaded = 0;
     return true;
 }
