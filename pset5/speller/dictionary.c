@@ -5,7 +5,7 @@
 #include <string.h>
 #include <ctype.h>
 #include "dictionary.h"
-#define N 17 576
+#define N 17576
 // Represents a node in a hash table
 typedef struct node
 {
@@ -33,7 +33,7 @@ bool check(const char *word)
         return false;
     }
 
-    for(int i = 0; i < max; i++)
+    for(int i = 0; i < LENGTH+1; i++)
     {
         s[i] = tolower(word[i]);
     }
@@ -56,15 +56,11 @@ unsigned int hash(const char *word)
 {
     // TODO
     int number;
-    if(isalpha(word[3]))
-    {
-        number = ((word[0] - 97) * 26 * 26 * 26) + ((word[1] - 97) *26 * 26) + ((word[2] - 97) *26)+ word[3] - 97;
-    }
-    else if (isalpha(word[2]) && !isalpha(word[3]))
+    if (isalpha(word[2]) && )
     {
         number = ((word[0] - 97) * 26 * 26 * 26) + ((word[1] - 97) *26 * 26) + ((word[2] - 97) *26);
     }
-    else if(isalpha(word[1]) && !isalpha(word[2]) && !isalpha(word[3]))
+    else if(isalpha(word[1]) && !isalpha(word[2]))
     {
         number = ((word[0] - 97) * 26 * 26 * 26) + ((word[1] - 97) *26 * 26);
     }
