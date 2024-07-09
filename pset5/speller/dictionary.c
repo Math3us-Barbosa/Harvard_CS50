@@ -77,18 +77,15 @@ bool load(const char *dictionary)
         printf("file %s not found",dictionary);
         return false;
     }
-    node*n = malloc(sizeof(node));
     for(node*n = malloc(sizeof(node);(n->word[i] = fgetc(f)) != EOF);)
     {
         bool word_loaded = false;
-        if(isalpha(ch))
+        if(isalpha(n->word[i]))
         {
-            n->word[i] = ch;
             i++;
         }
-        else if(ch == '\n')
+        else if(n->word[i] == '\n')
         {
-            node *n1 = malloc(sizeof(node));
             if(n1 == NULL)
             {
                 printf("out of memory \n");
@@ -103,10 +100,7 @@ bool load(const char *dictionary)
             {
                 if(tmp == NULL)
                 {
-                    if(siz == 0)
-                        tmp = n;
-                    else
-                        tmp = n1;
+                    tmp = n;
                     siz++;
                     j++;
                     word_loaded = true;
