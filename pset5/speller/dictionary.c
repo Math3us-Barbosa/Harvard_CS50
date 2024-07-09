@@ -54,7 +54,7 @@ unsigned int hash(const char *word)
 {
     // TODO
     int number;
-    if(islower(word[1]))
+    if(isalpha(word[1]))
     {
         number = ((word[0] - 96) * (word[0] - 97)) + (word[1] - 96) - 1;
     }
