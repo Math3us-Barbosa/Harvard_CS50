@@ -127,6 +127,7 @@ unsigned int size(void)
 {
     if(loaded == 0)
     {
+        printf("\n")
         return siz;
     }
     return 0;
