@@ -91,11 +91,6 @@ bool load(const char *dictionary)
             int j = 0;
             n->word[i] = '\0';
             i = 0;
-            if(n == NULL)
-            {
-                printf("out of memory \n");
-                return false;
-            }
             strcpy(n-> word,s);
             n-> next = NULL;
             index = hash(s);
@@ -116,6 +111,11 @@ bool load(const char *dictionary)
                 return false;
             }
             node *n = malloc(sizeof(node));
+            if(n == NULL)
+            {
+                printf("out of memory \n");
+                return false;
+            }
         }
 
     }
