@@ -83,6 +83,7 @@ bool load(const char *dictionary)
         bool word_loaded = false;
         if(isalpha(ch))
         {
+            printf("chegou aqui");
             s[i] = ch;
             i++;
         }
