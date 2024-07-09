@@ -88,6 +88,12 @@ bool load(const char *dictionary)
         }
         else if(ch == '\n')
         {
+            node *n1 = malloc(sizeof(node));
+            if(n1 == NULL)
+            {
+                printf("out of memory \n");
+                return false;
+            }
             int j = 0;
             n->word[i] = '\0';
             i = 0;
@@ -97,7 +103,10 @@ bool load(const char *dictionary)
             {
                 if(tmp == NULL)
                 {
-                    tmp = n;
+                    if(siz == 0)
+                        tmp = n;
+                    else
+                        tmp = n1;
                     siz++;
                     j++;
                     word_loaded = true;
@@ -106,12 +115,6 @@ bool load(const char *dictionary)
             }
             if(word_loaded == false)
             {
-                return false;
-            }
-            node *n = malloc(sizeof(node));
-            if(n == NULL)
-            {
-                printf("out of memory \n");
                 return false;
             }
         }
