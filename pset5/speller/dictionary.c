@@ -52,11 +52,11 @@ bool check(const char *word)
 }
 
 
-int hash_helper(char* word, int n)
+int hash_helper(char word, int n)
 {
     if(n = power)
     {
-        return (word[power-1])* 26 * power;
+        return (word)* 26 * power;
     }
     hash_helper_counter++;
     return(word[hash_helper_counter ]*power*)
