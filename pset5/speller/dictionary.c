@@ -32,6 +32,7 @@ bool check(const char *word)
         printf("out of memory\n");
         return false;
     }
+    
     for(int i = 0; i < max; i++)
     {
         s[i] = tolower(word[i]);
