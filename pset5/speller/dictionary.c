@@ -26,8 +26,8 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-
-    char *s = malloc(LENGTH + 1);
+    int  max = strlen(word);
+    char *s = malloc(max+1);
     if(s == NULL)
     {
         printf("out of memory\n");
@@ -56,7 +56,7 @@ unsigned int hash(const char *word)
 {
     // TODO
     int number;
-    for(int i = 0; i < LENGHT)
+    for(int i = 0; i < LE)
     if(islower(word[0])
     {
         number = ((word[0] - 97) * 26 * 26 * 26) + ((word[1] - 97) *26 * 26) + ((word[2] - 97) *26)+ word[3] - 97;
