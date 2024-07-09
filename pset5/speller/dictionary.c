@@ -78,7 +78,6 @@ bool load(const char *dictionary)
     }
     while((ch = fgetc(f)) != EOF)
     {
-        printf("%c",ch);
         int j = 0;
         int i = 0;
         bool word_loaded = false;
