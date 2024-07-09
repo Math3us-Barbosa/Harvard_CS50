@@ -67,6 +67,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    int i = 0;
     char ch;
     int index;
     char* s = malloc(46);
@@ -79,7 +80,6 @@ bool load(const char *dictionary)
     while((ch = fgetc(f)) != EOF)
     {
         int j = 0;
-        int i = 0;
         bool word_loaded = false;
         if(isalpha(ch))
         {
