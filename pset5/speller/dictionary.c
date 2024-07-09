@@ -5,7 +5,7 @@
 #include <string.h>
 #include <ctype.h>
 #include "dictionary.h"
-#define N 17 576
+#define N 456 976
 // Represents a node in a hash table
 typedef struct node
 {
