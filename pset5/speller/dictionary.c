@@ -26,8 +26,8 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    int  max = strlen(word);
-    char *s = malloc(max+1);
+
+    char *s = malloc(l1);
     if(s == NULL)
     {
         printf("out of memory\n");
