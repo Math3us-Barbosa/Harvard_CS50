@@ -105,10 +105,12 @@ bool load(const char *dictionary)
             {
                 if(tmp == NULL)
                 {
+
                     tmp = n;
                     siz++;
                     j++;
                     word_loaded = true;
+                    printf("%s",tmp->word);
                 }
             }
             if(word_loaded == false)
