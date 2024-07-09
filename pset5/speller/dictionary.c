@@ -58,7 +58,7 @@ unsigned int hash(const char *word)
     {
         number = (((word[0] - 97) * 26) * (word[1] - 97) * 26 ) + word[2] - 97;
     }
-    else if ({
+    else if {
         number = (word[0] - 96) * (word[0] - 97);
     }
     printf("%i\n",number);
