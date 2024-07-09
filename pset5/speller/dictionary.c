@@ -56,6 +56,7 @@ int hash_helper(char letter, int n)
 {
     if(n = power)
     {
+        
     }
     n++;
     return 26 * hash_helper(letter,n);
