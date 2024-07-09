@@ -70,7 +70,7 @@ bool load(const char *dictionary)
     int i = 0;
     char ch;
     int index;
-    char* s = malloc(46);
+    //char* s = malloc(46);
     FILE *f = fopen(dictionary,"r");
     if(f == NULL)
     {
@@ -91,9 +91,8 @@ bool load(const char *dictionary)
             int j = 0;
             n->word[i] = '\0';
             i = 0;
-            strcpy(n-> word,s);
             n-> next = NULL;
-            index = hash(s);
+            index = hash(n->word);
             for(node *tmp = table[index];j < 1;tmp = tmp->next)
             {
                 if(tmp == NULL)
