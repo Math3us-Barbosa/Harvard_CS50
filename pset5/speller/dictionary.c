@@ -55,10 +55,10 @@ unsigned int hash(const char *word)
     int number;
     if(isalpha(word[1]))
     {
-        number = ((word[0]-96) * (word[1]-96)) - 1;
+        number = ((word[0] - 96) * (word[0] - 97)) + (word[1] - 96) - 1;
     }
     else{
-        number = (word[0]-97);
+        number = (word[0] - 96) * (word[0] - 97);
     }
     printf("%i\n",number);
     return number;
