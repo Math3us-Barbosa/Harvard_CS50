@@ -26,19 +26,7 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    int  max = strlen(word);
-    char *s = malloc(max+1);
-    if(s == NULL)
-    {
-        printf("out of memory\n");
-        return false;
-    }
-
-    for(int i = 0; i < max; i++)
-    {
-        s[i] = tolower(word[i]);
-    }
-    int i = hash(s);
+    
     for(node *tmp = table[i]; tmp != NULL; tmp = tmp->next)
     {
         if(strcmp((tmp->word),s) == 0)
@@ -55,8 +43,20 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO
+    char *s = malloc(LENGHT+1);
+    if(s == NULL)
+    {
+        printf("out of memory\n");
+        return false;
+    }
+
+    for(int i = 0; i < max; i++)
+    {
+        s[i] = tolower(word[i]);
+    }
+    int i = hash(s);
     int number;
-    for(int i = 0; i < LE)
+    
     if(islower(word[0])
     {
         number = ((word[0] - 97) * 26 * 26 * 26) + ((word[1] - 97) *26 * 26) + ((word[2] - 97) *26)+ word[3] - 97;
