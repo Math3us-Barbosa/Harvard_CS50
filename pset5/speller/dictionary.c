@@ -56,12 +56,9 @@ int hash_helper(char* word, int n)
 {
     if(n = power)
     {
-        return word[power-1]
+        return word[power-1];
     }
-    word[i]
-
-
-
+    return(word[i])
 }
 // Hashes word to a number
 unsigned int hash(const char *word)
