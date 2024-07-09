@@ -96,7 +96,6 @@ bool load(const char *dictionary)
                 printf("out of memory \n");
                 return false;
             }
-            printf("%c",n->word[i]);
             strcpy(n-> word,s);
             printf("%s",n->word);
             n-> next = NULL;
