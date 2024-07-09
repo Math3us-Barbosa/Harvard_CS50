@@ -32,7 +32,7 @@ bool check(const char *word)
         printf("out of memory\n");
         return false;
     }
-    
+
     for(int i = 0; i < max; i++)
     {
         s[i] = tolower(word[i]);
@@ -54,7 +54,7 @@ unsigned int hash(const char *word)
 {
     // TODO
     int number;
-    if(isalpha(word[1]))
+    if(islower(word[1]))
     {
         number = ((word[0] - 96) * (word[0] - 97)) + (word[1] - 96) - 1;
     }
