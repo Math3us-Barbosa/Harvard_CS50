@@ -96,7 +96,8 @@ bool load(const char *dictionary)
                 printf("out of memory \n");
                 return false;
             }
-            strcpy(n-> word,s);
+            n-> word = NULL;
+            n-> word = s;
             n-> next = NULL;
             index = hash(s);
             for(node *tmp = table[index];j < 1;tmp = tmp->next)
