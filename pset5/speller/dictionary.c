@@ -68,7 +68,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     int i = 0;
-    char ch;
+    //char ch;
     int index;
     //char* s = malloc(46);
     FILE *f = fopen(dictionary,"r");
@@ -79,11 +79,11 @@ bool load(const char *dictionary)
     }
     for(node*n = malloc(sizeof(node));(n->word[i] = fgetc(f)) != EOF;)
     {
-            if(n == NULL)
-            {
-                printf("out of memory \n");
-                return false;
-            }
+        if(n == NULL)
+        {
+            printf("out of memory \n");
+            return false;
+        }
         bool word_loaded = false;
         if(isalpha(n->word[i]))
         {
@@ -114,7 +114,6 @@ bool load(const char *dictionary)
         }
 
     }
-    free(s);
     loaded = 0;
     return true;
 }
