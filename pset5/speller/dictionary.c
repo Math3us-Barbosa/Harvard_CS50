@@ -76,9 +76,9 @@ bool load(const char *dictionary)
         printf("file %s not found",dictionary);
         return false;
     }
-    while((ch = fgetc(f)) != EOF)
+    while(fread(&ch,1,1,f) != NULL)
     {
-        pri
+        printf("%c"ch);
         int j = 0;
         int i = 0;
         bool word_loaded = false;
