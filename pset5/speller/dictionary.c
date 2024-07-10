@@ -89,11 +89,6 @@ bool load(const char *dictionary)
     }
     while((ch = fgetc(f)) != NULL)
     {
-        if(n == NULL)
-        {
-            printf("out of memory \n");
-            return false;
-        }
         bool word_loaded = false;
         if(isalpha(n->word[i]))
         {
@@ -103,11 +98,17 @@ bool load(const char *dictionary)
         else if(ch == '\n')
         {
             node* n = malloc(sizeof(node));
-            int j = 0;
-            n->word[i] = '\0';
-            i = 0;
-            n-> next = NULL;
+            if(n == NULL)
+            {
+                printf("out of memory \n");
+                return false;
+            }
+            s[i] = '\0';
+            n -> next = NULL;
+            strcpy(n->word,s[i]);
             index = hash(n->word);
+            i = 0;
+            int j = 0;
             for(node *tmp = table[index];j < 1;tmp = tmp->next)
             {
                 if(tmp == NULL)

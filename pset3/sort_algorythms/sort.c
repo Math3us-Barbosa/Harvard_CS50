@@ -12,10 +12,6 @@ void merge(int *v, int left, int mid, int right);
 
 int main(void)
 {
-    for(int i = 0; int j = 0;j++)
-    {
-        printf("deixou")
-    }
     int max;
     srand(time(NULL));
     printf("type de size of the array: ");
