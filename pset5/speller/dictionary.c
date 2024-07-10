@@ -69,6 +69,7 @@ unsigned int hash(const char *word)
     {
         number = ((word[0] - 97) * 26 * 26 );
     }
+    
     printf("%i\n",number);
     return number;
 }
