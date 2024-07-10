@@ -61,7 +61,7 @@ unsigned int hash(const char *word)
     {
         number = ((word[0] - 97) * 26 * 26) + ((word[1] - 97) * 26) + (word[2] - 97);
     }
-    else if(isalpha(word[1]) && !isalpha(word[2]))
+    else if(isalpha(word[1]) && isalpha(word[2]) == '0')
     {
         number = ((word[0] - 97)  * 26 * 26) + ((word[1] - 97)  * 26);
     }
@@ -69,7 +69,7 @@ unsigned int hash(const char *word)
     {
         number = ((word[0] - 97) * 26 * 26 );
     }
-    
+
     printf("%i\n",number);
     return number;
 }
