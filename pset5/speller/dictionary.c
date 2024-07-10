@@ -77,7 +77,6 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     int i = 0;
-    int cntrl = 0;
     char ch;
     int index;
     char *s = malloc(46);
