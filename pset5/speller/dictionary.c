@@ -77,6 +77,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     int i = 0;
+    int cntrl = 0;
     //char ch;
     int index;
     //char* s = malloc(46);
@@ -86,9 +87,10 @@ bool load(const char *dictionary)
         printf("file %s not found",dictionary);
         return false;
     }
+    while()
     for(node*n = malloc(sizeof(node));(n->word[i] = fgetc(f)) != EOF;)
     {
-        
+
         if(n == NULL)
         {
             printf("out of memory \n");
