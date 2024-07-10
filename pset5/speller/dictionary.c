@@ -88,6 +88,7 @@ bool load(const char *dictionary)
     }
     for(node*n = malloc(sizeof(node));(n->word[i] = fgetc(f)) != EOF;)
     {
+        
         if(n == NULL)
         {
             printf("out of memory \n");
