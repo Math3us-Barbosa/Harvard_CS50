@@ -114,6 +114,7 @@ bool load(const char *dictionary)
                 if(tmp == NULL)
                 {
                     tmp = n;
+                    tmp->next = NULL;
                     siz++;
                     j++;
                     word_loaded = true;
