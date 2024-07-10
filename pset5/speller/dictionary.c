@@ -80,7 +80,7 @@ bool load(const char *dictionary)
     int cntrl = 0;
     char ch;
     int index;
-    char* s = malloc(46);
+    char *s = malloc(46);
     FILE *f = fopen(dictionary,"r");
     if(f == NULL)
     {
@@ -97,13 +97,13 @@ bool load(const char *dictionary)
         }
         else if(ch == '\n')
         {
-            node* n = malloc(sizeof(node));
+            s[i] = '\0';
+            node *n = malloc(sizeof(node));
             if(n == NULL)
             {
                 printf("out of memory \n");
                 return false;
             }
-            s[i] = '\0';
             n -> next = NULL;
             strcpy(n->word,s[i]);
             index = hash(n->word);
