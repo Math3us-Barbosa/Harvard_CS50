@@ -86,10 +86,10 @@ bool load(const char *dictionary)
         printf("file %s not found",dictionary);
         return false;
     }
-    while((ch = fgetc(f)) != NULL)
+    while((ch = fgetc(f)) != EOF)
     {
         bool word_loaded = false;
-        if(isalpha(n->word[i]))
+        if(isalpha(ch))
         {
             s[i] = ch;
             i++;
@@ -104,7 +104,7 @@ bool load(const char *dictionary)
                 return false;
             }
             n -> next = NULL;
-            strcpy(n->word,s[i]);
+            strcpy(n->word,s);
             index = hash(n->word);
             i = 0;
             int j = 0;
