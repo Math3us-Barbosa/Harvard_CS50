@@ -106,6 +106,7 @@ bool load(const char *dictionary)
             }
             n -> next = NULL;
             strcpy(n->word,s);
+            free(s);
             index = hash(n->word);
             i = 0;
             int j = 0;
