@@ -78,17 +78,16 @@ bool load(const char *dictionary)
 {
     int i = 0;
     int cntrl = 0;
-    //char ch;
+    char ch;
     int index;
-    //char* s = malloc(46);
+    char* s = malloc(46);
     FILE *f = fopen(dictionary,"r");
     if(f == NULL)
     {
         printf("file %s not found",dictionary);
         return false;
     }
-    while()
-    for(node*n = malloc(sizeof(node));(n->word[i] = fgetc(f)) != EOF;)
+    while(node*n = malloc(sizeof(node));(n->word[i] = fgetc(f)) != EOF;)
     {
 
         if(n == NULL)
