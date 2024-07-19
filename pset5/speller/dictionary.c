@@ -123,6 +123,7 @@ bool load(const char *dictionary)
             }
             if(word_loaded == false)
             {
+                printf("\nchegou aqui\n");
                 return false;
             }
         }
