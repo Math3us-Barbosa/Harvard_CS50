@@ -153,6 +153,7 @@ bool unload(void)
             node *tmp = table[i];
             table[i]= tmp->next;
             free(tmp);
+            tmp = NULL;
         }
     }
     return true;
