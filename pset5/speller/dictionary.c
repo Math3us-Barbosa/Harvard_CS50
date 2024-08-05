@@ -87,15 +87,17 @@ bool load(const char *dictionary)
         printf("file %s not found",dictionary);
         return false;
     }
-    while((ch = fgetc(f)) != EOF && siz != 17574)
+    while((ch = fgetc(f)) != EOF )
     {
         bool word_loaded = false;
         if(isalpha(ch))
         {
             s[i] = ch;
             i++;
+            if(siz == 17574)
+                printf("%i",s[i]);
         }
-        else if(ch == '\n'|| ch == NULL)
+        else if(ch == '\n')
         {
             s[i] = '\0';
             node *n = malloc(sizeof(node));
