@@ -57,7 +57,8 @@ unsigned int hash(const char *word)
 {
    unsigned int hash(const char *word) {
     int number = 0;
-    for (int i = 0; i < 3 && word[i] != '\0'; i++) {
+    for (int i = 0; i < 3 && word[i] != '\0'; i++)
+    {
         number = number * 26 + (word[i] - 'a');
     }
     return number;
