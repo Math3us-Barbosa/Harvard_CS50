@@ -37,6 +37,7 @@ bool check(const char *word)
     {
         s[i] = tolower(word[i]);
     }
+    s[max] = '\0';
     int j = hash(s);
     for(node *tmp = table[j]; tmp != NULL; tmp = tmp->next)
     {
