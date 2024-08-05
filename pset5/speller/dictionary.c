@@ -119,7 +119,7 @@ bool load(const char *dictionary)
     while((ch = fgetc(f)) != EOF )
     {
         loaded = 1;
-        if(isalpha(ch))
+        if(isalpha(ch) || ch == 39)
         {
             s[i] = ch;
             i++;
