@@ -17,7 +17,7 @@ node;
 // Number of buckets in hash table
 
 //global counter for how many words are in the hash table
-
+int word_size;
 int siz = 0;
 //global variable that defines if the dictionary is stored(0 for loaded 1 for unloaded)
 int loaded = 1;
