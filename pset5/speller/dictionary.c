@@ -85,7 +85,7 @@ bool load(const char *dictionary)
     }
     while((ch = fgetc(f)) != EOF )
     {
-        bool word_loaded = false;
+        loaded = 1;
         if(isalpha(ch))
         {
             s[i] = ch;
@@ -110,7 +110,6 @@ bool load(const char *dictionary)
             n->next = table[index];
             table[index] = n;
             siz++;
-            word_loaded = true;
         }
 
     }
