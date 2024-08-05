@@ -104,9 +104,7 @@ bool load(const char *dictionary)
             }
             n -> next = NULL;
             strcpy(n->word,s);
-            printf("%s",s);
             index = hash(n->word);
-            printf("%i\n",index);
             i = 0;
             int j = 0;
             n->next = table[index];
