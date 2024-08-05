@@ -55,25 +55,14 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO
-    int number;
-    if (isalpha(word[2]))
-    {
-        number = ((word[0] - 97) * 26 * 26) + ((word[1] - 97) * 26) + (word[2] - 97);
+   unsigned int hash(const char *word) {
+    int number = 0;
+    for (int i = 0; i < 3 && word[i] != '\0'; i++) {
+        number = number * 26 + (word[i] - 'a');
     }
-    else if(isalpha(word[1]))
-    {
-        number = ((word[0] - 97)  * 26 * 26) + ((word[1] - 97)  * 26);
-    }
-    else
-    {
-        number = ((word[0] - 97) * 26 * 26 );
-    }
-
-
     return number;
 }
-
+}
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
