@@ -98,7 +98,7 @@ bool load(const char *dictionary)
         else if(ch == '\n')
         {
             s[i] = '\0';
-            if(siz == 20)
+            if(siz == 143090)
                 printf("\n\n%s",s);
             node *n = malloc(sizeof(node));
             if(n == NULL)
