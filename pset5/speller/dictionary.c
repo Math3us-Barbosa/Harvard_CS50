@@ -124,12 +124,14 @@ bool load(const char *dictionary)
             if(word_loaded == false)
             {
                 printf("\nchegou aqui\n");
+                free(s);
                 return false;
             }
         }
 
     }
     loaded = 0;
+    free(s);
     return true;
 }
 
