@@ -39,8 +39,8 @@ bool check(const char *word)
         s[i] = tolower(word[i]);
     }
     s[i] = '\0';
-    int i = hash(s);
-    for(node *tmp = table[i]; tmp != NULL; tmp = tmp->next)
+    int j = hash(s);
+    for(node *tmp = table[j]; tmp != NULL; tmp = tmp->next)
     {
         if(strcmp((tmp->word),s) == 0)
         {
