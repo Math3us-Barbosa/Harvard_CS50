@@ -75,7 +75,7 @@ void initialize_table(void)
 unsigned int hash(const char *word)
 {
     int number;
-    if(isalpha(word[2]))
+    if(isalpha(word[2]) && word[1] != 39)
     {
         number = ((word[2] - 97) * 26 * 26) + ((word[1] - 97) * 26) + (word[0] - 97);
     }
@@ -83,7 +83,7 @@ unsigned int hash(const char *word)
     {
         number = ((word[1] - 97) * 26 *26) + ((word[0] - 97) * 26);
     }
-    else
+    else if (isalpha(word[0]))
     {
         number = (word[0] - 97) * 26 * 26;
     }
