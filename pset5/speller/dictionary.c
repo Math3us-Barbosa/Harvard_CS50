@@ -26,7 +26,7 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    int max = 46;
+    int max = LENGTH + 1;
     char *s = malloc(max);
     if(s == NULL)
     {
@@ -76,7 +76,7 @@ bool load(const char *dictionary)
     int i = 0;
     char ch;
     int index;
-    char *s = malloc(46);
+    char *s = malloc(LENGTH +1);
     FILE *f = fopen(dictionary,"r");
     if(f == NULL)
     {
