@@ -68,10 +68,10 @@ void initialize_table(void)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    int number = 0;
-    for (int i = 0; i < 3 && word[i] != '\0'; i++)
+    int number;
+    if(isalpha(word[2]))
     {
-        number = number * 26 + (word[i] - 'a');
+        number =
     }
     return number;
 }
