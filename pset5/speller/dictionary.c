@@ -35,7 +35,7 @@ bool check(const char *word)
     }
     for(int i = 0; i < max; i++)
     {
-        if(isalpha(s[i]))
+        if(isalpha(word[i]))
             s[i] = tolower(word[i]);
         else
         {
