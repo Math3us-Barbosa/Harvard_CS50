@@ -17,7 +17,7 @@ node;
 // Number of buckets in hash table
 
 //global counter for how many words are in the hash table
-int word_size;
+int word_length;
 int siz = 0;
 //global variable that defines if the dictionary is stored(0 for loaded 1 for unloaded)
 int loaded = 1;
@@ -132,6 +132,7 @@ bool load(const char *dictionary)
             }
             n -> next = NULL;
             strcpy(n->word,s);
+            word_length = i-1;
             index = hash(n->word);
             i = 0;
             int j = 0;
