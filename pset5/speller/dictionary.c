@@ -77,7 +77,10 @@ unsigned int hash(const char *word)
     {
         number = ((word[1] - 97) * 26) + (word[0] - 97);
     }
-    else 
+    else
+    {
+        number = word[0] - 97
+    }
     return number;
 }
 
