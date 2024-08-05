@@ -116,6 +116,7 @@ bool load(const char *dictionary)
     loaded = 0;
     printf("%i",loaded);
     free(s);
+    fclose(f);
     return true;
 }
 
