@@ -98,6 +98,7 @@ bool load(const char *dictionary)
             }
             n -> next = NULL;
             strcpy(n->word,s);
+            printf("%s",s);
             index = hash(n->word);
             i = 0;
             int j = 0;
