@@ -28,6 +28,7 @@ bool check(const char *word)
 {
     int max = strlen(word);
     char *s = malloc(max+1);
+    int test = 1;
     if(s == NULL)
     {
         printf("out of memory\n");
@@ -39,6 +40,7 @@ bool check(const char *word)
             s[i] = tolower(word[i]);
         else if(word[i] == 39)
             s[i] = word[i];
+            test = 0;
         else
         {
             free(s);
@@ -51,6 +53,8 @@ bool check(const char *word)
     {
         if(strcmp((tmp->word),s) == 0)
         {
+            if(test == 0)
+                printf("word with apostrophe found in dictionary");
             free(s);
             return true;
         }
