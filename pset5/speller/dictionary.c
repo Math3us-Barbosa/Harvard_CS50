@@ -26,19 +26,17 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    int max = LENGTH + 1;
-    char *s = malloc(max);
+    int max = strlen(word);
+    char *s = malloc(max+1);
     if(s == NULL)
     {
         printf("out of memory\n");
         return false;
     }
-    int i;
-    for(i = 0; i < max && s[i] != '\0'; i++)
+    for(int i = 0; i < max; i++)
     {
         s[i] = tolower(word[i]);
     }
-    s[i] = '\0';
     int j = hash(s);
     for(node *tmp = table[j]; tmp != NULL; tmp = tmp->next)
     {
