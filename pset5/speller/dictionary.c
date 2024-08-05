@@ -33,11 +33,12 @@ bool check(const char *word)
         printf("out of memory\n");
         return false;
     }
-
-    for(int i = 0; i < max && s[i] != '\0'; i++)
+    int i;
+    for(i = 0; i < max && s[i] != '\0'; i++)
     {
         s[i] = tolower(word[i]);
     }
+    s[i] = '\0';
     int i = hash(s);
     for(node *tmp = table[i]; tmp != NULL; tmp = tmp->next)
     {
