@@ -94,12 +94,12 @@ bool load(const char *dictionary)
         {
             s[i] = ch;
             i++;
-            if(siz == 20)
-                printf("\n\n%c",s[i]);
         }
         else if(ch == '\n')
         {
             s[i] = '\0';
+            if(siz == 20)
+                printf("\n\n%s",s);
             node *n = malloc(sizeof(node));
             if(n == NULL)
             {
@@ -120,7 +120,7 @@ bool load(const char *dictionary)
                     siz++;
                     j++;
                     word_loaded = true;
-                    //printf("%s",tmp->word);
+                    printf("%s",tmp->word);
                 }
             }
             if(word_loaded == false)
