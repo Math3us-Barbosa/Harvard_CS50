@@ -120,7 +120,7 @@ bool load(const char *dictionary)
                     siz++;
                     j++;
                     word_loaded = true;
-                    printf("%s",tmp->word);
+                    //printf("%s",tmp->word);
                 }
             }
             if(word_loaded == false)
