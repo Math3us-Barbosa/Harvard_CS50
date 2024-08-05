@@ -55,7 +55,6 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-   unsigned int hash(const char *word) {
     int number = 0;
     for (int i = 0; i < 3 && word[i] != '\0'; i++)
     {
@@ -63,7 +62,8 @@ unsigned int hash(const char *word)
     }
     return number;
 }
-}
+
+
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
