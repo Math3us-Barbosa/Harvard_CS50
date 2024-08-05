@@ -39,8 +39,10 @@ bool check(const char *word)
         if(isalpha(word[i]))
             s[i] = tolower(word[i]);
         else if(word[i] == 39)
+            {
             s[i] = word[i];
             test = 0;
+            }
         else
         {
             free(s);
