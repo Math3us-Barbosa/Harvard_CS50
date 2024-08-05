@@ -95,7 +95,7 @@ bool load(const char *dictionary)
             s[i] = ch;
             i++;
             if(siz == 143090)
-                printf("\n%i",s[i]);
+                printf("\n%c",s[i]);
         }
         else if(ch == '\n')
         {
