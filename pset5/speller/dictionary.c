@@ -80,6 +80,7 @@ bool load(const char *dictionary)
     if(f == NULL)
     {
         printf("file %s not found",dictionary);
+        free(s);
         return false;
     }
     while((ch = fgetc(f)) != EOF )
