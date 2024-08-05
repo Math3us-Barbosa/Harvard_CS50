@@ -75,7 +75,7 @@ unsigned int hash(const char *word)
     }
     else if(isalpha(word[1]))
     {
-        number = ((word[1] - 97) * 26) + (word[0] - 97);
+        number = ((word[1] - 97) * 26 *26) + (word[0] - 97);
     }
     else
     {
