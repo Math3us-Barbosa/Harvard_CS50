@@ -78,10 +78,10 @@ bool load(const char *dictionary)
     int index;
     char *s = malloc(LENGTH +1);
     if(s == NULL)
-    [
-        printf("out of memory")
+    {
+        printf("out of memory");
         return false;
-    ]
+    }
     FILE *f = fopen(dictionary,"r");
     if(f == NULL)
     {
@@ -106,8 +106,8 @@ bool load(const char *dictionary)
             if(n == NULL)
             {
                 printf("out of memory \n");
-                free(s)
-                fclose(f)
+                free(s);
+                fclose(f);
                 return false;
             }
             n -> next = NULL;
