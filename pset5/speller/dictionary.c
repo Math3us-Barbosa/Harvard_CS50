@@ -50,6 +50,7 @@ bool check(const char *word)
         }
     }
     s[max] = '\0';
+    max = word_length;
     int j = hash(s);
     for(node *tmp = table[j]; tmp != NULL; tmp = tmp->next)
     {
@@ -75,15 +76,15 @@ void initialize_table(void)
 unsigned int hash(const char *word)
 {
     int number = 0;
-    if(isalpha(word[2]) && word[1] != 39)
+    if(isalpha(word[2]) && word[1] != 39 && word_length > 2)
     {
         number = ((word[2] - 97) * 26 * 26) + ((word[1] - 97) * 26) + (word[0] - 97);
     }
-    else if(isalpha(word[1]))
+    else if(isalpha(word[1]) && word_length == 2)
     {
         number = ((word[1] - 97) * 26 *26) + ((word[0] - 97) * 26);
     }
-    else if (isalpha(word[0]))
+    else if (isalpha(word[0]) && word_length == 1)
     {
         number = (word[0] - 97) * 26 * 26;
     }
@@ -132,7 +133,7 @@ bool load(const char *dictionary)
             }
             n -> next = NULL;
             strcpy(n->word,s);
-            word_length = i-1;
+            word_length = i;
             index = hash(n->word);
             i = 0;
             int j = 0;
