@@ -111,9 +111,10 @@ bool load(const char *dictionary)
             int j = 0;
             for(node *tmp = table[index];j < 1;tmp = tmp->next)
             {
-                if(tmp->next == NULL)
+                if(tmp == NULL)
                 {
-                    tmp->next = n;
+                    tmp = n;
+                    tmp->next = NULL;
                     siz++;
                     j++;
                     word_loaded = true;
