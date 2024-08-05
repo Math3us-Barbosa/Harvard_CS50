@@ -23,6 +23,7 @@ int siz = 0;
 int loaded = 1;
 // Hash table
 node *table[N];
+memset(table, 0, sizeof(table));
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
