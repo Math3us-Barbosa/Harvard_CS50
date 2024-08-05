@@ -34,7 +34,7 @@ bool check(const char *word)
         return false;
     }
 
-    for(int i = 0; i < max|| s[i] == '\0'; i++)
+    for(int i = 0; i < max && s[i] != '\0'; i++)
     {
         s[i] = tolower(word[i]);
     }
