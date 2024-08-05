@@ -131,6 +131,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
+    printf("%i",loaded);
     if(loaded == 0)
     {
         printf("\n dicionario carregado%i\n",siz);
