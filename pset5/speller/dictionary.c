@@ -80,6 +80,10 @@ unsigned int hash(const char *word)
     {
         number = ((word[2] - 97) * 26 * 26) + ((word[1] - 97) * 26) + (word[0] - 97);
     }
+    else if(isalpha(word[2]) && word[1] == 39 && word_length > 2)
+    {
+        number =((word[2] - 97) * 26 * 26) + (word[0] - 97);
+    }
     else if(isalpha(word[1]) && word_length == 2)
     {
         number = ((word[1] - 97) * 26 *26) + ((word[0] - 97) * 26);
