@@ -70,7 +70,7 @@ unsigned int hash(const char *word)
         number = ((word[0] - 97) * 26 * 26 );
     }
 
-    printf("%i\n",number);
+
     return number;
 }
 
@@ -120,7 +120,7 @@ bool load(const char *dictionary)
                     siz++;
                     j++;
                     word_loaded = true;
-                    printf("%s",tmp->word);
+                    //printf("%s",tmp->word);
                 }
             }
             if(word_loaded == false)
