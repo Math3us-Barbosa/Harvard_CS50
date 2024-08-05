@@ -39,6 +39,7 @@ bool check(const char *word)
     }
     s[max] = '\0';
     int j = hash(s);
+    printf("%i\n",j);
     for(node *tmp = table[j]; tmp != NULL; tmp = tmp->next)
     {
         if(strcmp((tmp->word),s) == 0)
