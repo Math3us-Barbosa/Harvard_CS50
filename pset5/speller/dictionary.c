@@ -109,7 +109,18 @@ bool load(const char *dictionary)
             printf("%i\n",index);
             i = 0;
             int j = 0;
-            for(node *tmp = table[index];j < 1;tmp = tmp->next)
+            n->next = table[index];
+            table[index] = n;
+            siz++;
+            word_loaded = true;
+
+
+
+
+
+
+
+            /*for(node *tmp = table[index];j < 1;tmp = tmp->next)
             {
                 if(tmp == NULL)
                 {
@@ -121,6 +132,7 @@ bool load(const char *dictionary)
                     //printf("%s",tmp->word);
                 }
             }
+            */
             if(word_loaded == false)
             {
                 printf("\nchegou aqui\n");
