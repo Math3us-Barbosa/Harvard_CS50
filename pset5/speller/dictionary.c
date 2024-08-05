@@ -50,7 +50,7 @@ bool check(const char *word)
         }
     }
     s[max] = '\0';
-    max = word_length;
+    word_length = max;
     int j = hash(s);
     for(node *tmp = table[j]; tmp != NULL; tmp = tmp->next)
     {
