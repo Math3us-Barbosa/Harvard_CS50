@@ -113,12 +113,6 @@ bool load(const char *dictionary)
             table[index] = n;
             siz++;
             word_loaded = true;
-            if(word_loaded == false)
-            {
-                printf("\nchegou aqui\n");
-                free(s);
-                return false;
-            }
         }
 
     }
