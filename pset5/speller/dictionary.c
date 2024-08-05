@@ -23,7 +23,6 @@ int siz = 0;
 int loaded = 1;
 // Hash table
 node *table[N];
-memset(table, 0, sizeof(table));
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -51,6 +50,11 @@ bool check(const char *word)
     free(s);
     return false;
 }
+void initialize_table(void)
+{
+    // Initialize the table to NULL using memset
+    memset(table, 0, sizeof(table));
+}
 
 
 // Hashes word to a number
@@ -68,6 +72,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    initialize_table();
     int i = 0;
     char ch;
     int index;
