@@ -35,7 +35,13 @@ bool check(const char *word)
     }
     for(int i = 0; i < max; i++)
     {
-        s[i] = tolower(word[i]);
+        if(isalpha(s[i]))
+            s[i] = tolower(word[i]);
+        else
+        {
+            free(s);
+            return false;
+        }
     }
     s[max] = '\0';
     int j = hash(s);
