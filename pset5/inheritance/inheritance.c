@@ -58,7 +58,8 @@ person *create_family(int generations)
     {
         p-> parent[0] = NULL;
         p-> parent[1] = NULL;
-        p.
+        p->alleles = random_allele();
+        p+1->alleles = random_allele();
     }
         // TODO: Randomly assign alleles
 
