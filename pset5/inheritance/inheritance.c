@@ -138,7 +138,7 @@ char inherit_allele(person *p)
 {
     int r = rand() % 2;
     if(r == 0)
-        return(p->allele)
+        return(p->allele[0]);
     else
-        return(p->allele+1)
+        return(p->allele[1]);
 }
