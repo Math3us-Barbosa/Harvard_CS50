@@ -42,7 +42,7 @@ person *create_family(int generations)
 
     // If there are still generations left to create
     if (generations > 1)
-    { 
+    {
         // Create two new parents for current person by recursively calling create_family
         person *parent0 = create_family(generations - 1);
         person *parent1 = create_family(generations - 1);
@@ -52,7 +52,7 @@ person *create_family(int generations)
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
     }
 
-    // If there are no generations left to create
+    // If there are no  generations left to create
     elsewget https://cdn.cs50.net/2023/fall/psets/5/inheritance.zip
         // TODO: Randomly assign alleles
     }
