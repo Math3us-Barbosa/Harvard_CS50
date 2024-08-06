@@ -134,7 +134,11 @@ char random_allele()
         return 'O';
     }
 }
-char inherit_allele(person p)
+char inherit_allele(person *p)
 {
-    
+    int r = rand() % 2;
+    if(r == 0)
+        return(p->allele)
+    else
+        return(p+1->allele)
 }
