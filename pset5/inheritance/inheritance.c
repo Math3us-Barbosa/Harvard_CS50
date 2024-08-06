@@ -19,6 +19,7 @@ person *create_family(int generations);
 void print_family(person *p, int generation);
 void free_family(person *p);
 char random_allele();
+char select_allele(person *p);
 
 int main(void)
 {
@@ -48,18 +49,19 @@ person *create_family(int generations)
         person *parent1 = create_family(generations - 1);
 
         // TODO: Set parent pointers for current person
-        p-> parent[0] = parent0;
-        p-> parent[1] = parent1;
+        p-> parents[0] = parent0;
+        p-> parents[1] = parent1;
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
-        p.alleles[0] = select_allele;
+        p->alleles[0] = select_allele(p->parents[0]);
+        p->alleles[1] = select_allele(p->parents[1]);
     }
 
     // If there are no  generations left to create
     else
     {
         // TODO: Randomly assign alleles
-        p-> parent[0] = NULL;
-        p-> parent[1] = NULL;
+        p-> parents[0] = NULL;
+        p-> parents[1] = NULL;
         p->alleles[0] = random_allele();
         p->alleles[1] = random_allele();
     }
@@ -138,7 +140,7 @@ char select_allele(person *p)
 {
     int r = rand() % 2;
     if(r == 0)
-        return(p->allele[0]);
+        return(p->alleles[0]);
     else
-        return(p->allele[1]);
+        return(p->alleles[1]);
 }
