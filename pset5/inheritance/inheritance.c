@@ -53,7 +53,10 @@ person *create_family(int generations)
     }
 
     // If there are no  generations left to create
-    elsewget https://cdn.cs50.net/2023/fall/psets/5/inheritance.zip
+    else
+    {
+
+    }
         // TODO: Randomly assign alleles
     }
 
