@@ -42,7 +42,7 @@ person *create_family(int generations)
 
     // If there are still generations left to create
     if (generations > 1)
-    {
+    { 
         // Create two new parents for current person by recursively calling create_family
         person *parent0 = create_family(generations - 1);
         person *parent1 = create_family(generations - 1);
