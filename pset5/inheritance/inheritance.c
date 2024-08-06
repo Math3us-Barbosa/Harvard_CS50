@@ -140,5 +140,5 @@ char inherit_allele(person *p)
     if(r == 0)
         return(p->allele)
     else
-        return(p+1->allele)
+        return(p->allele+1)
 }
