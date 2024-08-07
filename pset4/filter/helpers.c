@@ -92,11 +92,9 @@ for(int i = 0; i < height; i++)
 free(image2);
     return;
 }
+
+
 // Detect edges
-
-
-
-
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
 
