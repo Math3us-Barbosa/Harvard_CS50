@@ -140,7 +140,6 @@ bool load(const char *dictionary)
             word_length = i;
             index = hash(n->word);
             i = 0;
-            int j = 0;
             n->next = table[index];
             table[index] = n;
             siz++;
