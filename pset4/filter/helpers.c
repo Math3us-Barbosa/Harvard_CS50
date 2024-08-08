@@ -149,7 +149,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 rblue = 255;
             }
-
+            printf()
             image2[i][j].rgbtBlue = rblue;
             image2[i][j].rgbtRed = rred;
             image2[i][j].rgbtGreen = rgreen;
