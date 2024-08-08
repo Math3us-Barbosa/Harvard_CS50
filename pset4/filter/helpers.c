@@ -98,7 +98,7 @@ free(image2);
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE **image2;
-    image2 = malloc(height *sizeof(*RGBTRIPLE));
+    image2 = malloc(height *sizeof(RGBTRIPLE*));
     for(int i = 0; i < width; i++)
     {
         image2[i] = malloc(width * sizeof(RGBTRIPLE));
@@ -124,6 +124,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if(x > -1 && x < height && y > -1 && y < width)
                     {
+                    if(cont1 ==3 || cont2 == 3)
+                        printf("deu ruim\n");
                     sxred += gx[cont1][cont2]*image[x][y].rgbtRed;
                     syred += gy[cont1][cont2]*image[x][y].rgbtRed;
                     sxgreen += gx[cont1][cont2]*image[x][y].rgbtGreen;
@@ -133,7 +135,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            printf("\n%i %i\n",cont1,cont2);
             rred = round(sqrt((sxred*sxred)+(syred*syred)));
             rgreen = round(sqrt((sxgreen*sxgreen)+(sygreen*sygreen)));
             rblue = round(sqrt((sxblue*sxblue)+(syblue*syblue)));
