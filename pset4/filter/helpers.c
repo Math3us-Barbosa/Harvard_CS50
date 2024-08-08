@@ -97,14 +97,6 @@ free(image2);
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
-    /*
-    RGBTRIPLE **image2;
-    image2 = malloc (height * sizeof(RGBTRIPLE*));
-    for(int i = 0; i < height; i++)
-    {
-        image2[i] = malloc(width * sizeof(RGBTRIPLE));
-    }
-    */
     int gx[3][3] = { {-1, 0, 1},
                      {-2, 0, 2},
                      {-1, 0, 1} };
@@ -154,28 +146,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtGreen = rgreen;
         }
     }
-    /*
-    for(int i = 0; i < height; i++)
-    {
-        free(image2[i]);
-    }
-    free(image2);
-    */
-    for(int i = 0; i < 3; i++)
-    {
-        for(int j = 0; j < 3; j++)
-        {
-            printf("%i \n",gx[i][j]);
-        }
-    }
-    for(int i = 0; i < 3; i++)
-    {
-        for(int j = 0; j < 3; j++)
-        {
-            printf("%i \n",gy[i][j]);
-        }
-    }
-
     return;
 }
 
