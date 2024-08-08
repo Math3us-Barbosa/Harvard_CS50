@@ -98,13 +98,14 @@ free(image2);
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
 
-
+    /*
     RGBTRIPLE **image2;
     image2 = malloc (height * sizeof(RGBTRIPLE*));
     for(int i = 0; i < height; i++)
     {
         image2[i] = malloc(width * sizeof(RGBTRIPLE));
     }
+    */
     int gx[3][3] = { {-1, 0, 1},
                      {-2, 0, 2},
                      {-1, 0, 1} };
@@ -130,7 +131,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
-            int txred = 0, tyred = 0, txgreen = 0, tygreen = 0, txblue = 0, tyblue = 0, cont1 = 0, cont2 = 0;
+            int rred ,rgreen ,rblue , sxred = 0, syred = 0, sxgreen = 0, sygreen = 0, sxblue = 0, syblue = 0, cont1 = 0, cont2 = 0;
             for(int x = (i-1); x < i+2; x++,cont1++)
             {
                     for(int y = (j-1); y < j+2; y++,cont2++)
@@ -146,21 +147,22 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         }
                     }
             }
-            sxred = round(sqrt((sxred*sxred)+(syred*syred)));
-            sxgreen = round(sqrt((sxgreen*sxgreen)+(sygreen*sygreen)));
-            sxblue = round(sqrt(sxblue*sxblue)+(syblue*syblue));
-            if(sxred > 255)
+            rred = round(sqrt((sxred*sxred)+(syred*syred)));
+            rgreen = round(sqrt((sxgreen*sxgreen)+(sygreen*sygreen)));
+            rblue = round(sqrt(sxblue*sxblue)+(syblue*syblue));
+            if(rred > 255)
             {
-                sxred = 255;
+                rred = 255;
             }
-            if(sxgreen > 255)
+            if(rgreen > 255)
             {
-                image[i][j].rgbtGreen = 255;
+                rgreen = 255;
             }
-            if(image[i][j].rgbtBlue > 255)
+            if(rblue > 255)
             {
-                image[i][j].rgbtBlue = 255;
+                rblue = 255;
             }
+            image[i][j].rgbtBlue =
         }
     }
     for(int i = 0; i < height; i++)
