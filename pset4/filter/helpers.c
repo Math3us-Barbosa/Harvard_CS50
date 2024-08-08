@@ -116,10 +116,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for(int l = 0; l < 3; l++)
                 {
-                    if((k-1 > -1) && k+1 < height)
-                    {
-                    gy[k][l] = g[]
-                    }
+                   
                 }
             }
         }
