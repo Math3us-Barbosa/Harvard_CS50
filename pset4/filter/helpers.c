@@ -132,6 +132,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         }
                     }
             }
+            printf("\n%i %i\n",cont1,cont2);
             rred = round(sqrt((sxred*sxred)+(syred*syred)));
             rgreen = round(sqrt((sxgreen*sxgreen)+(sygreen*sygreen)));
             rblue = round(sqrt((sxblue*sxblue)+(syblue*syblue)));
