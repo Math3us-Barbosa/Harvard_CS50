@@ -134,12 +134,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             sxred = 0, syred = 0, sxgreen = 0, sygreen = 0, sxblue = 0, syblue = 0;
 
 
-            for(int x = (i-1), cont1 = 0; x <= i+1; x++,cont1++)
+            for(int x = (i-1), cont1 = 0; x < i+2; x++,cont1++)
             {
-                    for(int y = (j-1), cont2 = 0; y <= j+1; y++,cont2++)
+                    for(int y = (j-1), cont2 = 0; y < j+2; y++,cont2++)
                     {
-
-
                         if(x > 0 && x < height && y > 0 && y < width)
                         {
                         sxred += gx[cont1][cont2]*image2[x][y].rgbtRed;
