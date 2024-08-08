@@ -115,22 +115,23 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
-            int sxred = 0, syred = 0, sxgreen = 0, sygreen = 0, sxblue = 0, syblue = 0, cont1 = 0, cont2 = 0;
+            int sxred = 0, syred = 0, sxgreen = 0, sygreen = 0, sxblue = 0, syblue = 0, cont1 = 0, cont2;
             BYTE rred, rgreen, rblue;
             for(int x = (i-1); x < i+2; x++,cont1++)
             {
-                    for(int y = (j-1); y < j+2; y++,cont2++)
+                cont2 = 0;
+                for(int y = (j-1); y < j+2; y++,cont2++)
+                {
+                    if(x > -1 && x < height && y > -1 && y < width)
                     {
-                        if(x > -1 && x < height && y > -1 && y < width)
-                        {
-                        sxred += gx[cont1][cont2]*image[x][y].rgbtRed;
-                        syred += gy[cont1][cont2]*image[x][y].rgbtRed;
-                        sxgreen += gx[cont1][cont2]*image[x][y].rgbtGreen;
-                        sygreen += gy[cont1][cont2]*image[x][y].rgbtGreen;
-                        sxblue += gx[cont1][cont2]*image[x][y].rgbtBlue;
-                        syblue += gy[cont1][cont2]*image[x][y].rgbtBlue;
-                        }
+                    sxred += gx[cont1][cont2]*image[x][y].rgbtRed;
+                    syred += gy[cont1][cont2]*image[x][y].rgbtRed;
+                    sxgreen += gx[cont1][cont2]*image[x][y].rgbtGreen;
+                    sygreen += gy[cont1][cont2]*image[x][y].rgbtGreen;
+                    sxblue += gx[cont1][cont2]*image[x][y].rgbtBlue;
+                    syblue += gy[cont1][cont2]*image[x][y].rgbtBlue;
                     }
+                }
             }
             printf("\n%i %i\n",cont1,cont2);
             rred = round(sqrt((sxred*sxred)+(syred*syred)));
