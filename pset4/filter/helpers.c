@@ -126,12 +126,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                     if(cont1 == 3 || cont2 == 3)
                         printf("deu ruim\n");
-                    sxred += gx[x+1][y+1]*image[x][y].rgbtRed;
-                    syred += gy[x+1][y+1]*image[x][y].rgbtRed;
-                    sxgreen += gx[x+1][y+1]*image[x][y].rgbtGreen;
-                    sygreen += gy[x+1][y+1]*image[x][y].rgbtGreen;
-                    sxblue += gx[x+1][y+1]*image[x][y].rgbtBlue;
-                    syblue += gy[x+1][y+1]*image[x][y].rgbtBlue;
+                    sxred += gx[cont1][cont2]*image[x][y].rgbtRed;
+                    syred += gy[cont1][cont2]*image[x][y].rgbtRed;
+                    sxgreen += gx[cont1][cont2]*image[x][y].rgbtGreen;
+                    sygreen += gy[cont1][cont2]*image[x][y].rgbtGreen;
+                    sxblue += gx[cont1][cont2]*image[x][y].rgbtBlue;
+                    syblue += gy[cont1][cont2]*image[x][y].rgbtBlue;
                     }
                 }
             }
