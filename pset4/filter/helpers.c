@@ -117,7 +117,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
-            image2[i][j] = image[i][j];
+            for(int k = 0; k < 3; k++)
+            {
+                for(int l = 0; l < 3; l++)
+                {
+                    if(l-1 < -1 && )
+                }
+            }
         }
     }
     int sxred,sxgreen,sxblue,syred,sygreen,syblue;
