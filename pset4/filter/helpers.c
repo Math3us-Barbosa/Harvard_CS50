@@ -97,6 +97,11 @@ free(image2);
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE **image2 = malloc(height *sizeof(RGBTRIPLE));
+    for(int i = 0; i < width; i++)
+    {
+        *image[i] = malloc(w)
+    }
     int gx[3][3] = { {-1, 0, 1},
                      {-2, 0, 2},
                      {-1, 0, 1} };
