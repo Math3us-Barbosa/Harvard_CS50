@@ -148,12 +148,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
             sxred = round(sqrt((sxred*sxred)+(syred*syred)));
             sxgreen = round(sqrt((sxgreen*sxgreen)+(sygreen*sygreen)));
-            sx = round(sqrt(sxblue*sxblue)+(syblue*syblue));
-            if(image[i][j].rgbtRed > 255)
+            sxblue = round(sqrt(sxblue*sxblue)+(syblue*syblue));
+            if(sxred > 255)
             {
-                image[i][j].rgbtRed = 255;
+                sxred = 255;
             }
-            if(image[i][j].rgbtGreen > 255)
+            if(sxgreen > 255)
             {
                 image[i][j].rgbtGreen = 255;
             }
