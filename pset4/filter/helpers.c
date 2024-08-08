@@ -124,12 +124,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         if(x > 0 && x < height && y > 0 && y < width)
                         {
-                        sxred += gx[cont1][cont2]*image2[x][y].rgbtRed;
-                        syred += gy[cont1][cont2]*image2[x][y].rgbtRed;
-                        sxgreen += gx[cont1][cont2]*image2[x][y].rgbtGreen;
-                        sygreen += gy[cont1][cont2]*image2[x][y].rgbtGreen;
-                        sxblue += gx[cont1][cont2]*image2[x][y].rgbtBlue;
-                        syblue += gy[cont1][cont2]*image2[x][y].rgbtBlue;
+                        sxred += gx[cont1][cont2]*image[x][y].rgbtRed;
+                        syred += gy[cont1][cont2]*image[x][y].rgbtRed;
+                        sxgreen += gx[cont1][cont2]*image[x][y].rgbtGreen;
+                        sygreen += gy[cont1][cont2]*image[x][y].rgbtGreen;
+                        sxblue += gx[cont1][cont2]*image[x][y].rgbtBlue;
+                        syblue += gy[cont1][cont2]*image[x][y].rgbtBlue;
                         }
                     }
             }
