@@ -149,9 +149,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 rblue = 255;
             }
+
             image2[i][j].rgbtBlue = rblue;
             image2[i][j].rgbtRed = rred;
-            image2[i][j].rgbtGreen = rgreen;    
+            image2[i][j].rgbtGreen = rgreen;
         }
     }
     for(int i = 0; i < height; i++)
