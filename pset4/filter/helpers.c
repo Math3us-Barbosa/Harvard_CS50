@@ -98,8 +98,8 @@ free(image2);
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE **image2;
-    image2 = malloc(height *sizeof(RGBTRIPLE*));
-    for(int i = 0; i < width; i++)
+    image2 = malloc (height * sizeof(RGBTRIPLE*));
+    for(int i = 0; i < height; i++)
     {
         image2[i] = malloc(width * sizeof(RGBTRIPLE));
     }
