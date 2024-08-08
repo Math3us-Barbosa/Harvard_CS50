@@ -105,14 +105,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         image2[i] = malloc(width * sizeof(RGBTRIPLE));
     }
-    int gx[3][3] = { {-1, 0, 1},
-                     {-2, 0, 2},
-                     {-1, 0, 1} };
-
-
-    int gy[3][3] = { {-1, -2, -1},
-                     {0, 0, 0},
-                     {1, 2, 1} };
+    int gx[3][3];
+    int gy[3][3];
+    for(int i)
     for(int i = 0; i < height; i++)
     {
         for(int j = 0; j < width; j++)
