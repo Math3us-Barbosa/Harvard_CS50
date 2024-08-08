@@ -166,7 +166,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         free(image2[i]);
     }
-free(image2);
+    free(image2);
     return;
 }
 
