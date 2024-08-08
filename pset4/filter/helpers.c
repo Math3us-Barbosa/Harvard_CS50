@@ -124,7 +124,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if(x > -1 && x < height && y > -1 && y < width)
                     {
-                    if(cont1 ==3 || cont2 == 3)
+                    if(cont1 == 3 || cont2 == 3)
                         printf("deu ruim\n");
                     sxred += gx[cont1][cont2]*image[x][y].rgbtRed;
                     syred += gy[cont1][cont2]*image[x][y].rgbtRed;
