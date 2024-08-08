@@ -126,14 +126,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
         }
     }
-    int sxred,sxgreen,sxblue,syred,sygreen,syblue;
     for(int i = 0; i < height; i++)
     {
         for(int j = 0; j < width; j++)
         {
-            sxred = 0, syred = 0, sxgreen = 0, sygreen = 0, sxblue = 0, syblue = 0;
-
-            
+            int sxred = 0, syred = 0, sxgreen = 0, sygreen = 0, sxblue = 0, syblue = 0, cont1 = 0, cont2 = 0;
             for(int x = (i-1); x < i+2; x++,cont1++)
             {
                     for(int y = (j-1); y < j+2; y++,cont2++)
