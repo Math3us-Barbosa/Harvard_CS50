@@ -3,7 +3,7 @@ from cs50 import get_float
 change = get_float("Change owed: ")
 print(change)
 coins = 0
-while round(change,2) > 0.0:
+while round(change,2) > 0:
     if change >= 0.25:
         coins += 1
         change -= 0.25
