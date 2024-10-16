@@ -16,4 +16,5 @@ while round(change,2) > 0:
     elif change >= 0.1:
         coins += 1
         change -=0.01
+    change = round(change,2)
 print(coins)
