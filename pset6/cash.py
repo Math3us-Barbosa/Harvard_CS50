@@ -11,10 +11,13 @@ while change > 0.0:
     elif change >= 0.10:
         coins +=1
         change -= 0.10
-    elif change >= 0.5:
+        print(change)
+    elif change >= 0.05:
         coins += 1
-        change -= 0.10
-    elif change >= 0.099:
+        change -= 0.05
+        print(change)
+    elif change >= 0.009:
         coins += 1
-        change -=0.1
+        change -=0.01
+        print(change)
 print(coins)
