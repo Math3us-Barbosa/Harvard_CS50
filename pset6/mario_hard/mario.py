@@ -11,3 +11,4 @@ for i in range (height):
     print("#" * (i + 1), end = "")
     print(" " *(height - 1 - i))
 
+x
