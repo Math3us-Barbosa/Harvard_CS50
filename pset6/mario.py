@@ -1,6 +1,6 @@
 from cs50 import get_int
 height = int(input("Height: "))
-for i in  [0,1,2,3]:
+for i in  range (height):
     print(" " * (height - 1 - i),end = "")
-    print("#" * i)
+    print("#" * (i+1))
 
