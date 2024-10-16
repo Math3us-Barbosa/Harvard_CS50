@@ -6,7 +6,7 @@ coins = 0
 while change > 0.0:
     if change >= 0.25:
         coins += 1
-        change -= 0.25
+        change -= 0.2500000
         print(change)
     elif change >= 0.10:
         coins +=1
