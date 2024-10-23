@@ -9,5 +9,6 @@ for i in range (height):
     print(" " * (height - 1 - i), end = "")
     print("#" * (i + 1), end = " ")
     print("#" * (i + 1), end = "")
-    print("")
+    print(" " *(height - 1 - i))
+
 
