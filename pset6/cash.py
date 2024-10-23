@@ -2,6 +2,7 @@ from cs50 import get_float
 
 # Getting change value from user
 change = get_float("Change owed: ")
+# Asks for a positive vallue if the user type a negative vallue for change
 while change < 0.01:
     print("negatives vallues are invalid")
     change = get_float("Change owed: ")
