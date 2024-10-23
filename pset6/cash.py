@@ -1,10 +1,11 @@
 from cs50 import get_float
 
+#getting change vallue
 change = get_float("Change owed: ")
-print(change)
+#counter for coins started as 0
 coins = 0
+#while change > 0.00 chose 
 while round(change,2) > 0:
-    print(change)
     if change >= 0.25:
         coins += 1
         change -= 0.25
