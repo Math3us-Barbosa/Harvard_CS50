@@ -1,7 +1,9 @@
 from cs50 import get_float
 
 # Getting change value from user
-change = get_float("Change owed: ")
+change = - 0.01
+while(change < 0.01)
+    change = get_float("Change owed: ")
 
 # Counter for coins starts at 0
 coins = 0
