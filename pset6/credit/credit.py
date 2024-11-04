@@ -12,8 +12,8 @@ c = 0
                 x = x + y
             n = n / 10
         elif c % 2 == 0 //se par
-            x = x + (n % 10);
-            n = n / 10;
+            x = x + (n % 10)
+            n = n / 10
 
         //declarando os dois primeiros digitos como p
         if ((n < 100) && (n > 10))
