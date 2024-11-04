@@ -19,6 +19,8 @@ while n > 0:
     if n < 100 and n > 10:
         p = n
     c+=
+if x % 10 != 0
+    print("INVALID")
 if p == 34 or p == 37
     print("Amex")
 elif p =
