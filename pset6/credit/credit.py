@@ -1,7 +1,27 @@
 import re
 
-num_card = get_int("Card Number: ")
+num = get_int("Number: ")
+c = 0
+//loop para checar validade do numero
+    while n > 0:
+        if c % 2 != 0: //se impar
+            y = 2 * (n % 10)
+            if y >= 10:
+                x = x + (y % 10) + (y / 10)
+            else:
+                x = x + y
+            n = n / 10
+        elif c % 2 == 0 //se par
+            x = x + (n % 10);
+            n = n / 10;
 
+        //declarando os dois primeiros digitos como p
+        if ((n < 100) && (n > 10))
+        {
+            p = n;
+        }
+        c++;
+    }
 
 
 
