@@ -2,6 +2,8 @@ import re
 
 n = get_int("Number: ")
 c = 0
+x = 0
+y = 0
 //loop para checar validade do numero
 while n > 0:
     if c % 2 != 0: //se impar
@@ -20,7 +22,6 @@ while n > 0:
         p = n
     c+=
 num = str(n)
-
 patterns = {
     "AMEX": r"^3[47][0-9]{13}$",          # Começa com 34 ou 37, e tem 15 dígitos
     "VISA": r"^4[0-9]{12}(?:[0-9]{3})?$", # Começa com 4, e tem 13 ou 16 dígitos
