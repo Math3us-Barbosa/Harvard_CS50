@@ -1,5 +1,10 @@
 import re
 
+num_card = get_int("Card Number: ")
+
+
+
+
 patterns = {
     "AMEX": r"^3[47][0-9]{13}$",          # Começa com 34 ou 37, e tem 15 dígitos
     "VISA": r"^4[0-9]{12}(?:[0-9]{3})?$", # Começa com 4, e tem 13 ou 16 dígitos
