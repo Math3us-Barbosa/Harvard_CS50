@@ -21,7 +21,7 @@ while n > 0:
     c+=
 if x % 10 != 0
     print("INVALID")
-if p == 34 or p == 37
+elif p == 34 or p == 37
     print("Amex")
-elif p =
+elif p == 
 
