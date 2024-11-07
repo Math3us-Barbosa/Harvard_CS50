@@ -5,6 +5,7 @@ n = get_int("Number: ")
 c = 0
 x = 0
 y = 0
+p = 0
 #loop to check if the number is valid or not
 while n > 0:
     if c % 2 != 0: #if odd
