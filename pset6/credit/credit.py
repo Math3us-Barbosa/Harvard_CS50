@@ -1,4 +1,5 @@
 import re
+from cs50 import get_int
 
 num = get_int("Number: ")
 c = 0
@@ -13,7 +14,7 @@ while n > 0:
         else:
             x = x + y
         n = n / 10
-    elif c % 2 == 0 #if even
+    elif c % 2 == 0: #if even
         x = x + (n % 10)
         n = int(n / 10)
 
@@ -23,10 +24,10 @@ while n > 0:
     c+= 1
 if x % 10 != 0:
     print("INVALID")
-elif c = 15 and (p = 34 or p = 37):
+elif c == 15 and (p == 34 or p == 37):
     print("AMEX")
-elif (c = 16 or c = 13) and int(p/10) == 4
+elif (c == 16 or c == 13) and int(p/10) == 4:
     print("VISA")
-else
+else:
     print("MASTERCARD")
 
