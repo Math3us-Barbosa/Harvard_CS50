@@ -27,8 +27,8 @@ elif c == 15 and (p == 34 or p == 37):
 elif (c == 16 or c == 13) and int(p/10) == 4:
     print("VISA")
     y = 0
-else:
+elif ((c == 16) and (int(p / 10) == 5) and (p % 10 <= 5) and (p % 10 >= 1)):
     print("MASTERCARD")
     y = 0
-if y != 0:
+else:
     print("INVALID")
