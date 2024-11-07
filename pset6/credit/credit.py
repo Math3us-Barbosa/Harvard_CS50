@@ -25,6 +25,6 @@ if x % 10 != 0:
     print("INVALID")
 elif c = 15 and (p = 34 or p = 37):
     print("AMEX")
-elif c = 16 
+elif c = 16 and p
 
 
