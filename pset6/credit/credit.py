@@ -1,7 +1,7 @@
 import re
 from cs50 import get_int
 
-num = get_int("Number: ")
+n = get_int("Number: ")
 c = 0
 x = 0
 y = 0
