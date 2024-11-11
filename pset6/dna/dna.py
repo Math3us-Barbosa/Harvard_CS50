@@ -5,27 +5,27 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-if len(sys.argv) != 3:
-    print("There must be 3 command-line arguments")
-    sys.exit(1)
+    if len(sys.argv) != 3:
+        print("There must be 3 command-line arguments")
+        sys.exit(1)
     # TODO: Read database file into a variable
-with open(sys.argv[1],"r") as file:
-    reader = csv.DictReader(file)
+    with open(sys.argv[1],"r") as file:
+        reader = csv.DictReader(file)
     # TODO: Read DNA sequence file into a variable
-with open (sys.argv[2],"r") as f:
-    dna_sequence = f.read()
+    with open (sys.argv[2],"r") as f:
+        dna_sequence = f.read()
     # TODO: Find longest match of each STR in DNA sequence
-sequences = reader.fieldnames
-reps = []
-for seq in sequences
-    if seq == "name":
-        continue
-    reps.append(longest_match(dna_sequence,seq))
+    sequences = reader.fieldnames
+    reps = []
+    for seq in sequences:
+        if seq == "name":
+            continue
+        reps.append(longest_match(dna_sequence,seq))
     # TODO: Check database for matching profiles
-for row in reader:
-    if int(row[1:]) == reps:
-        print(row.name)
-    return
+    for row in reader:
+        if int(row[1:]) == reps:
+            print(row.name)
+        return
 
 # Now you can use fieldnames as a parameter for the longest_match method
 
