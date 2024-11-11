@@ -60,7 +60,7 @@ def simulate_tournament(teams):
     random.shuffle(teams)
     winner = teams
     while len(winner) > 1:
-    winner = simulate_round(winner[)
-
+    winner = simulate_round(winner)
+    return winner["name"]
 if __name__ == "__main__":
     main()
