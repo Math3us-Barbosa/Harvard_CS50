@@ -19,14 +19,16 @@ def main():
         dna_sequence = f.read()
     # TODO: Find longest match of each STR in DNA sequence
     reps = []
+    sequences2 = []
     for seq in sequences:
         if seq == "name":
             continue
+        sequences2.append(seq)
         reps.append(longest_match(dna_sequence,seq))
     # TODO: Check database for matching profiles
     print(reps)
     for row in database:
-        if int(row[sequences]) == reps:
+        if int(row[sequences2]) == reps:
             print(row.name)
             sys.exit(0)
     print("No match")
