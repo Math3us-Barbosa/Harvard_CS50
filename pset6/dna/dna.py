@@ -6,8 +6,8 @@ def main():
 
     # TODO: Check for command-line usage
 if len(sys.argv) != 2:
-    print("There must be ")
-
+    print("There must be 3 command-line arguments")
+    sys.exit(1)
     # TODO: Read database file into a variable
 
     # TODO: Read DNA sequence file into a variable
