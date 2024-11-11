@@ -15,4 +15,4 @@ for i in range (N):
 L = (letter_counter/word_counter) * 100
 S = (sentences/word_counter) * 100
 index = round(0.0588 * L - 0.296 * S - 15.8)
-print("Grade: " + index)
+print("Grade: " + str(index))
