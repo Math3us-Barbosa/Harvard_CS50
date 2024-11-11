@@ -23,12 +23,9 @@ if x % 10 != 0:
     print("INVALID")
 elif c == 15 and (p == 34 or p == 37):
     print("AMEX")
-    y = 0
 elif (c == 16 or c == 13) and int(p/10) == 4:
     print("VISA")
-    y = 0
 elif ((c == 16) and (int(p / 10) == 5) and (p % 10 <= 5) and (p % 10 >= 1)):
     print("MASTERCARD")
-
 else:
     print("INVALID")
