@@ -10,7 +10,6 @@ while height < 1 or height > 8:
 for i in range (height):
     print(" " * (height - 1 - i), end = "") #printing spaces before 1st pyramide
     print("#" * (i + 1), end = "  ") #printing hashes from 1st pyramide/space at the end
-    print("#" * (i + 1), end = "")  #printing hashes from 2nd pyramide
-    print("") #new line
+    print("#" * (i + 1))  #printing hashes from 2nd pyramide
 
 
