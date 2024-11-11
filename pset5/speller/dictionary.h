@@ -16,4 +16,5 @@ bool load(const char *dictionary);
 unsigned int size(void);
 bool unload(void);
 int hash_helper(char* s , int n);
+
 #endif // DICTIONARY_H
