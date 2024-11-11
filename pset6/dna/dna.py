@@ -14,6 +14,7 @@ def main():
         sequences = reader.fieldnames
         database = list(reader)
     # TODO: Read DNA sequence file into a variable
+    print(database)
     with open (sys.argv[2],"r") as f:
         dna_sequence = f.read()
     # TODO: Find longest match of each STR in DNA sequence
@@ -68,7 +69,7 @@ def longest_match(sequence, subsequence):
         longest_run = max(longest_run, count)
 
     # After checking for runs at each character in seqeuence, return longest run found
-    return longest_run
+    return int(longest_run)
 
 
 main()
