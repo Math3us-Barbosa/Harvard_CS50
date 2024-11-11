@@ -21,7 +21,7 @@ def main():
         teams = list(reader)
     counts = {}
     for row in teams:
-        counts[row["name"]] = 0
+        counts[row["team"]] = 0
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(N):
         counts[simulate_tournament(teams)] += 1
