@@ -18,7 +18,8 @@ with open (sys.argv[2],"r") as f:
 sequences = reader.fieldnames
 reps = []
 for seq in sequences
-    
+    if seq == "name":
+        continue
     reps.append(longest_match(dna_sequence,seq))
     # TODO: Check database for matching profiles
 
