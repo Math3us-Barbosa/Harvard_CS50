@@ -9,10 +9,11 @@ if len(sys.argv) != 3:
     print("There must be 3 command-line arguments")
     sys.exit(1)
     # TODO: Read database file into a variable
-with open(sys.argv[1]) as file
+with open(sys.argv[1],"r") as file
     reader = csv.DictReader(file)
     # TODO: Read DNA sequence file into a variable
-
+with open (sys.argv[2],"r") as f
+    dna_sequence = f.read()
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
