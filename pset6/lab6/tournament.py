@@ -55,12 +55,10 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
-    winner = []
     random.shuffle(teams)
-    for row in teams:
-        winner.append(row)
+    winner = teams
     while len(winner) > 1:
         winner = simulate_round(winner)
-    return winner[0]
+    return str(winner[0])
 if __name__ == "__main__":
     main()
