@@ -1,11 +1,17 @@
 from cs50 import get_string
 
 text = get_string("Text: ")
-max = strlen(text)
+N = len(text)
 word_counter = 1
 letter_counter = 0
-for i in range (max):
+sentences = 0
+for i in range (N):
     if text[i] == ' ':
         word_counter  +=  1
-    elif text[i]
-        letter coun
+    elif isalpha(text[i])
+        letter_counter += 1
+    elif text[i] == '.' or text[i]  == '!' or text[i] == "?"
+        sentences += 1
+L = letter_counter/word_counter
+S = letter
+index = round()
