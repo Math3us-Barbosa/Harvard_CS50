@@ -26,6 +26,8 @@ def main():
     for row in database:
         if int(row[seq]) == reps:
             print(row.name)
+            sys.exit(0)
+    print("")
         return
 
 # Now you can use fieldnames as a parameter for the longest_match method
