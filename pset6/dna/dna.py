@@ -29,7 +29,7 @@ def main():
     print(reps)
     for row in database:
         if int(row[sequences2]) == reps:
-            print(row.name)
+            print(row["name"])
             sys.exit(0)
     print("No match")
     return
