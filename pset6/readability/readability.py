@@ -10,7 +10,7 @@ for i in range (N):
         word_counter  +=  1
     elif text[i].isalpha:
         letter_counter += 1
-    elif text[i] == '.' or text[i]  == '!' or text[i] == "?":
+    elif text[i] == "." or text[i]  == "!" or text[i] == "?":
         sentences += 1
 print(word_counter)
 print(letter_counter)
