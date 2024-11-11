@@ -9,32 +9,28 @@ def main():
         print("There must be 3 command-line arguments")
         sys.exit(1)
     # TODO: Read database file into a variable
-    with open(sys.argv[1],"r") as file:
+    with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         sequences = reader.fieldnames[1:]
         database = list(reader)
     # TODO: Read DNA sequence file into a variable
 
-    with open (sys.argv[2],"r") as f:
+    with open(sys.argv[2], "r") as f:
         dna_sequence = f.read()
     # TODO: Find longest match of each STR in DNA sequence
     reps = {}
     for seq in sequences:
-        reps[seq] = (longest_match(dna_sequence,seq))
+        reps[seq] = (longest_match(dna_sequence, seq))
     # TODO: Check database for matching profiles
     for row in database:
         for seq in sequences:
             found = True
             if int(row[seq]) != int(reps[seq]):
-                found = False
-                break
-        if(found == True):
-            print(f"{row["name"]}.")
-            sys.exit(0)
-    print("No match.")
+                found = Falsestyle50 dna.py
     return
 
 # Now you can use fieldnames as a parameter for the longest_match method
+
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
