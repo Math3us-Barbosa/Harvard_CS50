@@ -22,8 +22,7 @@ def main():
         teams.append(row)
     counts = {}
     for row in teams:
-        counts[0] = row["name"]
-        counts[1] = 0
+        counts[row["name"]] = 0
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range N
         simulate_tournament(teams)
