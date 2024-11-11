@@ -15,7 +15,7 @@ with open(sys.argv[1],"r") as file
 with open (sys.argv[2],"r") as f
     dna_sequence = f.read()
     # TODO: Find longest match of each STR in DNA sequence
-
+subseq = reader.fieldnames
     # TODO: Check database for matching profiles
 
     return
