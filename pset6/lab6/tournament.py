@@ -21,6 +21,8 @@ def main():
     for row in reader
         teams.append(row)
     counts = {}
+    for row in teams
+        counts = 
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range N
         simulate_tournament(teams)
