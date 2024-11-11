@@ -9,7 +9,7 @@ if len(sys.argv) != 3:
     print("There must be 3 command-line arguments")
     sys.exit(1)
     # TODO: Read database file into a variable
-
+with open(sys.argv)
     # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
