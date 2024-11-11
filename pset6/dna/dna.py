@@ -26,14 +26,9 @@ def main():
     # TODO: Check database for matching profiles
     print(reps)
     for row in database:
-        print(row[seq])
-        for i in seq:
-            found = true
-            if int(row[i]) != reps[i]:
-                found = false
-                break
-        if found = true:
-            print(row["name"])
+        if int(row[seq]) == reps:
+            print(row.name)
+            sys.exit(0)
     print("No match")
     return
 
