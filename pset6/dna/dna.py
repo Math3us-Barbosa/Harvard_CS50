@@ -20,6 +20,7 @@ with open (sys.argv[2],"r") as f
 
     return
 
+# Now you can use fieldnames as a parameter for the longest_match method
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
