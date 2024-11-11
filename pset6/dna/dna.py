@@ -22,8 +22,8 @@ for seq in sequences
         continue
     reps.append(longest_match(dna_sequence,seq))
     # TODO: Check database for matching profiles
-for row in reader
-    if row[1:] == reps
+for row in reader:
+    if row[1:] == reps:
         print(row.name)
     return
 
