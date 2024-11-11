@@ -9,10 +9,8 @@ def main():
         print("There must be 3 command-line arguments")
         sys.exit(1)
     # TODO: Read database file into a variable
-    dic = set()
     with open(sys.argv[1],"r") as file:
         reader = csv.DictReader(file)
-        dic = reader
         sequences = reader.fieldnames
     # TODO: Read DNA sequence file into a variable
     with open (sys.argv[2],"r") as f:
@@ -24,7 +22,7 @@ def main():
             continue
         reps.append(longest_match(dna_sequence,seq))
     # TODO: Check database for matching profiles
-    for row in reader:
+    for row in dic:
         if int(row[1:]) == reps:
             print(row.name)
         return
