@@ -17,9 +17,10 @@ while n > 0:
     if n < 100 and n > 10:
         p = n   #declairing first 2 digits as p
     c+= 1
-
+#checking if the last digit of the Luhm algorithm is 0
 if x % 10 != 0:
     print("INVALID")
+#checking first to digits and amount of digits to define the output
 elif c == 15 and (p == 34 or p == 37):
     print("AMEX")
 elif (c == 16 or c == 13) and int(p/10) == 4:
