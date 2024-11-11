@@ -26,6 +26,7 @@ def main():
     # TODO: Check database for matching profiles
     print(reps)
     for row in database:
+        print(row[seq])
         if int(row[seq]) == reps:
             print(row.name)
             sys.exit(0)
