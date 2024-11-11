@@ -18,4 +18,9 @@ print(sentences)
 L = (letter_counter/word_counter) * 100
 S = (sentences/word_counter) * 100
 index = round(0.0588 * L - 0.296 * S - 15.8)
-print("Grade: " + str(index))
+if(index > 1 and index < 16):
+    print("Grade: " + str(index))
+elif(index < 1):
+    print("Before 1")
+else
+    print
