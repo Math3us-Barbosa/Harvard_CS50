@@ -9,7 +9,6 @@ def main():
         print("There must be 3 command-line arguments")
         sys.exit(1)
     # TODO: Read database file into a variable
-    reader = set()
     with open(sys.argv[1],"r") as file:
         reader = csv.DictReader(file)
         sequences = reader.fieldnames
