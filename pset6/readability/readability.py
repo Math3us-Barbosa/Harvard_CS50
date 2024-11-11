@@ -18,9 +18,10 @@ print(sentences)
 L = (letter_counter/word_counter) * 100
 S = (sentences/word_counter) * 100
 index = round(0.0588 * L - 0.296 * S - 15.8)
-if(index > 1 and index < 16):
-    print("Grade: " + str(index))
+if(index > 16):
+    print("Grade 16+")
 elif(index < 1):
-    print("Before 1")
-else
-    print
+    print("Before Grade 1")
+else:
+    print("Grade " + str(index))
+
