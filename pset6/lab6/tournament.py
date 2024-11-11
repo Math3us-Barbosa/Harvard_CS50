@@ -37,7 +37,7 @@ def simulate_game(team1, team2):
     rating2 = team2["rating"]
     probability = 1 / (1 + 10 ** ((rating2 - rating1) / 600))
     return random.random() < probability
-
+    
 
 def simulate_round(teams):
     """Simulate a round. Return a list of winning teams."""
