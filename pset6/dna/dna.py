@@ -19,7 +19,6 @@ def main():
         dna_sequence = f.read()
     # TODO: Find longest match of each STR in DNA sequence
     reps = []
-    sequences2 = []
     for seq in sequences:
         if seq == "name":
             continue
