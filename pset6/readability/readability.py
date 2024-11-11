@@ -6,7 +6,7 @@ word_counter = 1
 letter_counter = 0
 sentences = 0
 for i in range (N):
-    if text[i] == ' ':
+    if text[i].isspace() :
         word_counter  +=  1
     elif text[i].isalpha:
         letter_counter += 1
