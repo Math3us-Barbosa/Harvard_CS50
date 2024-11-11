@@ -53,7 +53,7 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     random.shuffle(teams)
     while teams_in_b > 1:
-        simulate round
+        simulate round(winne)
     """Simulate a tournament. Return name of winning team."""
     # TODO
 
