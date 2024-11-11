@@ -12,6 +12,7 @@ def main():
     with open(sys.argv[1],"r") as file:
         reader = csv.DictReader(file)
         sequences = reader.fieldnames
+        database = list(reader)
     # TODO: Read DNA sequence file into a variable
     with open (sys.argv[2],"r") as f:
         dna_sequence = f.read()
@@ -22,7 +23,7 @@ def main():
             continue
         reps.append(longest_match(dna_sequence,seq))
     # TODO: Check database for matching profiles
-    for row in reader:
+    for row in database:
         if int(row[1:]) == reps:
             print(row.name)
         return
