@@ -27,9 +27,13 @@ def main():
     print(reps)
     for row in database:
         print(row[seq])
-        if int(row[seq]) == reps:
-            print(row.name)
-            sys.exit(0)
+        for i in seq:
+            found = true
+            if int(row[i]) != reps[i]:
+                found = false
+                break
+        if found = true:
+            print(row["name"])
     print("No match")
     return
 
