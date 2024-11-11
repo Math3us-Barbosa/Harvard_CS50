@@ -22,7 +22,8 @@ for seq in sequences
         continue
     reps.append(longest_match(dna_sequence,seq))
     # TODO: Check database for matching profiles
-
+for row in reader
+    if row[1:]
     return
 
 # Now you can use fieldnames as a parameter for the longest_match method
