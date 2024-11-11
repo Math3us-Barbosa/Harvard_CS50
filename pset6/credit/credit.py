@@ -14,13 +14,13 @@ while n > 0:
     elif c % 2 == 0: #if even
         x = x + (n % 10)
     n = int(n / 10)
+    #declairing first 2 digits as p
     if n < 100 and n > 10:
-        p = n     #declairing first 2 digits as p
+        p = n
     c+= 1
 
 if x % 10 != 0:
     print("INVALID")
-    
 elif c == 15 and (p == 34 or p == 37):
     print("AMEX")
     y = 0
