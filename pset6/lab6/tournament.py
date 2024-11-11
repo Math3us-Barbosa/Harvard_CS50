@@ -51,7 +51,8 @@ def simulate_round(teams):
 
 
 def simulate_tournament(teams):
-    team1_index = random.randrange(1,len(teams))
+    random.shuffle(teams)
+    
     """Simulate a tournament. Return name of winning team."""
     # TODO
 
