@@ -24,11 +24,15 @@ def main():
     # TODO: Check database for matching profiles
     print(reps)
     for row in database:
-        for seq in sequences
-        if int(row[seq]) == reps[seq]:
-            print(row["name"])
+        for seq in sequences:
+            found = True
+            if int(row[seq]) != int(reps[seq]):
+                found = False
+                break
+        if(found == True):
+            print(f"{row["name"]}.")
             sys.exit(0)
-    print("No match")
+    print("No match.")
     return
 
 # Now you can use fieldnames as a parameter for the longest_match method
@@ -68,7 +72,7 @@ def longest_match(sequence, subsequence):
         longest_run = max(longest_run, count)
 
     # After checking for runs at each character in seqeuence, return longest run found
-    return int(longest_run)
+    return longest_run
 
 
 main()
