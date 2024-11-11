@@ -26,7 +26,12 @@ def main():
         for seq in sequences:
             found = True
             if int(row[seq]) != int(reps[seq]):
-                found = Falsestyle50 dna.py
+                found = False
+                break
+        if (found == True):
+            print(f"{row["name"]}.")
+            sys.exit(0)
+    print("No match.")
     return
 
 # Now you can use fieldnames as a parameter for the longest_match method
