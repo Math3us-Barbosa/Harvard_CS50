@@ -52,7 +52,7 @@ def simulate_round(teams):
 
 def simulate_tournament(teams):
     random.shuffle(teams)
-    
+    teams_in_bracket = len(teams)
     """Simulate a tournament. Return name of winning team."""
     # TODO
 
