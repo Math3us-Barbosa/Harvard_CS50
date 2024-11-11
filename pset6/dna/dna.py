@@ -24,7 +24,7 @@ def main():
         reps.append(longest_match(dna_sequence,seq))
     # TODO: Check database for matching profiles
     for row in database:
-        if int(row[1:]) == reps:
+        if int(row[seq]) == reps:
             print(row.name)
         return
 
