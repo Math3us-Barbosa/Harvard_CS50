@@ -29,6 +29,6 @@ elif (c == 16 or c == 13) and int(p/10) == 4:
     y = 0
 elif ((c == 16) and (int(p / 10) == 5) and (p % 10 <= 5) and (p % 10 >= 1)):
     print("MASTERCARD")
-    y = 0
+
 else:
     print("INVALID")
