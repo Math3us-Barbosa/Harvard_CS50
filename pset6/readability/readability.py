@@ -8,7 +8,7 @@ sentences = 0
 for i in range (N):
     if text[i] == ' ':
         word_counter  +=  1
-    elif isalpha(text[i]):
+    elif text[i].isalpha:
         letter_counter += 1
     elif text[i] == '.' or text[i]  == '!' or text[i] == "?":
         sentences += 1
