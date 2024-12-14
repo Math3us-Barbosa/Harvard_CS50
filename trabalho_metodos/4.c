@@ -7,7 +7,7 @@ double f1(double x) {
 }
 
 double f2(double x) {
-    return x * x * x - 2 * x - 5;
+    return pow(x,3) - 2 * x - 5;
 }
 
 // Método da Secante
