@@ -3,7 +3,7 @@
 
 // Definindo as funções não lineares
 double f1(double x) {
-    return exp(x) - 2 * x * x;
+    return exp(x) - 2 * pow(x,2);
 }
 
 double f2(double x) {
