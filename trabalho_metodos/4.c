@@ -1,78 +1,58 @@
-import numpy as np
-import matplotlib.pyplot as plt
+#include <stdio.h>
+#include <math.h>
 
-# Definindo as funções não lineares
-def f1(x):
-    return np.exp(x) - 2*x**2
+// Definindo as funções não lineares
+double f1(double x) {
+    return exp(x) - 2 * x * x;
+}
 
-def f2(x):
-    return x**3 - 2*x - 5
+double f2(double x) {
+    return x * x * x - 2 * x - 5;
+}
 
-# Método da Secante
-def secante(f, x0, x1, tolerancia, max_iter):
-    iteracoes = 0
-    x_vals = [x0, x1]
-    f_vals = [f(x0), f(x1)]
+// Método da Secante
+double secante(double (*f)(double), double x0, double x1, double tolerancia, int max_iter) {
+    int iteracoes = 0;
+    double x2, f_x2;
 
-    while iteracoes < max_iter:
-        # Aplicando a fórmula da secante
-        x2 = x1 - f(x1) * (x1 - x0) / (f(x1) - f(x0))
-        f_x2 = f(x2)
+    // Imprimindo o cabeçalho
+    printf("Iteração\tx0\t\t x1\t\t x2\t\t f(x2)\n");
 
-        # Registrando os valores
-        x_vals.append(x2)
-        f_vals.append(f_x2)
+    while (iteracoes < max_iter) {
+        // Aplicando a fórmula da secante
+        x2 = x1 - f(x1) * (x1 - x0) / (f(x1) - f(x0));
+        f_x2 = f(x2);
 
-        # Verificando a convergência
-        if abs(x2 - x1) < tolerancia:
-            break
+        // Imprimindo os valores de cada iteração
+        printf("%d\t\t %.6f\t %.6f\t %.6f\t %.6f\n", iteracoes + 1, x0, x1, x2, f_x2);
 
-        # Atualizando os valores para a próxima iteração
-        x0, x1 = x1, x2
-        iteracoes += 1
+        // Verificando a convergência
+        if (fabs(x2 - x1) < tolerancia) {
+            break;
+        }
 
-    return x2, iteracoes, x_vals, f_vals
+        // Atualizando os valores para a próxima iteração
+        x0 = x1;
+        x1 = x2;
+        iteracoes++;
+    }
 
-# Parâmetros
-x0 = 1.0  # Aproximação inicial
-x1 = 2.0  # Segunda aproximação inicial
-tolerancia = 1e-6
-max_iter = 50
+    return x2; // Retorna a raiz aproximada
+}
 
-# Aplicando o método da secante nas duas funções
-raiz_f1, iter_f1, x_vals_f1, f_vals_f1 = secante(f1, x0, x1, tolerancia, max_iter)
-raiz_f2, iter_f2, x_vals_f2, f_vals_f2 = secante(f2, x0, x1, tolerancia, max_iter)
+int main() {
+    double x0 = 1.0, x1 = 2.0; // Aproximações iniciais
+    double tolerancia = 1e-6; // Tolerância
+    int max_iter = 50; // Número máximo de iterações
 
-# Exibindo os resultados
-print(f"Função 1 (f1) - Raiz aproximada: {raiz_f1}, Iterações: {iter_f1}")
-print(f"Função 2 (f2) - Raiz aproximada: {raiz_f2}, Iterações: {iter_f2}")
+    // Aplicando o método da secante nas duas funções
+    printf("Evolução do Método da Secante - Função 1: f1(x) = exp(x) - 2x^2\n");
+    double raiz_f1 = secante(f1, x0, x1, tolerancia, max_iter);
+    printf("\nRaiz aproximada de f1: %.6f\n\n", raiz_f1);
 
-# Plotando os gráficos da evolução do método da secante
-x = np.linspace(-2, 2, 400)
-y1 = f1(x)
-y2 = f2(x)
+    printf("Evolução do Método da Secante - Função 2: f2(x) = x^3 - 2x - 5\n");
+    double raiz_f2 = secante(f2, x0, x1, tolerancia, max_iter);
+    printf("\nRaiz aproximada de f2: %.6f\n", raiz_f2);
 
-plt.figure(figsize=(14, 6))
-
-# Gráfico da função 1
-plt.subplot(1, 2, 1)
-plt.plot(x, y1, label="f1(x) = exp(x) - 2x^2")
-plt.axhline(0, color='black',linewidth=1)
-plt.scatter(x_vals_f1, f_vals_f1, color='red', label="Pontos de iteração")
-plt.title("Método da Secante - f1(x)")
-plt.xlabel("x")
-plt.ylabel("f1(x)")
-plt.legend()
-
-# Gráfico da função 2
-plt.subplot(1, 2, 2)
-plt.plot(x, y2, label="f2(x) = x^3 - 2x - 5")
-plt.axhline(0, color='black',linewidth=1)
-plt.scatter(x_vals_f2, f_vals_f2, color='red', label="Pontos de iteração")
-plt.title("Método da Secante - f2(x)")
-plt.xlabel("x")
-plt.ylabel("f2(x)")
-plt.legend()
-
-plt.tight_layout()
-plt.show()
+    return 0;
+}
