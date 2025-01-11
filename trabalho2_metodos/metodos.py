@@ -100,7 +100,7 @@ def newton(func, x0, epsilon):
 
 
 def secante(func, x0, x1, epsilon):
-    print(f"{'Iteração':<10}{'x0':<15}{'x1':<15}{'x':<15}{'f(x)':<15}")
+   print(f"{'Iteração':<10}{'x0':<15}{'x1':<15}{'x':<15}{'f(x)':<15}")
    iteracao = 0
    while True:
        fx0 = func(x0)
@@ -132,16 +132,9 @@ def main():
    metodo = int(input("Digite o número do método: "))
 
 
-
-   # Variável simbólica
-   x = sp.Symbol('x')
-
-    # Função simbólica para o SymPy
-    func_simb = sp.exp(2 * x) - 2 * x**3 - 5  # Use sp.exp em vez de math.exp
-
-    # Função numérica para cálculo
-    func = lambda x: math.exp(2 * x) - (2 * (x**3)) - 5
-    epsilon = 0.01
+   # Função definida no código
+   func = lambda x: math.exp(2 * x) - (2 * (x**3)) - 5 # Função
+   epsilon = 0.01
 
 
    if metodo == 1 or metodo == 2:
@@ -155,7 +148,7 @@ def main():
 
    elif metodo == 3:
        x0 = float(input("Digite o valor de x0 (ponto inicial): "))
-       g = lambda x: math.log(2 * x**3 + 5) / 2 # Insira aqui a função para o ponto fixo
+       g = lambda x: (x + 2)**(1/3)  # Exemplo de função para Ponto Fixo
        raiz = ponto_fixo(func, g, x0, epsilon)
 
 
