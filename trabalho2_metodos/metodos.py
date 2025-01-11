@@ -140,7 +140,7 @@ def main():
     func_simb = sp.exp(2 * x) - 2 * x**3 - 5  # Use sp.exp em vez de math.exp
 
     # Função numérica para cálculo
-    func = lambda x: math.exp(2 * x) - 2 * x**3 - 5
+    func = lambda x: math.exp(2 * x) - (2 * (x**3)) - 5
     epsilon = 0.01
 
 
