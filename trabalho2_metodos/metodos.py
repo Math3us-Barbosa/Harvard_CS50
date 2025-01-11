@@ -148,7 +148,7 @@ def main():
 
    elif metodo == 3:
        x0 = float(input("Digite o valor de x0 (ponto inicial): "))
-       g = lambda x: -((2 * (x**3)) + (5 * (x**2)) - math.sin(x) - 3)  # Exemplo de função para Ponto Fixo
+       g = lambda x: ((x - 1) * (x - 3)**5) / (x + 1)  # Exemplo de função para Ponto Fixo
        raiz = ponto_fixo(func, g, x0, epsilon)
 
 
