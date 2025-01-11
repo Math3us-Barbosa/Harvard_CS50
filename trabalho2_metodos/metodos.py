@@ -133,7 +133,7 @@ def main():
 
 
    # Função definida no código
-   func = lambda x:  (2 * (x**3)) + 5 * x**2 - math.sin(x) - 3 # Função
+   func = lambda x:  (2 * (x**3)) + (5 * (x**2)) - math.sin(x) - 3 # Função
    epsilon = 0.01
 
 
